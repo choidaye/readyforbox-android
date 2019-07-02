@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <!--app color-->
+    <color name="White">#ffffff</color>
+    <color name="pumpkinOrange">#ff7400</color>
+    <color name="lightBlueGrey">#ced4da</color>
+    <color name="charcoalGrey">#343a40</color>
+    <color name="darkGrey">#212529</color>
+    <color name="paleGrey">#f8f9fa</color>
+    <color name="veryㅣightPink">#efefef</color>
+    <color name="blueGrey">#868e96</color>
+
+</resources>
