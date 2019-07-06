@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/White"
+        android:layout_marginHorizontal="16dp">
+
+
+
+    <TextView
+            android:id="@+id/tv_fg_search_keyword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/darkGrey"
+            android:lineSpacingExtra="2sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:text="물티슈"/>
+
+
+    <ImageView
+            android:id="@+id/btn_fg_search_list_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_cancel"/>
+
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightBlueGrey"
+            android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

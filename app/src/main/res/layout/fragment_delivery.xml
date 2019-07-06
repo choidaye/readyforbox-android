@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
+             android:id="@+id/fl_delivery_main"
              tools:context=".UI.Fragment.Category.DeliveryFragment">
 
 
@@ -26,6 +27,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp">
                     <RelativeLayout
+                            android:id="@+id/btn_fg_delivery_water"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -33,7 +35,7 @@
 
                         <ImageView
                                 android:layout_centerHorizontal="true"
-                                android:id="@+id/giftcon"
+                                android:id="@+id/iv_water"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/delivery_btn_1" />
@@ -41,12 +43,12 @@
                         <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@+id/giftcon"
+                                android:layout_below="@+id/iv_water"
                                 android:layout_centerHorizontal="true"
                                 android:lineSpacingExtra="6sp"
-                                android:text="선물하기"
-                                android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:text="생수/음료"
+                                android:textColor="@color/darkGrey"
+                                android:textSize="10sp" />
 
                     </RelativeLayout>
 
@@ -58,7 +60,7 @@
 
                         <ImageView
                                 android:layout_centerHorizontal="true"
-                                android:id="@+id/emoticon"
+                                android:id="@+id/detergent"
                                 android:layout_width="42dp"
                                 android:layout_height="42dp"
                                 android:src="@drawable/delivery_btn_1" />
@@ -66,12 +68,12 @@
                         <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@+id/emoticon"
+                                android:layout_below="@+id/detergent"
                                 android:layout_centerHorizontal="true"
                                 android:lineSpacingExtra="6sp"
-                                android:text="이모티콘"
-                                android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:text="세제/섬유유연제"
+                                android:textColor="@color/darkGrey"
+                                android:textSize="10sp" />
 
                     </RelativeLayout>
 
@@ -94,7 +96,7 @@
                                 android:layout_below="@+id/hairshop"
                                 android:layout_centerHorizontal="true"
                                 android:lineSpacingExtra="6sp"
-                                android:text="헤어샵"
+                                android:text="욕실용품"
                                 android:textColor="#0a0a0a"
                                 android:textSize="11sp" />
 
@@ -120,7 +122,7 @@
                                 android:layout_below="@+id/makers"
                                 android:layout_centerHorizontal="true"
                                 android:lineSpacingExtra="6sp"
-                                android:text="메이커스"
+                                android:text="휴지/물티슈"
                                 android:textColor="#0a0a0a"
                                 android:textSize="11sp" />
 
@@ -536,4 +538,4 @@
 
     </android.support.v4.widget.NestedScrollView>
 
-</LinearLayout>
+</FrameLayout >

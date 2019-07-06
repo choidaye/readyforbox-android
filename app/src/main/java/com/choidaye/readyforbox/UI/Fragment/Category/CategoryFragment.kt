@@ -34,7 +34,7 @@ class CategoryFragment : Fragment() {
     }
 
     private fun configureToptab() {
-        vp_fg_category_product.adapter = CategoryFragmentStatePagerAdapter(fragmentManager!!, 2)
+        vp_fg_category_product.adapter = CategoryFragmentStatePagerAdapter(childFragmentManager, 2)
         tl_fg_category_toptab.setupWithViewPager(vp_fg_category_product)
         val topTabLayout: View = activity!!.layoutInflater.inflate(R.layout.top_tabbar_fg_category, null, false)
 

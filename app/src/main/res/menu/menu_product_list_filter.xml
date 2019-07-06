@@ -2,11 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-            android:id="@+id/one"
+            android:id="@+id/fg_product_one"
+            android:title="최신순" />
+
+    <item
+            android:id="@+id/fg_product_two"
             android:title="가격 높은 순" />
 
     <item
-            android:id="@+id/two"
+            android:id="@+id/fg_product_three"
             android:title="가격 낮은 순" />
 
 

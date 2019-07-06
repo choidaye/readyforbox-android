@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:layout_marginRight="8dp">
+
+
+
+    <LinearLayout
+            android:id="@+id/li_fg_for_u_result_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical">
+
+        <ImageView
+                android:id="@+id/img_fg_for_u_result_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/lightBlueGrey"/>
+
+
+        <TextView
+                android:id="@+id/tv_fg_for_u_result_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/darkGrey"
+                android:layout_marginTop="9dp"
+                android:text="패키지패키지패키지"/>
+
+        <TextView
+                android:id="@+id/tv_fg_for_u_result_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#9b9b9b"
+                android:text="서울 강서구 방화대로 294" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

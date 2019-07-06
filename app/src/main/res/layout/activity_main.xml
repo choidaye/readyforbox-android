@@ -8,14 +8,14 @@
         tools:context=".UI.Activity.MainActivity">
 
 
-    <com.choidaye.readyforbox.UI.SwipeLockableViewPager
+    <com.choidaye.readyforbox.UI.Fragment.SwipeLockableViewPager
             android:id="@+id/vp_ac_main_frag_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/tl_ac_main_bottomTab">
 
 
-    </com.choidaye.readyforbox.UI.SwipeLockableViewPager>
+    </com.choidaye.readyforbox.UI.Fragment.SwipeLockableViewPager>
 
     <android.support.design.widget.TabLayout
             android:id="@+id/tl_ac_main_bottomTab"

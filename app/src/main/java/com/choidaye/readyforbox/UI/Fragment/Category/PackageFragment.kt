@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.choidaye.readyforbox.R
+import kotlinx.android.synthetic.main.fragment_delivery.*
+import kotlinx.android.synthetic.main.fragment_package.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,6 +28,39 @@ class PackageFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_package, container, false)
+    }
+
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+
+        setOnBtnClickListener()
+
+
+
+    }
+
+
+    //카테고리 메인 프래그먼트를 교체시켜줄겁니다
+
+    fun replaceFragment(fragment: Fragment) {
+        activity!!.supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fl_fg_category_main, fragment, fragment.javaClass.simpleName)
+            .addToBackStack(fragment.javaClass.simpleName)
+            .commit()
+    }
+
+
+    private fun setOnBtnClickListener() {
+        btn_fg_package_dress.setOnClickListener{
+
+            replaceFragment(PackageListFragment())
+
+
+        }
+
     }
 
 

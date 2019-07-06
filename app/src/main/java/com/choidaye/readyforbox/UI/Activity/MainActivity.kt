@@ -1,21 +1,36 @@
 package com.choidaye.readyforbox.UI.Activity
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.View
 import android.widget.RelativeLayout
 import com.choidaye.readyforbox.R
 import com.choidaye.readyforbox.UI.Adapter.MainFragmentStatePagerAdapter
+import com.choidaye.readyforbox.UI.Fragment.Category.DeliveryListFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         configureBottomNavigation()
+
+
+
+
+
+
     }
+
+
+
 
     private fun configureBottomNavigation() {
         vp_ac_main_frag_pager.adapter = MainFragmentStatePagerAdapter(supportFragmentManager, 5)
@@ -28,5 +43,20 @@ class MainActivity : AppCompatActivity() {
         tl_ac_main_bottomTab.getTabAt(3)!!.customView = bottomNaviLayout.findViewById(R.id.btn_bottom_navi_forU_tab) as RelativeLayout
         tl_ac_main_bottomTab.getTabAt(4)!!.customView = bottomNaviLayout.findViewById(R.id.btn_bottom_navi_my_box_tab) as RelativeLayout
     }
+
+
+//    public  fun replaceFragment(fragment: Fragment) {
+//        supportFragmentManager
+//            .beginTransaction()
+//            .replace(R.id.vp_ac_main_frag_pager, fragment, fragment.javaClass.simpleName)
+//            .addToBackStack(fragment.javaClass.simpleName)
+//            .commit()
+//    }
+
+
+
+
+
+
 
 }

@@ -1,10 +1,11 @@
-package com.choidaye.readyforbox.UI
+package com.choidaye.readyforbox.UI.Fragment
 
 import android.content.Context
 import android.support.v4.view.ViewPager
 import android.util.AttributeSet
 import android.view.MotionEvent
 
+//스와이프 막기 위해 뷰페이저 커스텀
 
 class SwipeLockableViewPager(context: Context, attrs: AttributeSet): ViewPager(context, attrs) {
     private var swipeEnabled = false
