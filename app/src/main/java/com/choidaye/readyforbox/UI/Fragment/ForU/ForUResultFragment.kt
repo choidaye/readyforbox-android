@@ -12,12 +12,10 @@ import com.choidaye.readyforbox.Data.ForUResultHelp
 import com.choidaye.readyforbox.Data.ForUResultPackage
 
 import com.choidaye.readyforbox.R
-import com.choidaye.readyforbox.UI.Adapter.ForUResultDeliveryRecyclcerViewAdapter
-import com.choidaye.readyforbox.UI.Adapter.ForUResultHelpRecyclcerViewAdapter
-import com.choidaye.readyforbox.UI.Adapter.ForUResultPackageRecyclcerViewAdapter
+import com.choidaye.readyforbox.UI.Adapter.ForUResultDeliveryRecyclerViewAdapter
+import com.choidaye.readyforbox.UI.Adapter.ForUResultHelpRecyclerViewAdapter
+import com.choidaye.readyforbox.UI.Adapter.ForUResultPackageRecyclerViewAdapter
 import kotlinx.android.synthetic.main.fragment_for_u_result.*
-import kotlinx.android.synthetic.main.fragment_package_list.*
-
 
 
 class ForUResultFragment : Fragment() {
@@ -43,7 +41,7 @@ class ForUResultFragment : Fragment() {
         forUresultpackageList.add(ForUResultPackage("삼다수","http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428",17000))
         forUresultpackageList.add(ForUResultPackage("삼다수","http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428",17000))
 
-        var forUResultPackageRecyclcerViewAdapter = ForUResultPackageRecyclcerViewAdapter(activity!!,forUresultpackageList)
+        var forUResultPackageRecyclcerViewAdapter = ForUResultPackageRecyclerViewAdapter(activity!!,forUresultpackageList)
         rv_fg_for_u_ready_for_package.adapter = forUResultPackageRecyclcerViewAdapter
         rv_fg_for_u_ready_for_package.layoutManager = LinearLayoutManager(activity!!, LinearLayoutManager.HORIZONTAL,false)
 
@@ -58,7 +56,7 @@ class ForUResultFragment : Fragment() {
         forUresultdeliveryList.add(ForUResultDelivery("삼다수","http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428",17000))
         forUresultdeliveryList.add(ForUResultDelivery("삼다수","http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428",17000))
 
-        var forUResultDeliveryRecyclcerViewAdapter = ForUResultDeliveryRecyclcerViewAdapter(activity!!,forUresultdeliveryList)
+        var forUResultDeliveryRecyclcerViewAdapter = ForUResultDeliveryRecyclerViewAdapter(activity!!,forUresultdeliveryList)
         rv_fg_for_u_ready_for_delivery.adapter = forUResultDeliveryRecyclcerViewAdapter
         rv_fg_for_u_ready_for_delivery.layoutManager = LinearLayoutManager(activity!!, LinearLayoutManager.HORIZONTAL,false)
 
@@ -71,7 +69,7 @@ class ForUResultFragment : Fragment() {
         forUresulthelpList.add(ForUResultHelp("삼다수","http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428",17000))
 
 
-        var forUResultHelpRecyclcerViewAdapter = ForUResultHelpRecyclcerViewAdapter(activity!!,forUresulthelpList)
+        var forUResultHelpRecyclcerViewAdapter = ForUResultHelpRecyclerViewAdapter(activity!!,forUresulthelpList)
         rv_fg_for_u_ready_for_help.adapter = forUResultHelpRecyclcerViewAdapter
         rv_fg_for_u_ready_for_help.layoutManager = LinearLayoutManager(activity!!, LinearLayoutManager.HORIZONTAL,false)
 

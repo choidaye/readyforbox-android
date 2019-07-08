@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import com.choidaye.readyforbox.Data.SearchData
 
 import com.choidaye.readyforbox.R
-import com.choidaye.readyforbox.UI.Adapter.SearchRecyclcerViewAdapter
+import com.choidaye.readyforbox.UI.Adapter.SearchRecyclerViewAdapter
 import kotlinx.android.synthetic.main.fragment_search_new.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -44,7 +44,7 @@ class SearchNewFragment : Fragment() {
 
 
 
-        var searchRecyclcerViewAdapter = SearchRecyclcerViewAdapter(activity!!,searchList)
+        var searchRecyclcerViewAdapter = SearchRecyclerViewAdapter(activity!!,searchList)
         rv_fg_search_list_new.adapter = searchRecyclcerViewAdapter
         rv_fg_search_list_new.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
     }
