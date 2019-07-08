@@ -45,15 +45,16 @@ class HomeFragment : Fragment() {
     }
 
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+//    override fun onActivityCreated(savedInstanceState: Bundle?) {
+//        super.onActivityCreated(savedInstanceState)
+//
+//
+//        setOnBtnClickListener()
+//    }
+//
+//    private fun setOnBtnClickListener() {
+//
+//    }
 
-
-        setOnBtnClickListener()
-    }
-
-    private fun setOnBtnClickListener() {
-
-    }
 }
 

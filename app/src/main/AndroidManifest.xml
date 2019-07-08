@@ -14,23 +14,33 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
+
         <activity android:name=".UI.Activity.MainActivity">
+        </activity>
+        <activity android:name=".UI.Activity.Cart.CartActivity">
+        </activity>
+        <activity android:name=".UI.Activity.SignupActivity">
+        </activity>
+        <activity android:name=".UI.Activity.OrdercompletedActivity">
+        </activity>
+        <activity android:name=".UI.Activity.TutorialActivity">
+        </activity>
+        <activity android:name=".UI.Activity.LoginActivity">
+        </activity>
+        <activity android:name=".UI.Activity.SignupCartActivity">
+        </activity>
+
+        <activity
+                android:name=".UI.Activity.SplashActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".UI.Activity.Cart.CartActivity">
-        </activity>
-        <activity android:name=".UI.Activity.Sign.SignUpActivity">
-        </activity>
-        <activity android:name=".UI.Activity.OrdercompletedActivity">
-        </activity>
-        <activity android:name=".UI.Activity.TutorialActivity">
-        </activity>
-        <activity android:name=".UI.Activity.Sign.LoginActivity">
-        </activity>
+
     </application>
 
 </manifest>

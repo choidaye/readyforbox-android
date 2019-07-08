@@ -1,10 +1,10 @@
 package com.choidaye.readyforbox.UI.Activity
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.choidaye.readyforbox.R
+import android.support.v7.app.AppCompatActivity
 import org.jetbrains.anko.startActivity
+
 
 class SplashActivity : AppCompatActivity() {
 
