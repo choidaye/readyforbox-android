@@ -9,11 +9,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.choidaye.readyforbox.Data.ForUResultDelivery
-import com.choidaye.readyforbox.Data.ForUResultPackage
-import com.choidaye.readyforbox.Data.Product
 import com.choidaye.readyforbox.R
 
-class ForUResultDeliveryRecyclcerViewAdapter(val ctx: Context, val forUresultDeliveryList: ArrayList<ForUResultDelivery>) : RecyclerView.Adapter<ForUResultDeliveryRecyclcerViewAdapter.Holder>(){
+class ForUResultDeliveryRecyclerViewAdapter(val ctx: Context, val forUresultDeliveryList: ArrayList<ForUResultDelivery>) : RecyclerView.Adapter<ForUResultDeliveryRecyclerViewAdapter.Holder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_fg_for_u_result_delivery, parent, false)

@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import com.choidaye.readyforbox.Data.Product
 import com.choidaye.readyforbox.R
 
-class DeliveryRecyclcerViewAdapter(val ctx: Context, val deliveryList: ArrayList<Product>) : RecyclerView.Adapter<DeliveryRecyclcerViewAdapter.Holder>(){
+class DeliveryRecyclerViewAdapter(val ctx: Context, val deliveryList: ArrayList<Product>) : RecyclerView.Adapter<DeliveryRecyclerViewAdapter.Holder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_fg_delivery_list, parent, false)
@@ -22,14 +22,14 @@ class DeliveryRecyclcerViewAdapter(val ctx: Context, val deliveryList: ArrayList
     override fun getItemCount(): Int = deliveryList.size
 
 
-    override fun onBindViewHolder(holer: Holder, position: Int) {
+    override fun onBindViewHolder(hodler: Holder, position: Int) {
         Glide.with(ctx)
             .load(deliveryList[position].main_img)
-            .into(holer.main_img)
-        holer.name.text = deliveryList[position].name
-        holer.price.text=deliveryList[position].price.toString()
-        holer.saled_price.text = deliveryList[position].saled_price.toString()
-        holer.content.text = deliveryList[position].content
+            .into(hodler.main_img)
+        hodler.name.text = deliveryList[position].name
+        hodler.price.text=deliveryList[position].price.toString()
+        hodler.saled_price.text = deliveryList[position].saled_price.toString()
+        hodler.content.text = deliveryList[position].content
 
 
     }

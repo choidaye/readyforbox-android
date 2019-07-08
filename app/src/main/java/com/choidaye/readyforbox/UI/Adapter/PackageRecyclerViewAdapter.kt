@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import com.choidaye.readyforbox.Data.Product
 import com.choidaye.readyforbox.R
 
-class PackageRecyclcerViewAdapter(val ctx: Context, val packageList: ArrayList<Product>) : RecyclerView.Adapter<PackageRecyclcerViewAdapter.Holder>(){
+class PackageRecyclerViewAdapter(val ctx: Context, val packageList: ArrayList<Product>) : RecyclerView.Adapter<PackageRecyclerViewAdapter.Holder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_fg_package_list, parent, false)

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+         android:layout_width="match_parent"
+         android:layout_height="163dp"
+        android:background="@color/White">
+
+
+
+    <RelativeLayout
+            android:id="@+id/rl_ac_cart_info_top"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+    <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:text="제주삼다수, 500ml,40개입"
+            android:layout_marginLeft="16dp"
+            android:id="@+id/btn_rv_item_ac_cart_package_check"/>
+
+    <ImageView
+            android:id="@+id/btn_rv_item_ac_cart_package_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_cancel"/>
+
+
+
+    </RelativeLayout>
+
+
+
+    <ImageView
+            android:layout_below="@+id/rl_ac_cart_info_top"
+            android:id="@+id/iv_item_ac_cart_package"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:layout_marginLeft="16dp"
+            android:background="@color/lightBlueGrey"/>
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="11dp"
+            android:layout_marginBottom="11dp"
+            android:layout_above="@+id/li_rv_ac_cart_package_bg"
+            android:layout_alignParentRight="true">
+
+
+
+
+        <TextView
+                android:id="@+id/tv_rv_ac_cart_package_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/darkGrey"
+                android:lineSpacingExtra="2sp"
+                android:gravity="end"
+                android:text="10,000"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/darkGrey"
+                android:lineSpacingExtra="2sp"
+                android:gravity="end"
+                android:text="원"/>
+    </LinearLayout>
+
+
+
+    <View
+            android:id="@+id/view_grey_stroke"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/lightBlueGrey"/>
+
+
+
+    <LinearLayout
+            android:id="@+id/li_rv_ac_cart_package_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="11dp"
+            android:layout_above="@+id/view_grey_stroke"
+            android:orientation="horizontal">
+
+
+
+
+
+
+    <RelativeLayout
+            android:layout_width="96dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="9dp">
+
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dark_grey_stroke"/>
+
+
+        <TextView
+                android:id="@+id/tv_rv_ac_cart_package_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="12sp"
+                android:textColor="@color/darkGrey"
+                android:text="1개" />
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

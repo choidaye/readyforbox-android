@@ -43,5 +43,17 @@ class HomeFragment : Fragment() {
         tl_home_indicator.setupWithViewPager(vp_home_slider)
 
     }
+
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+
+        setOnBtnClickListener()
+    }
+
+    private fun setOnBtnClickListener() {
+
+    }
 }
 

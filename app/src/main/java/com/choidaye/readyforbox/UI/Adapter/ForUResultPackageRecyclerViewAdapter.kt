@@ -8,29 +8,26 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
-import com.choidaye.readyforbox.Data.ForUResultDelivery
-import com.choidaye.readyforbox.Data.ForUResultHelp
 import com.choidaye.readyforbox.Data.ForUResultPackage
-import com.choidaye.readyforbox.Data.Product
 import com.choidaye.readyforbox.R
 
-class ForUResultHelpRecyclcerViewAdapter(val ctx: Context, val forUresultHelpList: ArrayList<ForUResultHelp>) : RecyclerView.Adapter<ForUResultHelpRecyclcerViewAdapter.Holder>(){
+class ForUResultPackageRecyclerViewAdapter(val ctx: Context, val forUresultpackageList: ArrayList<ForUResultPackage>) : RecyclerView.Adapter<ForUResultPackageRecyclerViewAdapter.Holder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_fg_for_u_result_help, parent, false)
+        val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_fg_for_u_result_package, parent, false)
         return Holder(view)
     }
 
 
-    override fun getItemCount(): Int = forUresultHelpList.size
+    override fun getItemCount(): Int = forUresultpackageList.size
 
 
     override fun onBindViewHolder(holer: Holder, position: Int) {
         Glide.with(ctx)
-            .load(forUresultHelpList[position].main_img)
+            .load(forUresultpackageList[position].main_img)
             .into(holer.main_img)
-        holer.name.text = forUresultHelpList[position].name
-        holer.price.text=forUresultHelpList[position].price.toString()
+        holer.name.text = forUresultpackageList[position].name
+        holer.price.text=forUresultpackageList[position].price.toString()
 
 
 
