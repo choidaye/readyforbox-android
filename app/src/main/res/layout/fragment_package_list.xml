@@ -76,15 +76,17 @@
 
 
             <RelativeLayout
+                    android:id="@+id/btn_fg_package_list_area"
                     android:layout_width="match_parent"
                     android:layout_height="32dp">
 
                 <TextView
+                        android:id="@+id/tv_fg_package_list_area"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:lineSpacingExtra="6sp"
-                        android:text="생수/음료"
+                        android:text="공간확보의 달인"
                         android:layout_weight="1"
                         android:layout_centerInParent="true"
                         android:textColor="@color/darkGrey"
@@ -97,15 +99,17 @@
                     android:background="@color/lightBlueGrey"/>
 
             <RelativeLayout
+                    android:id="@+id/btn_fg_package_list_sleep"
                     android:layout_width="match_parent"
                     android:layout_height="32dp">
 
                 <TextView
+                        android:id="@+id/tv_fg_package_list_sleep"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:lineSpacingExtra="6sp"
-                        android:text="생수/음료"
+                        android:text="포근하게 자기"
                         android:layout_weight="1"
                         android:layout_centerInParent="true"
                         android:textColor="@color/darkGrey"
@@ -136,15 +140,17 @@
                     android:layout_height="1dp"
                     android:background="@color/lightBlueGrey"/>
             <RelativeLayout
+                    android:id="@+id/btn_fg_package_list_appliances"
                     android:layout_width="match_parent"
                     android:layout_height="32dp">
 
                 <TextView
+                        android:id="@+id/tv_fg_package_list_appliances"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:lineSpacingExtra="6sp"
-                        android:text="생수/음료"
+                        android:text="가전제품"
                         android:layout_weight="1"
                         android:layout_centerInParent="true"
                         android:textColor="@color/darkGrey"
@@ -157,15 +163,17 @@
                     android:background="@color/lightBlueGrey"/>
 
             <RelativeLayout
+                    android:id="@+id/btn_fg_package_list_dress"
                     android:layout_width="match_parent"
                     android:layout_height="32dp">
 
             <TextView
+                    android:id="@+id/tv_fg_package_list_dress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:lineSpacingExtra="6sp"
-                    android:text="생수/음료"
+                    android:text="입는건 중요해"
                     android:layout_weight="1"
                    android:layout_centerInParent="true"
                     android:textColor="@color/darkGrey"
@@ -200,15 +208,17 @@
                     android:background="@color/lightBlueGrey"/>
 
             <RelativeLayout
+                    android:id="@+id/btn_fg_package_list_manage"
                     android:layout_width="match_parent"
                     android:layout_height="32dp">
 
                 <TextView
+                        android:id="@+id/tv_fg_package_list_manage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:lineSpacingExtra="6sp"
-                        android:text="생수/음료"
+                        android:text="우리 집 관리"
                         android:layout_weight="1"
                         android:layout_centerInParent="true"
                         android:textColor="@color/darkGrey"
@@ -221,15 +231,17 @@
                     android:background="@color/lightBlueGrey"/>
 
             <RelativeLayout
+                    android:id="@+id/btn_fg_package_list_animal"
                     android:layout_width="match_parent"
                     android:layout_height="32dp">
 
                 <TextView
+                        android:id="@+id/tv_fg_package_list_animal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:lineSpacingExtra="6sp"
-                        android:text="생수/음료"
+                        android:text="반려동물과 함께"
                         android:layout_weight="1"
                         android:layout_centerInParent="true"
                         android:textColor="@color/darkGrey"
@@ -261,15 +273,17 @@
                     android:background="@color/lightBlueGrey"/>
 
             <RelativeLayout
+                    android:id="@+id/btn_fg_package_list_homecafe"
                     android:layout_width="match_parent"
                     android:layout_height="32dp">
 
                 <TextView
+                        android:id="@+id/tv_fg_pakcage_list_homecafe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:lineSpacingExtra="6sp"
-                        android:text="생수/음료"
+                        android:text="홈카페"
                         android:layout_weight="1"
                         android:layout_centerInParent="true"
                         android:textColor="@color/darkGrey"
@@ -282,15 +296,17 @@
                     android:background="@color/lightBlueGrey"/>
 
             <RelativeLayout
+                    android:id="@+id/btn_fg_package_list_special"
                     android:layout_width="match_parent"
                     android:layout_height="32dp">
 
                 <TextView
+                        android:id="@+id/tv_fg_package_list_special"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:lineSpacingExtra="6sp"
-                        android:text="생수/음료"
+                        android:text="특별기획"
                         android:layout_weight="1"
                         android:layout_centerInParent="true"
                         android:textColor="@color/darkGrey"
@@ -306,9 +322,6 @@
         </LinearLayout>
 
         </LinearLayout>
-
-
-
 
 
         <LinearLayout

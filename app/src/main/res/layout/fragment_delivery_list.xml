@@ -31,7 +31,7 @@
                     android:layout_centerInParent="true"
                     android:textSize="17sp"
                     android:textColor="#212529"
-                    android:id="@+id/toolbar_title"/>
+                    android:id="@+id/toolbar_delivery_list_title"/>
 
 
             <ImageView
@@ -77,10 +77,12 @@
 
 
                     <RelativeLayout
+                            android:id="@+id/btn_fg_delivery_list_water"
                             android:layout_width="match_parent"
                             android:layout_height="32dp">
 
                         <TextView
+                                android:id="@+id/tv_fg_delivery_list_water"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
@@ -98,15 +100,17 @@
                             android:background="@color/lightBlueGrey"/>
 
                     <RelativeLayout
+                            android:id="@+id/btn_fg_delivery_list_clean"
                             android:layout_width="match_parent"
                             android:layout_height="32dp">
 
                         <TextView
+                                android:id="@+id/tv_fg_delivery_list_clean"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:lineSpacingExtra="6sp"
-                                android:text="생수/음료"
+                                android:text="청소용품"
                                 android:layout_weight="1"
                                 android:layout_centerInParent="true"
                                 android:textColor="@color/darkGrey"
@@ -137,15 +141,17 @@
                             android:layout_height="1dp"
                             android:background="@color/lightBlueGrey"/>
                     <RelativeLayout
+                            android:id="@+id/btn_fg_delivery_list_detergent"
                             android:layout_width="match_parent"
                             android:layout_height="32dp">
 
                         <TextView
+                                android:id="@+id/tv_fg_delivery_list_detergent"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:lineSpacingExtra="6sp"
-                                android:text="생수/음료"
+                                android:text="세제/섬유유연"
                                 android:layout_weight="1"
                                 android:layout_centerInParent="true"
                                 android:textColor="@color/darkGrey"
@@ -158,15 +164,17 @@
                             android:background="@color/lightBlueGrey"/>
 
                     <RelativeLayout
+                            android:id="@+id/btn_fg_delivery_list_cook"
                             android:layout_width="match_parent"
                             android:layout_height="32dp">
 
                         <TextView
+                                android:id="@+id/tv_fg_delivery_list_cook"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:lineSpacingExtra="6sp"
-                                android:text="생수/음료"
+                                android:text="주방용품"
                                 android:layout_weight="1"
                                 android:layout_centerInParent="true"
                                 android:textColor="@color/darkGrey"
@@ -201,15 +209,17 @@
                             android:background="@color/lightBlueGrey"/>
 
                     <RelativeLayout
+                            android:id="@+id/btn_fg_delivery_list_bathroom"
                             android:layout_width="match_parent"
                             android:layout_height="32dp">
 
                         <TextView
+                                android:id="@+id/tv_fg_delivery_list_bathroom"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:lineSpacingExtra="6sp"
-                                android:text="생수/음료"
+                                android:text="욕실용품"
                                 android:layout_weight="1"
                                 android:layout_centerInParent="true"
                                 android:textColor="@color/darkGrey"
@@ -222,15 +232,17 @@
                             android:background="@color/lightBlueGrey"/>
 
                     <RelativeLayout
+                            android:id="@+id/btn_fg_delivery_list_defuser"
                             android:layout_width="match_parent"
                             android:layout_height="32dp">
 
                         <TextView
+                                android:id="@+id/tv_fg_delivery_list_defuser"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:lineSpacingExtra="6sp"
-                                android:text="생수/음료"
+                                android:text="디퓨저/방향제"
                                 android:layout_weight="1"
                                 android:layout_centerInParent="true"
                                 android:textColor="@color/darkGrey"
@@ -262,15 +274,17 @@
                             android:background="@color/lightBlueGrey"/>
 
                     <RelativeLayout
+                            android:id="@+id/btn_fg_delivery_list_tissue"
                             android:layout_width="match_parent"
                             android:layout_height="32dp">
 
                         <TextView
+                                android:id="@+id/tv_fg_delivery_list_tissue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:lineSpacingExtra="6sp"
-                                android:text="생수/음료"
+                                android:text="휴지/물티슈"
                                 android:layout_weight="1"
                                 android:layout_centerInParent="true"
                                 android:textColor="@color/darkGrey"
@@ -283,15 +297,17 @@
                             android:background="@color/lightBlueGrey"/>
 
                     <RelativeLayout
+                           android:id="@+id/btn_fg_delivery_list_animal"
                             android:layout_width="match_parent"
                             android:layout_height="32dp">
 
                         <TextView
+                                android:id="@+id/tv_fg_delivery_list_animal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:lineSpacingExtra="6sp"
-                                android:text="생수/음료"
+                                android:text="반려동물용품"
                                 android:layout_weight="1"
                                 android:layout_centerInParent="true"
                                 android:textColor="@color/darkGrey"
