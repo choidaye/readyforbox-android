@@ -6,6 +6,7 @@
 
 
     <!--app color-->
+    <color name="black">#000000</color>
     <color name="White">#ffffff</color>
     <color name="pumpkinOrange">#ff7400</color>
     <color name="lightBlueGrey">#ced4da</color>
