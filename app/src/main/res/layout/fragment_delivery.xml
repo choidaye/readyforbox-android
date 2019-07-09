@@ -260,7 +260,7 @@
             <View
                     android:layout_width="match_parent"
                     android:layout_height="6dp"
-                    android:background="@color/veryㅣightPink"/>
+                    android:background="@color/verylightPink"/>
 
 
             <LinearLayout
@@ -375,7 +375,7 @@
                     android:layout_height="2dp"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="16dp"
-                    android:background="@color/veryㅣightPink"/>
+                    android:background="@color/verylightPink"/>
 
 
             <LinearLayout
