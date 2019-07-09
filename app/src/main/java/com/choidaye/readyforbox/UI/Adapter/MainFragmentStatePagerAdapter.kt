@@ -19,7 +19,7 @@ class MainFragmentStatePagerAdapter(fm : FragmentManager, val fragmentCount : In
             0 -> return HomeFragment()
             1 -> return CategoryFragment()
             2 -> return SearchFragment()
-            3 -> return ForUResultFragment()
+            3 -> return ForUFragment()
             4 -> return MyBoxFragment()
             else -> return null
 
