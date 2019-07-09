@@ -35,7 +35,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp">
                     <RelativeLayout
-                            android:id="@+id/btn_fg_package_dress"
+                            android:id="@+id/btn_fg_package_area"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -49,12 +49,13 @@
                                 android:src="@drawable/package_btn_2" />
 
                         <TextView
+                                android:id="@+id/tv_fg_package_area"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/giftcon"
                                 android:layout_centerHorizontal="true"
                                 android:lineSpacingExtra="6sp"
-                                android:text="공간확보의 달인"
+                                android:text="공간확보의달인"
                                 android:textColor="#0a0a0a"
                                 android:textSize="11sp" />
 
@@ -187,6 +188,7 @@
                                 android:src="@drawable/package_btn_1" />
 
                         <TextView
+                                android:id="@+id/tv_fg_package_dress"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/shopping"

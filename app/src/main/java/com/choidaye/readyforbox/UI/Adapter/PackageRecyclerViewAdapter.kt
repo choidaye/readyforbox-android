@@ -9,10 +9,10 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import com.bumptech.glide.Glide
-import com.choidaye.readyforbox.Data.Product
+import com.choidaye.readyforbox.Data.Packages
 import com.choidaye.readyforbox.R
 
-class PackageRecyclerViewAdapter(val ctx: Context, val packageList: ArrayList<Product>) : RecyclerView.Adapter<PackageRecyclerViewAdapter.Holder>(){
+class PackageRecyclerViewAdapter(val ctx: Context, val packageList: ArrayList<Packages>) : RecyclerView.Adapter<PackageRecyclerViewAdapter.Holder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_fg_package_list, parent, false)
@@ -29,7 +29,7 @@ class PackageRecyclerViewAdapter(val ctx: Context, val packageList: ArrayList<Pr
             .into(holer.main_img)
         holer.price.text=packageList[position].price.toString()
         holer.saled_price.text = packageList[position].saled_price.toString()
-        holer.content.text = packageList[position].content
+        holer.name.text = packageList[position].name
     }
 
 
@@ -37,7 +37,7 @@ class PackageRecyclerViewAdapter(val ctx: Context, val packageList: ArrayList<Pr
         val price: TextView = itemView.findViewById(R.id.tv_fg_package_list_original_cost) as TextView
         val main_img : ImageView = itemView.findViewById(R.id.iv_item_fg_package_list) as ImageView
         val saled_price : TextView = itemView.findViewById(R.id.tv_fg_package_list_saled_price)as TextView
-        val content : TextView = itemView.findViewById(R.id.tv_fg_package_list_content) as TextView
+        val name : TextView = itemView.findViewById(R.id.tv_fg_package_list_name)as TextView
 
     }
 

@@ -49,10 +49,10 @@ class DeliveryFragment : Fragment() {
         bundle.putString("name",name)
          deliverylistFragment.arguments = bundle
 
-        var trans = activity!!.supportFragmentManager.beginTransaction()
-        trans.replace(R.id.fl_fg_category_main,deliverylistFragment)
-       trans.addToBackStack(fragment.javaClass.simpleName)
-        trans.commit()
+        var translate = activity!!.supportFragmentManager.beginTransaction()
+        translate.replace(R.id.fl_fg_category_main,deliverylistFragment)
+       translate.addToBackStack(fragment.javaClass.simpleName)
+        translate.commit()
 
 //            .replace(R.id.fl_fg_category_main, fragment, fragment.javaClass.simpleName)
 //            .addToBackStack(fragment.javaClass.simpleName)

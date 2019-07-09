@@ -16,7 +16,7 @@ interface NetworkService {
 
 
     //패키지 리스트 조회
-    @GET("/product/package")
+    @GET("product/package")
     fun  getProductPackageListResponse(
         @Query("category")  category: String,
         @Query("flag") flag : Int

@@ -226,6 +226,7 @@ class DeliveryListFragment : Fragment() {
     }
 
 
+
     fun setProductDeliveyList(category_name : String){
 
 
@@ -247,9 +248,10 @@ class DeliveryListFragment : Fragment() {
 
                 }
                 else{
-                    Log.v("TAG", "마이페이지 서버 값 전달 실패")
+                    Log.v("TAG", "서버 값 전달 실패")
                 }
             }
+
             override fun onFailure(call: Call<GetProductDeliveyListResponse>?, t: Throwable?) {
                 Log.v("TAG", "통신 실패 = " +t.toString())
             }
