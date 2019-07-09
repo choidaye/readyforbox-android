@@ -3,22 +3,15 @@ package com.choidaye.readyforbox.UI.Fragment.Search
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
-import com.choidaye.readyforbox.Data.Product
-import com.choidaye.readyforbox.Data.SearchData
 
 import com.choidaye.readyforbox.R
 
 import com.choidaye.readyforbox.UI.Adapter.SearchFragmentStatePagerAdapter
-import com.choidaye.readyforbox.UI.Adapter.SearchRecyclcerViewAdapter
-import kotlinx.android.synthetic.main.fragment_category.*
-import kotlinx.android.synthetic.main.fragment_delivery_list.*
 import kotlinx.android.synthetic.main.fragment_search.*
-import kotlinx.android.synthetic.main.fragment_search_new.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

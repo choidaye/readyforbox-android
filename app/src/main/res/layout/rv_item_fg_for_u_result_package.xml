@@ -19,6 +19,7 @@
                 android:id="@+id/img_fg_for_u_result_thumbnail"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
+                android:scaleType="centerCrop"
                 android:background="@color/lightBlueGrey"/>
 
 

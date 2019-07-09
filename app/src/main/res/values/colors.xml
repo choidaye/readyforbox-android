@@ -6,13 +6,15 @@
 
 
     <!--app color-->
+    <color name="black">#000000</color>
     <color name="White">#ffffff</color>
     <color name="pumpkinOrange">#ff7400</color>
     <color name="lightBlueGrey">#ced4da</color>
     <color name="charcoalGrey">#343a40</color>
     <color name="darkGrey">#212529</color>
     <color name="paleGrey">#f8f9fa</color>
-    <color name="veryㅣightPink">#efefef</color>
+    <color name="verylightPink">#efefef</color>
     <color name="blueGrey">#868e96</color>
+    <color name="veryLightPinkFour">#f3f3f3</color>
 
 </resources>

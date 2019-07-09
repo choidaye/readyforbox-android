@@ -9,8 +9,10 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 
 import com.choidaye.readyforbox.R
+import com.choidaye.readyforbox.UI.Activity.Cart.CartActivity
 import com.choidaye.readyforbox.UI.Adapter.CategoryFragmentStatePagerAdapter
 import kotlinx.android.synthetic.main.fragment_category.*
+import org.jetbrains.anko.support.v4.startActivity
 
 
 /**
@@ -30,8 +32,12 @@ class CategoryFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+
+        setOnBtnClickListener()
+
         configureToptab()
     }
+
 
     private fun configureToptab() {
         vp_fg_category_product.adapter = CategoryFragmentStatePagerAdapter(childFragmentManager, 2)
@@ -41,5 +47,14 @@ class CategoryFragment : Fragment() {
         tl_fg_category_toptab.getTabAt(0)!!.customView = topTabLayout.findViewById(R.id.rl_fg_category_delivery) as RelativeLayout
         tl_fg_category_toptab.getTabAt(1)!!.customView = topTabLayout.findViewById(R.id.rl_fg_category_package) as RelativeLayout
     }
+
+    private fun setOnBtnClickListener() {
+        btn_toolbar_cart.setOnClickListener {
+            startActivity<CartActivity>()
+        }
+
+    }
+
+
 
 }

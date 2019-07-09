@@ -11,8 +11,10 @@ import com.bumptech.glide.request.RequestCoordinator
 import com.choidaye.readyforbox.R
 import com.choidaye.readyforbox.UI.Activity.MainActivity
 import kotlinx.android.synthetic.main.fragment_delivery.*
+import kotlinx.android.synthetic.main.fragment_delivery_list.*
 import org.jetbrains.anko.support.v4.ctx
 import org.jetbrains.anko.support.v4.startActivity
+import org.jetbrains.anko.support.v4.toast
 
 
 class DeliveryFragment : Fragment() {
@@ -40,12 +42,24 @@ class DeliveryFragment : Fragment() {
 
     //카테고리 메인 프래그먼트를 교체시켜줄겁니다
 
-    fun replaceFragment(fragment: Fragment) {
-        activity!!.supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.fl_fg_category_main, fragment, fragment.javaClass.simpleName)
-            .addToBackStack(fragment.javaClass.simpleName)
-            .commit()
+    fun replaceFragment(fragment: Fragment,name: String) {
+        val deliverylistFragment = DeliveryListFragment()
+        val bundle = Bundle()
+
+        bundle.putString("name",name)
+         deliverylistFragment.arguments = bundle
+
+        var trans = activity!!.supportFragmentManager.beginTransaction()
+        trans.replace(R.id.fl_fg_category_main,deliverylistFragment)
+       trans.addToBackStack(fragment.javaClass.simpleName)
+        trans.commit()
+
+//            .replace(R.id.fl_fg_category_main, fragment, fragment.javaClass.simpleName)
+//            .addToBackStack(fragment.javaClass.simpleName)
+//            .commit()
+
+
+
     }
 
 
@@ -53,11 +67,35 @@ class DeliveryFragment : Fragment() {
 
         btn_fg_delivery_water.setOnClickListener{
 
+            //toast(tv_fg_delivery_water.text.toString()).show()
             //프레그만트 교체
-            replaceFragment(DeliveryListFragment())
-
+         replaceFragment(DeliveryListFragment(),tv_fg_delivery_water.text.toString())
 
         }
+
+
+        btn_fg_delivery_detergent.setOnClickListener {
+            replaceFragment(DeliveryListFragment(),tv_fg_delivery_detergent.text.toString())
+
+        }
+
+
+        btn_fg_delivery_bathroom.setOnClickListener {
+            replaceFragment(DeliveryListFragment(),tv_fg_delivery_bathroom.text.toString())
+
+        }
+
+        btn_fg_delivery_tissue.setOnClickListener {
+            replaceFragment(DeliveryListFragment(),tv_fg_delivery_tissue.text.toString())
+
+        }
+
+        btn_fg_delivery_detergent.setOnClickListener {
+            replaceFragment(DeliveryListFragment(),tv_fg_delivery_detergent.text.toString())
+
+        }
+
+
 
     }
 
