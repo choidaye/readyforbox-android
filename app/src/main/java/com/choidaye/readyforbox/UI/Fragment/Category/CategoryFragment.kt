@@ -48,7 +48,6 @@ class CategoryFragment : Fragment() {
         tl_fg_category_toptab.getTabAt(1)!!.customView = topTabLayout.findViewById(R.id.rl_fg_category_package) as RelativeLayout
     }
 
-
     private fun setOnBtnClickListener() {
         btn_toolbar_cart.setOnClickListener {
             startActivity<CartActivity>()

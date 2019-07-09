@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="31dp"
+    android:background="@drawable/popup_round"
+    android:id="@+id/cart_dialog_design">
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/white_cart_img"
+        android:layout_gravity="center"
+        android:layout_marginLeft="41dp"
+        android:layout_marginRight="45dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상품이 장바구니에"
+        android:layout_gravity="center"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/White"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="담겼습니다"
+        android:layout_gravity="center"
+        android:textSize="12sp"
+        android:layout_marginBottom="18dp"
+        android:textColor="@color/White"/>
+</LinearLayout>
