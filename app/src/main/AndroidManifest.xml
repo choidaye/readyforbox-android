@@ -31,6 +31,9 @@
         <activity android:name=".UI.Activity.SignupCartActivity">
         </activity>
 
+        <activity android:name=".UI.Activity.ForUSettingActivity">
+        </activity>
+
         <activity
                 android:name=".UI.Activity.SplashActivity"
                 android:screenOrientation="portrait"
