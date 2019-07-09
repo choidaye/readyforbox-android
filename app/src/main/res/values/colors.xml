@@ -16,5 +16,7 @@
     <color name="verylightPink">#efefef</color>
     <color name="blueGrey">#868e96</color>
     <color name="veryLightPinkFour">#f3f3f3</color>
+    <color name="brownGrey">#c7c7cc</color>
+    <color name="blur">#60000000</color>
 
 </resources>

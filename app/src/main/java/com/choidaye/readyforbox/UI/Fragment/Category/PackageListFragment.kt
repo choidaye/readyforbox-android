@@ -11,13 +11,9 @@ import android.view.ViewGroup
 import com.choidaye.readyforbox.Data.Product
 
 import com.choidaye.readyforbox.R
-import com.choidaye.readyforbox.UI.Activity.PackageActivity
-import com.choidaye.readyforbox.UI.Adapter.PackageRecyclcerViewAdapter
 import com.choidaye.readyforbox.UI.Adapter.PackageRecyclerViewAdapter
 import kotlinx.android.synthetic.main.fragment_package_list.*
-import kotlinx.android.synthetic.main.rv_item_fg_package_list.*
-import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.support.v4.startActivity
+
 
 
 class PackageListFragment : Fragment() {
@@ -55,6 +51,7 @@ class PackageListFragment : Fragment() {
 
     private fun setOnBtnClickListener() {
         btn_fg_package_list_appliances.setOnClickListener {
+
 
         }
     }
