@@ -6,7 +6,10 @@
              android:id="@+id/fl_delivery_main"
              android:background="@color/White"
              tools:context=".UI.Fragment.Category.DeliveryFragment">
-
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
     <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -26,7 +29,8 @@
                 <LinearLayout
                         android:layout_marginHorizontal="16dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp">
 
                     <RelativeLayout
                             android:id="@+id/btn_fg_delivery_water"
@@ -34,13 +38,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-
                         <ImageView
                                 android:layout_centerHorizontal="true"
                                 android:id="@+id/iv_water"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/delivery_btn_1" />
+                                android:src="@drawable/delivery_btn_1"/>
 
                         <TextView
                                 android:id="@+id/tv_fg_delivery_water"
@@ -51,7 +54,7 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="생수/음료"
                                 android:textColor="@color/darkGrey"
-                                android:textSize="10sp" />
+                                android:textSize="10sp"/>
 
                     </RelativeLayout>
 
@@ -67,7 +70,7 @@
                                 android:id="@+id/detergent"
                                 android:layout_width="42dp"
                                 android:layout_height="42dp"
-                                android:src="@drawable/delivery_btn_2" />
+                                android:src="@drawable/delivery_btn_2"/>
 
                         <TextView
                                 android:id="@+id/tv_fg_delivery_detergent"
@@ -78,7 +81,7 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="세제/섬유유연제"
                                 android:textColor="@color/darkGrey"
-                                android:textSize="10sp" />
+                                android:textSize="10sp"/>
 
                     </RelativeLayout>
 
@@ -94,7 +97,7 @@
                                 android:id="@+id/hairshop"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/delivery_btn_3" />
+                                android:src="@drawable/delivery_btn_3"/>
 
                         <TextView
                                 android:id="@+id/tv_fg_delivery_bathroom"
@@ -105,7 +108,7 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="욕실용품"
                                 android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:textSize="10sp"/>
 
                     </RelativeLayout>
 
@@ -122,7 +125,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
-                                android:src="@drawable/delivery_btn_4" />
+                                android:src="@drawable/delivery_btn_4"/>
 
                         <TextView
                                 android:id="@+id/tv_fg_delivery_tissue"
@@ -133,7 +136,7 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="휴지/물티슈"
                                 android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:textSize="10sp"/>
 
                     </RelativeLayout>
 
@@ -142,23 +145,24 @@
 
 
                 <LinearLayout
-                        android:id="@+id/btn_fg_delivery_clean"
                         android:layout_marginHorizontal="16dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp">
                     <RelativeLayout
+                            android:id="@+id/btn_fg_delivery_clean"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
 
                         <ImageView
-                                android:layout_centerHorizontal="true"
                                 android:id="@+id/friendshop"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/delivery_btn_5" />
+                                android:src="@drawable/delivery_btn_5"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="26dp"/>
 
                         <TextView
                                 android:id="@+id/tv_fg_delivery_clean"
@@ -169,7 +173,7 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="청소용품"
                                 android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:textSize="10sp"/>
 
                     </RelativeLayout>
 
@@ -185,7 +189,7 @@
                                 android:id="@+id/shopping"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/delivery_btn_6" />
+                                android:src="@drawable/delivery_btn_6"/>
 
                         <TextView
                                 android:id="@+id/tv_fg_delivery_cook"
@@ -196,7 +200,7 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="주방용품"
                                 android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:textSize="10sp"/>
 
                     </RelativeLayout>
 
@@ -212,7 +216,8 @@
                                 android:id="@+id/style"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/delivery_btn_7"/>
+                                android:src="@drawable/delivery_btn_7"
+                                android:layout_alignParentTop="true"/>
 
                         <TextView
                                 android:id="@+id/tv_fg_delivery_defuser"
@@ -223,23 +228,23 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="디퓨저/방향제"
                                 android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:textSize="10sp"/>
 
                     </RelativeLayout>
 
 
                     <RelativeLayout
+                            android:id="@+id/btn_fg_delivery_animal"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
-
 
                         <ImageView
                                 android:layout_centerHorizontal="true"
                                 android:id="@+id/order"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/delivery_btn_8" />
+                                android:src="@drawable/delivery_btn_8"/>
 
                         <TextView
                                 android:id="@+id/tv_fg_delivery_animal"
@@ -250,7 +255,7 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="반려동물용품"
                                 android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:textSize="10sp"/>
 
                     </RelativeLayout>
 
@@ -258,14 +263,7 @@
                 </LinearLayout>
 
 
-
-
-
-
-
             </LinearLayout>
-
-
 
 
             <View
@@ -316,8 +314,7 @@
                                 android:textColor="@color/darkGrey"
                                 android:letterSpacing="-0.02"
                                 android:layout_marginTop="6dp"
-                                android:text="제품명제품명제품명제품" />
-
+                                android:text="제품명제품명제품명제품"/>
 
 
                     </LinearLayout>
@@ -332,7 +329,7 @@
                         <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/recommend_btn_1"/>
+                                android:src="@drawable/recommend_btn_2"/>
 
 
                         <TextView
@@ -341,12 +338,10 @@
                                 android:textSize="10sp"
                                 android:textColor="@color/darkGrey"
                                 android:layout_marginTop="6dp"
-                                android:text="제품명제품명제품명제품" />
-
+                                android:text="제품명제품명제품명제품"/>
 
 
                     </LinearLayout>
-
 
 
                     <LinearLayout
@@ -358,7 +353,7 @@
                         <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/recommend_btn_1"/>
+                                android:src="@drawable/recommend_btn_3"/>
 
 
                         <TextView
@@ -367,12 +362,10 @@
                                 android:textSize="10sp"
                                 android:textColor="@color/darkGrey"
                                 android:layout_marginTop="6dp"
-                                android:text="제품명제품명제품명제품" />
-
+                                android:text="제품명제품명제품명제품"/>
 
 
                     </LinearLayout>
-
 
 
                 </LinearLayout>
@@ -421,7 +414,7 @@
                         <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/recommend_btn_1"/>
+                                android:src="@drawable/sale_btn_1"/>
 
 
                         <LinearLayout
@@ -446,10 +439,9 @@
                                     android:textSize="10sp"
                                     android:layout_marginLeft="4dp"
                                     android:textColor="@color/darkGrey"
-                                    android:text="제품명제품" />
+                                    android:text="제품명제품"/>
 
                         </LinearLayout>
-
 
 
                     </LinearLayout>
@@ -464,7 +456,7 @@
                         <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/recommend_btn_1"/>
+                                android:src="@drawable/sale_btn_2"/>
 
 
                         <LinearLayout
@@ -489,14 +481,12 @@
                                     android:textSize="10sp"
                                     android:layout_marginLeft="4dp"
                                     android:textColor="@color/darkGrey"
-                                    android:text="제품명제" />
+                                    android:text="제품명제"/>
 
                         </LinearLayout>
 
 
-
                     </LinearLayout>
-
 
 
                     <LinearLayout
@@ -508,7 +498,7 @@
                         <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/recommend_btn_1"/>
+                                android:src="@drawable/sale_btn_3"/>
 
                         <LinearLayout
                                 android:layout_width="wrap_content"
@@ -532,10 +522,9 @@
                                     android:textSize="10sp"
                                     android:layout_marginLeft="4dp"
                                     android:textColor="@color/darkGrey"
-                                    android:text="제품명제품" />
+                                    android:text="제품명제품"/>
 
                         </LinearLayout>
-
 
 
                     </LinearLayout>
@@ -543,10 +532,10 @@
                 </LinearLayout>
 
 
-
             </LinearLayout>
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
 
-</FrameLayout >
+</FrameLayout>

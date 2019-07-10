@@ -7,17 +7,14 @@
              android:background="@color/White"
              tools:context=".UI.Fragment.Category.PackageFragment">
 
-<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
     <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-
 
         <LinearLayout
                 android:layout_width="match_parent"
@@ -29,6 +26,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="20dp">
+
                 <LinearLayout
                         android:layout_marginHorizontal="16dp"
                         android:layout_width="match_parent"
@@ -55,13 +53,14 @@
                                 android:layout_below="@+id/giftcon"
                                 android:layout_centerHorizontal="true"
                                 android:lineSpacingExtra="6sp"
-                                android:text="공간확보의달인"
+                                android:text="공간확보의 달인"
                                 android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:textSize="10sp" />
 
                     </RelativeLayout>
 
                     <RelativeLayout
+                            android:id="@+id/btn_fg_package_appliances"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -75,6 +74,7 @@
                                 android:src="@drawable/package_btn_6" />
 
                         <TextView
+                                android:id="@+id/tv_fg_package_appliances"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/emoticon"
@@ -82,12 +82,13 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="가전제품"
                                 android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:textSize="10sp" />
 
                     </RelativeLayout>
 
 
                     <RelativeLayout
+                            android:id="@+id/btn_fg_package_manage"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -100,6 +101,7 @@
                                 android:src="@drawable/package_btn_3" />
 
                         <TextView
+                                android:id="@+id/tv_fg_package_manage"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/hairshop"
@@ -107,12 +109,13 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="우리 집 관리"
                                 android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:textSize="10sp" />
 
                     </RelativeLayout>
 
 
                     <RelativeLayout
+                            android:id="@+id/btn_fg_package_homecafe"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -126,6 +129,7 @@
                                 android:src="@drawable/package_btn_4" />
 
                         <TextView
+                                android:id="@+id/tv_fg_package_homecafe"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/makers"
@@ -133,7 +137,7 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="홈카페"
                                 android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:textSize="10sp" />
 
                     </RelativeLayout>
 
@@ -148,7 +152,7 @@
                         android:layout_marginTop="12dp">
 
                     <RelativeLayout
-                            android:id="@+id/btn_fg_package_list_sleep"
+                            android:id="@+id/btn_fg_package_sleep"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -159,10 +163,12 @@
                                 android:id="@+id/friendshop"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="26dp"
                                 android:src="@drawable/package_btn_5" />
 
                         <TextView
-                                android:id="@+id/tv_fg_package_list_sleep"
+                                android:id="@+id/tv_fg_package_sleep"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/friendshop"
@@ -170,11 +176,12 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="포근하게 자기"
                                 android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:textSize="10sp" />
 
                     </RelativeLayout>
 
                     <RelativeLayout
+                            android:id="@+id/btn_fg_package_dress"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -196,12 +203,13 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="입는건 중요해"
                                 android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:textSize="10sp" />
 
                     </RelativeLayout>
 
 
                     <RelativeLayout
+                            android:id="@+id/btn_fg_package_animal"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -215,6 +223,7 @@
                                 android:layout_alignParentTop="true"/>
 
                         <TextView
+                                android:id="@+id/tv_fg_package_animal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/style"
@@ -222,12 +231,13 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="반려동물과 함께"
                                 android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:textSize="10sp" />
 
                     </RelativeLayout>
 
 
                     <RelativeLayout
+                            android:id="@+id/btn_fg_package_special"
                             android:layout_weight="1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -241,6 +251,7 @@
                                 android:src="@drawable/package_btn_8" />
 
                         <TextView
+                                android:id="@+id/tv_fg_package_special"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/order"
@@ -248,7 +259,7 @@
                                 android:lineSpacingExtra="6sp"
                                 android:text="특별기획"
                                 android:textColor="#0a0a0a"
-                                android:textSize="11sp" />
+                                android:textSize="10sp" />
 
                     </RelativeLayout>
 
@@ -301,7 +312,7 @@
                             android:orientation="vertical">
 
                         <ImageView
-                                android:layout_width="105dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="105dp"
                                 android:src="@drawable/recommend_btn_1"/>
 
@@ -329,7 +340,7 @@
                         <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/recommend_btn_1"/>
+                                android:src="@drawable/recommend_btn_2"/>
 
 
                         <TextView
@@ -355,7 +366,7 @@
                         <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/recommend_btn_1"/>
+                                android:src="@drawable/recommend_btn_3"/>
 
 
                         <TextView
@@ -418,7 +429,7 @@
                         <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/recommend_btn_1"/>
+                                android:src="@drawable/sale_btn_1"/>
 
 
                         <LinearLayout
@@ -461,7 +472,7 @@
                         <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/recommend_btn_1"/>
+                                android:src="@drawable/sale_btn_2"/>
 
 
                         <LinearLayout
@@ -505,7 +516,7 @@
                         <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/recommend_btn_1"/>
+                                android:src="@drawable/sale_btn_3"/>
 
                         <LinearLayout
                                 android:layout_width="wrap_content"

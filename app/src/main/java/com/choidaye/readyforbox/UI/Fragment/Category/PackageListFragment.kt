@@ -15,6 +15,7 @@ import com.choidaye.readyforbox.Network.NetworkService
 
 import com.choidaye.readyforbox.R
 import com.choidaye.readyforbox.UI.Adapter.PackageRecyclerViewAdapter
+import kotlinx.android.synthetic.main.fragment_delivery_list.*
 import kotlinx.android.synthetic.main.fragment_package_list.*
 import org.jetbrains.anko.support.v4.toast
 import retrofit2.Call
@@ -61,7 +62,14 @@ class PackageListFragment : Fragment() {
 //        toolbar_delivery_list_title.text= extra!!.getString("name")
 
         setProductPackageList(extra!!.getString("name"))
-
+        if(extra!!.getString("name").equals("공간확보의 달인")) tv_fg_package_list_area.setTextColor(resources.getColor(R.color.pumpkinOrange))
+        else if(extra!!.getString("name").equals("가전제품")) tv_fg_package_list_appliances.setTextColor(resources.getColor(R.color.pumpkinOrange))
+        else if(extra!!.getString("name").equals("우리 집 관리")) tv_fg_package_list_manage.setTextColor(resources.getColor(R.color.pumpkinOrange))
+        else if(extra!!.getString("name").equals("홈카페")) tv_fg_pakcage_list_homecafe.setTextColor(resources.getColor(R.color.pumpkinOrange))
+        else if(extra!!.getString("name").equals("포근하게 자기")) tv_fg_package_list_sleep.setTextColor(resources.getColor(R.color.pumpkinOrange))
+        else if(extra!!.getString("name").equals("입는건 중요해")) tv_fg_package_list_dress.setTextColor(resources.getColor(R.color.pumpkinOrange))
+        else if(extra!!.getString("name").equals("반려동물과 함께")) tv_fg_package_list_animal.setTextColor(resources.getColor(R.color.pumpkinOrange))
+        else if(extra!!.getString("name").equals("특별기획")) tv_fg_package_list_special.setTextColor(resources.getColor(R.color.pumpkinOrange))
 
     }
 
