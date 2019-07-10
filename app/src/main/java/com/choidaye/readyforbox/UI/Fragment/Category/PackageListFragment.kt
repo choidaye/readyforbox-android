@@ -67,16 +67,20 @@ class PackageListFragment : Fragment() {
 
 
 
+
     private fun setRecyclerView() {
 
-        var packageRecyclcerViewAdapter =PackageRecyclerViewAdapter(activity!!, packageList)
-        rv_fg_package_list.adapter = packageRecyclcerViewAdapter
+        packageRecyclerViewAdapter = PackageRecyclerViewAdapter(activity!!, packageList)
+        rv_fg_package_list.adapter =  packageRecyclerViewAdapter
         rv_fg_package_list.layoutManager =  LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
 
 
     }
 
 
+
+
+    //필터 버튼 눌렀을 때 내가 누른 버튼 아니고 다른 버튼은 클리어 시켜줌
     private  fun clearbuttonTextColor(){
         tv_fg_package_list_appliances.setTextColor(resources.getColor(R.color.darkGrey))
         tv_fg_package_list_area.setTextColor(resources.getColor(R.color.darkGrey))
@@ -85,7 +89,7 @@ class PackageListFragment : Fragment() {
         tv_fg_package_list_animal.setTextColor(resources.getColor(R.color.darkGrey))
         tv_fg_package_list_dress.setTextColor(resources.getColor(R.color.darkGrey))
         tv_fg_package_list_sleep.setTextColor(resources.getColor(R.color.darkGrey))
-        //tv_fg_pakcage_list_homecafe.setTextColor(resources.getColor(R.color.darkGrey))
+        tv_fg_pakcage_list_homecafe.setTextColor(resources.getColor(R.color.darkGrey))
     }
 
 
@@ -101,6 +105,7 @@ class PackageListFragment : Fragment() {
 
 
 
+            setProductPackageList(tv_fg_package_list_appliances.text.toString())
             clearbuttonTextColor()
             tv_fg_package_list_appliances.setTextColor(resources.getColor(R.color.pumpkinOrange))
         }
@@ -118,6 +123,8 @@ class PackageListFragment : Fragment() {
 
         btn_fg_package_list_manage.setOnClickListener{
 
+
+            setProductPackageList(tv_fg_package_list_manage.text.toString())
             clearbuttonTextColor()
             tv_fg_package_list_manage.setTextColor(resources.getColor(R.color.pumpkinOrange))
 
@@ -126,6 +133,7 @@ class PackageListFragment : Fragment() {
 
         btn_fg_package_list_special.setOnClickListener{
 
+            setProductPackageList(tv_fg_package_list_special.text.toString())
             clearbuttonTextColor()
             tv_fg_package_list_special.setTextColor(resources.getColor(R.color.pumpkinOrange))
 
@@ -134,6 +142,8 @@ class PackageListFragment : Fragment() {
 
         btn_fg_package_list_animal.setOnClickListener{
 
+
+            setProductPackageList(tv_fg_package_list_animal.text.toString())
             clearbuttonTextColor()
             tv_fg_package_list_animal.setTextColor(resources.getColor(R.color.pumpkinOrange))
 
@@ -141,6 +151,10 @@ class PackageListFragment : Fragment() {
 
 
         btn_fg_package_list_dress.setOnClickListener{
+
+
+
+            setProductPackageList(tv_fg_package_list_dress.text.toString())
 
             clearbuttonTextColor()
             tv_fg_package_list_dress.setTextColor(resources.getColor(R.color.pumpkinOrange))
@@ -150,6 +164,8 @@ class PackageListFragment : Fragment() {
 
         btn_fg_package_list_sleep.setOnClickListener{
 
+
+            setProductPackageList(tv_fg_package_list_sleep.text.toString())
             clearbuttonTextColor()
             tv_fg_package_list_sleep.setTextColor(resources.getColor(R.color.pumpkinOrange))
 
@@ -157,6 +173,10 @@ class PackageListFragment : Fragment() {
 
         btn_fg_package_list_homecafe.setOnClickListener{
 
+
+
+
+            setProductPackageList(tv_fg_pakcage_list_homecafe.text.toString())
             clearbuttonTextColor()
             tv_fg_pakcage_list_homecafe.setTextColor(resources.getColor(R.color.pumpkinOrange))
 
@@ -166,6 +186,9 @@ class PackageListFragment : Fragment() {
     }
 
 
+
+
+    //packagelist를 통신으로 받아오는 부분
 
     private fun setProductPackageList(category_name : String) {
 
@@ -177,15 +200,11 @@ class PackageListFragment : Fragment() {
 
                 if (response!!.isSuccessful) {
 
-
-
-                    toast(response.body()!!.status.toString())
-
+                    Log.v("statuus code",response.body()!!.status.toString())
+                    packageList.clear()
 
                     Log.e("clear",packageList.toString())
 
-
-//                packageRecyclerViewAdapter = PackageRecyclerViewAdapter(context!!, response.body()!!.data!!.packages )
 
                     var temp: ArrayList<Packages> = response.body()!!.data.packages
                     if (temp.size > 0) {

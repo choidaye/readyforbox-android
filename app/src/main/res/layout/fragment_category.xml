@@ -51,22 +51,24 @@
     </android.support.v7.widget.Toolbar>
 
 
-    <android.support.design.widget.TabLayout
-            android:id="@+id/tl_fg_category_toptab"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/toolbar">
+        <android.support.design.widget.TabLayout
+                android:id="@+id/tl_fg_category_toptab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar">
 
-    </android.support.design.widget.TabLayout>
+        </android.support.design.widget.TabLayout>
 
-    <android.support.v4.view.ViewPager
-            android:id="@+id/vp_fg_category_product"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tl_fg_category_toptab">
+        <android.support.v4.view.ViewPager
+                android:id="@+id/vp_fg_category_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tl_fg_category_toptab">
 
 
-    </android.support.v4.view.ViewPager>
+        </android.support.v4.view.ViewPager>
+
+
     </LinearLayout>
 
 

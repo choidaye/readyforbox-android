@@ -15,7 +15,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
-
+        <activity android:name=".UI.Activity.MyPageDeliveryManangerActivity">
+        </activity>
         <activity android:name=".UI.Activity.MainActivity">
         </activity>
         <activity android:name=".UI.Activity.Cart.CartActivity">
@@ -30,10 +31,8 @@
         </activity>
         <activity android:name=".UI.Activity.SignupCartActivity">
         </activity>
-
         <activity android:name=".UI.Activity.ForUSettingActivity">
         </activity>
-
         <activity
                 android:name=".UI.Activity.SplashActivity"
                 android:screenOrientation="portrait"
@@ -44,7 +43,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
