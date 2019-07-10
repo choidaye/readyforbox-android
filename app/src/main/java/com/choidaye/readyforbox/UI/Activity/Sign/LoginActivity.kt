@@ -1,9 +1,10 @@
-package com.choidaye.readyforbox.UI.Activity
+package com.choidaye.readyforbox.UI.Activity.Sign
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.choidaye.readyforbox.R
+import com.choidaye.readyforbox.UI.Activity.MainActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {

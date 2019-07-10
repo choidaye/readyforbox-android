@@ -23,7 +23,7 @@ class CartActivity : AppCompatActivity() {
 
         var cartPackageList: ArrayList<CartData> = ArrayList()
 
-        cartPackageList.add(CartData("삼다수, ","http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428",17000,"1달에 한번"))
+        cartPackageList.add(CartData("삼다수, ","http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428",17000,"1",1))
 
 
 
