@@ -1,4 +1,4 @@
-package com.choidaye.readyforbox.UI.Activity
+package com.choidaye.readyforbox.UI.Activity.Sign
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity

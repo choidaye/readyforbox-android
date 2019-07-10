@@ -20,6 +20,7 @@
             android:id="@+id/iv_item_fg_package_list"
             android:layout_width="180dp"
             android:layout_height="90dp"
+            android:scaleType="centerCrop"
             android:layout_centerInParent="true"
             android:src="@drawable/delivery_btn_1"/>
     </RelativeLayout>

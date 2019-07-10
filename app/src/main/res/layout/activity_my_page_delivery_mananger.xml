@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/White"
-        tools:context=".UI.Activity.MyPageDeliveryManangerActivity">
+        tools:context=".UI.Activity.Mypage.MyPageDeliveryManangerActivity">
 
 
 
@@ -63,7 +63,8 @@
             android:id="@+id/vp_ac_my_page_delivery_manage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tl_fg_category_toptab">
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/tl_ac_my_page_delivery_manage_toptab">
 
 
     </android.support.v4.view.ViewPager>

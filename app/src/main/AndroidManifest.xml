@@ -15,26 +15,29 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
-        <activity android:name=".UI.Activity.MyPageDeliveryManangerActivity">
+
+        <activity android:name=".UI.Activity.Mypage.MyPageDeliveryManangerActivity">
         </activity>
         <activity android:name=".UI.Activity.MainActivity">
         </activity>
         <activity android:name=".UI.Activity.Cart.CartActivity">
         </activity>
-        <activity android:name=".UI.Activity.SignupActivity">
+        <activity android:name=".UI.Activity.Sign.SignupActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
         </activity>
-        <activity android:name=".UI.Activity.OrdercompletedActivity">
+        <activity android:name=".UI.Activity.Order.OrdercompletedActivity">
         </activity>
         <activity android:name=".UI.Activity.TutorialActivity">
         </activity>
-        <activity android:name=".UI.Activity.LoginActivity">
+        <activity android:name=".UI.Activity.Sign.LoginActivity">
         </activity>
-        <activity android:name=".UI.Activity.SignupCartActivity">
+        <activity android:name=".UI.Activity.Sign.SignupCartActivity">
         </activity>
         <activity android:name=".UI.Activity.ForUSettingActivity">
         </activity>
@@ -43,6 +46,15 @@
                 android:screenOrientation="portrait"
                 android:theme="@style/SplashTheme">
         </activity>
+
+        <activity android:name=".UI.Activity.WebviewActivity">
+
+        </activity>
+
+
+
+
+
     </application>
 
 </manifest>

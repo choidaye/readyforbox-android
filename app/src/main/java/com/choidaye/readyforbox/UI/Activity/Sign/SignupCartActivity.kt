@@ -1,4 +1,4 @@
-package com.choidaye.readyforbox.UI.Activity
+package com.choidaye.readyforbox.UI.Activity.Sign
 
 import android.app.Activity
 import android.content.DialogInterface
@@ -10,7 +10,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.choidaye.readyforbox.R
-import kotlinx.android.synthetic.main.activity_signup.*
+import com.choidaye.readyforbox.UI.Activity.MainActivity
 import kotlinx.android.synthetic.main.activity_signup.ic_toolbar_back
 import kotlinx.android.synthetic.main.activity_signup_cart.*
 

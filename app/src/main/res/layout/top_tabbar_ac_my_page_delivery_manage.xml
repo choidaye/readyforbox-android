@@ -5,7 +5,7 @@
               android:layout_height="36dp"
               android:dividerPadding="1dp">
     <RelativeLayout
-            android:id="@+id/rl_fg_category_delivery"
+            android:id="@+id/rl_ac_my_page_delivery_manage_check"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -19,7 +19,7 @@
                 android:textStyle="bold"/>
     </RelativeLayout>
     <RelativeLayout
-            android:id="@+id/rl_fg_category_package"
+            android:id="@+id/rl_ac_my_page_delivery_manage_modify"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"

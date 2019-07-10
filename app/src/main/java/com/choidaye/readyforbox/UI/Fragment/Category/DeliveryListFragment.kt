@@ -32,6 +32,8 @@ class DeliveryListFragment : Fragment() {
     var deliveryList = ArrayList<Product>()
 
 
+
+
     lateinit var deliveryRecyclcerViewAdapter: DeliveryRecyclerViewAdapter
 
 
@@ -206,7 +208,7 @@ class DeliveryListFragment : Fragment() {
 
 
 //
-//        productListFilter.rb_filter_product_list_new.text = temp[0]!!.name
+//        productListFilter.rb_filter_product_list_new.text = result[0]!!.
 //        productListFilter.rb_filter_product_list_famous.text = temp[1]!!.name
 //        productListFilter.rb_filter_product_list_cheap.text = temp[2]!!.name
 
@@ -217,6 +219,7 @@ class DeliveryListFragment : Fragment() {
 
             result =  productListFilter.rb_filter_product_list_new.text.toString()!!
             tv_fg_delivery_list_filter_title.text = result
+
             productListFilter.dismiss()
 
 
@@ -228,6 +231,25 @@ class DeliveryListFragment : Fragment() {
 
 
             result = productListFilter.rb_filter_product_list_famous.text.toString()!!
+            tv_fg_delivery_list_filter_title.text = result
+            productListFilter.dismiss()
+        }
+
+
+        productListFilter.rb_filter_product_list_cheap.setOnCheckedChangeListener { buttonView, isChecked ->
+
+
+            result = productListFilter.rb_filter_product_list_cheap.text.toString()!!
+            tv_fg_delivery_list_filter_title.text = result
+            productListFilter.dismiss()
+        }
+
+
+
+        productListFilter.rb_filter_product_list_expansive.setOnCheckedChangeListener { buttonView, isChecked ->
+
+
+            result = productListFilter.rb_filter_product_list_expansive.text.toString()!!
             tv_fg_delivery_list_filter_title.text = result
             productListFilter.dismiss()
         }

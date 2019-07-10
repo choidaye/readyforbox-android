@@ -111,23 +111,38 @@
 
 
 
+        <LinearLayout
+                android:id="@+id/li_tv_ac_cart_delivery_term"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
         <TextView
                 android:id="@+id/tv_rv_ac_cart_delivery_term"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
                 android:textSize="12sp"
                 android:textColor="@color/darkGrey"
-                android:text="1달에 한 번" />
+                android:text="1" />
 
-        <ImageView
+        <TextView
+                android:id="@+id/tv_rv_ac_cart_delivery_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="4dp"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/tv_rv_ac_cart_delivery_term"
-                android:src="@drawable/button_arrow"/>
+                android:textSize="12sp"
+                android:textColor="@color/darkGrey"
+                android:text="달에 한 번" />
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/button_arrow"/>
+
+        </LinearLayout>
+
+
 
 
 
@@ -151,26 +166,38 @@
 
 
 
-        <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="4dp"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/tv_rv_ac_cart_delivery_num"
-                android:src="@drawable/button_arrow"/>
 
 
 
-
-        <TextView
-                android:id="@+id/tv_rv_ac_cart_delivery_num"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+        <LinearLayout
+                android:id="@+id/li_tv_ac_cart_delivery_num"
                 android:layout_centerInParent="true"
-                android:textSize="12sp"
-                android:textColor="@color/darkGrey"
-                android:text="1개" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tv_rv_ac_cart_delivery_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/darkGrey"
+                    android:text="1" />
+
+            <TextView
+                    android:id="@+id/tv_rv_ac_cart_delivery_num_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/darkGrey"
+                    android:text="개" />
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/button_arrow"/>
+        </LinearLayout>
+
 
     </RelativeLayout>
 
