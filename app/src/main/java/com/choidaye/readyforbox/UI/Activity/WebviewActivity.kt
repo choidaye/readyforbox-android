@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.webkit.WebSettings
 import com.choidaye.readyforbox.R
+import com.choidaye.readyforbox.UI.Activity.Sign.SignupCartActivity
 import kotlinx.android.synthetic.main.activity_webview.*
 
 
