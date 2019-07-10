@@ -94,7 +94,22 @@ class DeliveryFragment : Fragment() {
             replaceFragment(DeliveryListFragment(),tv_fg_delivery_detergent.text.toString())
 
         }
+        btn_fg_delivery_clean.setOnClickListener {
+            replaceFragment(DeliveryListFragment(),tv_fg_delivery_clean.text.toString())
 
+        }
+        btn_fg_delivery_cook.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_delivery_cook.text.toString())
+
+        }
+        btn_fg_delivery_defuser.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_delivery_defuser.text.toString())
+
+        }
+        btn_fg_delivery_animal.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_delivery_animal.text.toString())
+
+        }
 
 
     }

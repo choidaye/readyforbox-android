@@ -47,7 +47,7 @@ class SignupCartActivity : AppCompatActivity() {
         //추후 변경
         btn_ac_signup_nextcom.setOnClickListener {
             val intent: Intent = Intent(this, MainActivity::class.java)
-            startActivityForResult(intent, 100)
+            //startActivityForResult(intent, 100)
         }
         btn_ac_cartif_search.setOnClickListener {
             val intent: Intent = Intent(this, WebviewActivity::class.java)
@@ -64,6 +64,10 @@ class SignupCartActivity : AppCompatActivity() {
            if(resultCode == Activity.RESULT_OK) {
                val str: String = data!!.getStringExtra("zoneCode")
                edtAddressNum.setText(str)
+               val address: String = data!!.getStringExtra("address")
+               val buildingName: String = data!!.getStringExtra("buildingName")
+               edtAddress.setText(address+buildingName)
+
                Log.e("myTag", "SignupCartActivity" + str)
 
            }

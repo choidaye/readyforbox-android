@@ -21,6 +21,9 @@ class WebviewActivity : AppCompatActivity() {
         postView.setCallback { zoneCode, address, buildingName ->
             val intent: Intent = Intent(this, SignupCartActivity::class.java)
             intent.putExtra("zoneCode", "" + zoneCode)
+            intent.putExtra("address", "" + address)
+            intent.putExtra("buildingName","" + buildingName)
+
             Log.e("myTag", "WebviewActivity: "+ zoneCode)
             setResult(Activity.RESULT_OK, intent);
             finish()
