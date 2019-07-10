@@ -8,6 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.choidaye.readyforbox.R
+import com.choidaye.readyforbox.UI.Activity.ForUSettingActivity
+import kotlinx.android.synthetic.main.fragment_for_u.*
+import org.jetbrains.anko.support.v4.startActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,5 +31,10 @@ class ForUFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_for_u, container, false)
     }
 
-
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        btn_only_setting.setOnClickListener {
+            startActivity<ForUSettingActivity>()
+        }
+    }
 }

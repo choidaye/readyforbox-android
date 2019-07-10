@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import com.choidaye.readyforbox.R
 import kotlinx.android.synthetic.main.fragment_delivery.*
 import kotlinx.android.synthetic.main.fragment_package.*
+import kotlinx.android.synthetic.main.fragment_package_list.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -44,19 +45,24 @@ class PackageFragment : Fragment() {
 
     //카테고리 메인 프래그먼트를 교체시켜줄겁니다
 
-    fun replaceFragment(fragment: Fragment) {
-        activity!!.supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.fl_fg_category_main, fragment, fragment.javaClass.simpleName)
-            .addToBackStack(fragment.javaClass.simpleName)
-            .commit()
+    fun replaceFragment(fragment: Fragment,name: String) {
+        val packagelistFragment =PackageListFragment()
+        val bundle = Bundle()
+
+        bundle.putString("name",name)
+        packagelistFragment.arguments = bundle
+
+        var trans = activity!!.supportFragmentManager.beginTransaction()
+        trans.replace(R.id.fl_fg_category_main,packagelistFragment)
+        trans.addToBackStack(fragment.javaClass.simpleName)
+        trans.commit()
     }
 
 
     private fun setOnBtnClickListener() {
-        btn_fg_package_dress.setOnClickListener{
+        btn_fg_package_area.setOnClickListener{
 
-            replaceFragment(PackageListFragment())
+            replaceFragment(PackageListFragment(),tv_fg_package_area.text.toString())
 
 
         }
