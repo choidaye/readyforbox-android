@@ -17,10 +17,7 @@ import kotlinx.android.synthetic.main.fragment_package_list.*
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- *
- */
+
 class PackageFragment : Fragment() {
 
     override fun onCreateView(
@@ -61,9 +58,35 @@ class PackageFragment : Fragment() {
 
     private fun setOnBtnClickListener() {
         btn_fg_package_area.setOnClickListener{
-
             replaceFragment(PackageListFragment(),tv_fg_package_area.text.toString())
 
+        }
+        btn_fg_package_appliances.setOnClickListener {
+            replaceFragment(DeliveryListFragment(),tv_fg_package_appliances.text.toString())
+
+        }
+        btn_fg_package_manage.setOnClickListener {
+            replaceFragment(DeliveryListFragment(),tv_fg_package_manage.text.toString())
+
+        }
+        btn_fg_package_homecafe.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_package_homecafe.text.toString())
+
+        }
+        btn_fg_package_sleep.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_package_sleep.text.toString())
+
+        }
+        btn_fg_package_dress.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_package_dress.text.toString())
+
+        }
+        btn_fg_package_animal.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_package_animal.text.toString())
+
+        }
+        btn_fg_package_special.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_package_special.text.toString())
 
         }
 

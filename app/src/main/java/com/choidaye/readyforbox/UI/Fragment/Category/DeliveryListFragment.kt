@@ -66,6 +66,18 @@ class DeliveryListFragment : Fragment() {
 //        toolbar_delivery_list_title.text= extra!!.getString("name")
 
         setProductDeliveyList(extra!!.getString("name"))
+        if(extra!!.getString("name").equals("생수/음료")) tv_fg_delivery_list_water.setTextColor(resources.getColor(R.color.pumpkinOrange))
+        else if(extra!!.getString("name").equals("세제/섬유유연제")) tv_fg_delivery_list_detergent.setTextColor(resources.getColor(R.color.pumpkinOrange))
+        else if(extra!!.getString("name").equals("욕실용품")) tv_fg_delivery_list_bathroom.setTextColor(resources.getColor(R.color.pumpkinOrange))
+        else if(extra!!.getString("name").equals("휴지/물티슈")) tv_fg_delivery_list_tissue.setTextColor(resources.getColor(R.color.pumpkinOrange))
+        else if(extra!!.getString("name").equals("청소용품")) tv_fg_delivery_list_clean.setTextColor(resources.getColor(R.color.pumpkinOrange))
+        else if(extra!!.getString("name").equals("주방용품")) tv_fg_delivery_list_cook.setTextColor(resources.getColor(R.color.pumpkinOrange))
+        else if(extra!!.getString("name").equals("디퓨저/방향제")) tv_fg_delivery_list_defuser.setTextColor(resources.getColor(R.color.pumpkinOrange))
+        else if(extra!!.getString("name").equals("반려동물용품")) tv_fg_delivery_list_animal.setTextColor(resources.getColor(R.color.pumpkinOrange))
+
+
+
+
     }
 
     //리사이클러뷰어댑터
