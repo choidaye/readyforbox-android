@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.Toast
 import com.choidaye.readyforbox.R
 import com.choidaye.readyforbox.UI.Activity.MainActivity
+import com.choidaye.readyforbox.UI.Activity.WebviewActivity
 import kotlinx.android.synthetic.main.activity_signup.ic_toolbar_back
 import kotlinx.android.synthetic.main.activity_signup_cart.*
 

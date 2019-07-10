@@ -16,7 +16,8 @@
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
 
-        <activity android:name=".UI.Activity.Mypage.MyPageDeliveryManangerActivity">
+        <activity android:name=".UI.Activity.Mypage.MyPageDeliveryManangerActivity"></activity>
+        <activity android:name=".UI.Activity.WebviewActivity">
         </activity>
         <activity android:name=".UI.Activity.MainActivity">
         </activity>
@@ -47,9 +48,6 @@
                 android:theme="@style/SplashTheme">
         </activity>
 
-        <activity android:name=".UI.Activity.WebviewActivity">
-
-        </activity>
 
 
 
