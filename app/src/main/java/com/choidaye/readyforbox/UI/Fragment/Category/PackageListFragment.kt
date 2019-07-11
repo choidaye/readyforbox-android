@@ -14,9 +14,11 @@ import com.choidaye.readyforbox.Network.ApplicationController
 import com.choidaye.readyforbox.Network.NetworkService
 
 import com.choidaye.readyforbox.R
+import com.choidaye.readyforbox.UI.Activity.PackageActivity
 import com.choidaye.readyforbox.UI.Adapter.PackageRecyclerViewAdapter
 import kotlinx.android.synthetic.main.fragment_delivery_list.*
 import kotlinx.android.synthetic.main.fragment_package_list.*
+import org.jetbrains.anko.support.v4.startActivity
 import org.jetbrains.anko.support.v4.toast
 import retrofit2.Call
 import retrofit2.Callback
@@ -72,20 +74,16 @@ class PackageListFragment : Fragment() {
         else if(extra!!.getString("name").equals("특별기획")) tv_fg_package_list_special.setTextColor(resources.getColor(R.color.pumpkinOrange))
 
     }
-
-
-
-
     private fun setRecyclerView() {
 
-        packageRecyclerViewAdapter = PackageRecyclerViewAdapter(activity!!, packageList)
+        packageRecyclerViewAdapter = PackageRecyclerViewAdapter(activity!!, packageList) {Packages ->
+        startActivity<PackageActivity>()
+    }
         rv_fg_package_list.adapter =  packageRecyclerViewAdapter
         rv_fg_package_list.layoutManager =  LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
 
 
     }
-
-
 
 
     //필터 버튼 눌렀을 때 내가 누른 버튼 아니고 다른 버튼은 클리어 시켜줌
@@ -234,9 +232,6 @@ class PackageListFragment : Fragment() {
             }
         })
     }
-
-
-
 
 }
 

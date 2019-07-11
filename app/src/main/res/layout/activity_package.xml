@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/verylightPink"
     tools:context=".UI.Activity.PackageActivity">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
         <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,6 +29,7 @@
                     android:text="패키지 상품정보"
                     android:textSize="17sp"
                     android:textStyle="bold"
+                    android:textColor="@color/darkGrey"
                     android:layout_centerInParent="true"/>
                 <ImageView
                     android:layout_width="24dp"
@@ -79,6 +85,7 @@
                             android:textColor="@color/darkGrey"
                             android:layout_marginRight="5dp"/>
                         <TextView
+                                android:id="@+id/txt_package_detail_realPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="11,700"
@@ -117,11 +124,12 @@
                     android:id="@+id/rv_item_package_detail_all"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp">
+                    android:layout_marginTop="3dp">
                 </android.support.v7.widget.RecyclerView>
             </LinearLayout>
         </ScrollView>
         <Button
+                android:id="@+id/btn_package_buy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="구매하기"
@@ -129,6 +137,16 @@
             android:textSize="25sp"
             android:textColor="@color/White"
             android:background="@color/pumpkinOrange"
-            android:paddingVertical="12dp"/>
+            android:paddingVertical="16dp"/>
     </LinearLayout>
-</RelativeLayout>
+    <View
+            android:id="@+id/package_blur"
+            android:layout_width="match_parent"
+            android:layout_height="620dp"
+            android:background="@color/blur"
+            android:visibility="gone"></View>
+    </RelativeLayout>
+    <include
+        android:id="@+id/package_option"
+        layout="@layout/package_option"/>
+</android.support.design.widget.CoordinatorLayout>

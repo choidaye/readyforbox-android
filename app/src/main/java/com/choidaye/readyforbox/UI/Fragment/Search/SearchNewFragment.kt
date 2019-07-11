@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.choidaye.readyforbox.DB.SearchSharedPreferenceController
 import com.choidaye.readyforbox.Data.SearchData
 
 import com.choidaye.readyforbox.R
@@ -47,6 +48,7 @@ class SearchNewFragment : Fragment() {
         var searchRecyclcerViewAdapter = SearchRecyclerViewAdapter(activity!!,searchList)
         rv_fg_search_list_new.adapter = searchRecyclcerViewAdapter
         rv_fg_search_list_new.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+
     }
 
 }

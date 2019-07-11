@@ -9,6 +9,8 @@ import android.view.ViewGroup
 
 import com.choidaye.readyforbox.R
 import com.choidaye.readyforbox.UI.Activity.ForUSettingActivity
+import com.choidaye.readyforbox.UI.Activity.PackageActivity
+import com.choidaye.readyforbox.UI.Activity.ProductDetailActivity
 import kotlinx.android.synthetic.main.fragment_for_u.*
 import org.jetbrains.anko.support.v4.startActivity
 
@@ -33,6 +35,7 @@ class ForUFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         btn_only_setting.setOnClickListener {
             startActivity<ForUSettingActivity>()
         }

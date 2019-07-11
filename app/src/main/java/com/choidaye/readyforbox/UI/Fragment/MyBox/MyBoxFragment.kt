@@ -35,9 +35,12 @@ class MyBoxFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
 
-        textbtn.setOnClickListener {
+        btn_fg_my_box_delivery_manage.setOnClickListener {
             startActivity<MyPageDeliveryManangerActivity>()
         }
+
+
+
     }
 
 

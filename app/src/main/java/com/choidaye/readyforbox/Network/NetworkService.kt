@@ -21,4 +21,14 @@ interface NetworkService {
         @Query("category")  category: String,
         @Query("flag") flag : Int
     ): Call<GetProductPackageListResponse>
+
+
+    @GET("/product/custom")
+    fun getForUResultResponse(
+        @Query("first") first: String,
+        @Query("second") second : String,
+        @Query("fifth") fifth : String,
+        @Query("minprice") minprice : Int
+
+    )
 }

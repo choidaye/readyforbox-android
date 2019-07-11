@@ -19,9 +19,9 @@ class ProductDetailActivity : AppCompatActivity() {
 
         txt_product_realPrice.paintFlags=txt_product_realPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
 
-        var bottomSheet= BottomSheetBehavior.from(option)
+        var bottomSheet= BottomSheetBehavior.from(product_option)
         btn_product_buy.setOnClickListener {
-            option.visibility= View.VISIBLE
+            product_option.visibility= View.VISIBLE
             product_blur.visibility= View.VISIBLE
             bottomSheet.state= BottomSheetBehavior.STATE_EXPANDED
         }
@@ -69,7 +69,7 @@ class ProductDetailActivity : AppCompatActivity() {
             }
         }
         btn_product_addCart.setOnClickListener {
-            option.visibility= View.INVISIBLE
+            product_option.visibility= View.INVISIBLE
             product_blur.visibility= View.INVISIBLE
             bottomSheet.state= BottomSheetBehavior.STATE_COLLAPSED
 
@@ -79,7 +79,7 @@ class ProductDetailActivity : AppCompatActivity() {
             toast.show()
         }
         product_blur.setOnClickListener{
-            option.visibility= View.INVISIBLE
+            product_option.visibility= View.INVISIBLE
             product_blur.visibility= View.INVISIBLE
             bottomSheet.state= BottomSheetBehavior.STATE_COLLAPSED
         }

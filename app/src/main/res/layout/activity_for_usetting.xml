@@ -344,15 +344,17 @@
                 </LinearLayout>
                 <Button
                     android:id="@+id/btn_for_u_setting_finish"
-                    android:layout_width="328dp"
-                    android:layout_height="49dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="설정완료"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:textColor="@color/White"
                     android:background="@drawable/orange_border_fill"
-                    android:layout_marginTop="32dp"/>
+                    android:paddingVertical="10dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginHorizontal="16dp"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
