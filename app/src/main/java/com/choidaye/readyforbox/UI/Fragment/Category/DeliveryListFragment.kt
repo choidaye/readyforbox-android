@@ -15,22 +15,17 @@ import com.choidaye.readyforbox.Network.ApplicationController
 import com.choidaye.readyforbox.Network.NetworkService
 
 import com.choidaye.readyforbox.R
-<<<<<<< HEAD
 import com.choidaye.readyforbox.UI.Activity.ProductDetailActivity
-=======
 import com.choidaye.readyforbox.UI.Activity.Cart.CartActivity
->>>>>>> 4bbddcbdc59a20e65c399e43ebf3379bb6c2abf0
 import com.choidaye.readyforbox.UI.Adapter.DeliveryRecyclerViewAdapter
 import kotlinx.android.synthetic.main.filter_product_list.*
 import kotlinx.android.synthetic.main.fragment_category.*
 import kotlinx.android.synthetic.main.fragment_delivery_list.*
 import org.jetbrains.anko.support.v4.startActivity
-<<<<<<< HEAD
-=======
+
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
->>>>>>> 4bbddcbdc59a20e65c399e43ebf3379bb6c2abf0
 
 
 class DeliveryListFragment : Fragment() {
@@ -113,62 +108,10 @@ class DeliveryListFragment : Fragment() {
 
     //리사이클러뷰어댑터
 
-<<<<<<< HEAD
-        var deliveryList: ArrayList<Product> = ArrayList()
-        deliveryList.add(
-            Product(
-                "삼다수",
-                "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428",
-                "제주삼다수, 500ml,40개입",
-                17000,
-                10000
-            )
-        )
-        deliveryList.add(
-            Product(
-                "삼다수",
-                "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428",
-                "제주삼다수, 500ml,40개입",
-                17000,
-                10000
-            )
-        )
-        deliveryList.add(
-            Product(
-                "삼다수",
-                "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428",
-                "제주삼다수, 500ml,40개입",
-                17000,
-                10000
-            )
-        )
-        deliveryList.add(
-            Product(
-                "삼다수",
-                "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428",
-                "제주삼다수, 500ml,40개입",
-                17000,
-                10000
-            )
-        )
-        deliveryList.add(
-            Product(
-                "삼다수",
-                "http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428",
-                "제주삼다수, 500ml,40개입",
-                17000,
-                10000
-            )
-        )
-
-
-        var deliveryRecyclcerViewAdapter = DeliveryRecyclerViewAdapter(activity!!, deliveryList){ Product ->
+    private fun setRecyclerView() {
+        deliveryRecyclcerViewAdapter = DeliveryRecyclerViewAdapter(activity!!, deliveryList){ Product ->
             startActivity<ProductDetailActivity>()
         }
-=======
-    private fun setRecyclerView() {
-        deliveryRecyclcerViewAdapter = DeliveryRecyclerViewAdapter(activity!!, deliveryList)
->>>>>>> 4bbddcbdc59a20e65c399e43ebf3379bb6c2abf0
         rv_fg_delivery_list.adapter = deliveryRecyclcerViewAdapter
         rv_fg_delivery_list.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
 

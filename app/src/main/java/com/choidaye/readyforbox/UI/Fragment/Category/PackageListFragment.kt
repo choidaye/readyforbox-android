@@ -14,21 +14,15 @@ import com.choidaye.readyforbox.Network.ApplicationController
 import com.choidaye.readyforbox.Network.NetworkService
 
 import com.choidaye.readyforbox.R
-<<<<<<< HEAD
 import com.choidaye.readyforbox.UI.Activity.PackageActivity
-=======
->>>>>>> 4bbddcbdc59a20e65c399e43ebf3379bb6c2abf0
 import com.choidaye.readyforbox.UI.Adapter.PackageRecyclerViewAdapter
 import kotlinx.android.synthetic.main.fragment_delivery_list.*
 import kotlinx.android.synthetic.main.fragment_package_list.*
-<<<<<<< HEAD
 import org.jetbrains.anko.support.v4.startActivity
-=======
 import org.jetbrains.anko.support.v4.toast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
->>>>>>> 4bbddcbdc59a20e65c399e43ebf3379bb6c2abf0
 
 
 class PackageListFragment : Fragment() {
@@ -80,19 +74,16 @@ class PackageListFragment : Fragment() {
         else if(extra!!.getString("name").equals("특별기획")) tv_fg_package_list_special.setTextColor(resources.getColor(R.color.pumpkinOrange))
 
     }
+    private fun setRecyclerView() {
 
-
-
-        val packageRecyclcerViewAdapter =PackageRecyclerViewAdapter(activity!!,packageList){ Product ->
-            startActivity<PackageActivity>()
-        }
-        rv_fg_package_list.adapter = packageRecyclcerViewAdapter
+        packageRecyclerViewAdapter = PackageRecyclerViewAdapter(activity!!, packageList) {Packages ->
+        startActivity<PackageActivity>()
+    }
+        rv_fg_package_list.adapter =  packageRecyclerViewAdapter
         rv_fg_package_list.layoutManager =  LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
 
 
     }
-
-
 
 
     //필터 버튼 눌렀을 때 내가 누른 버튼 아니고 다른 버튼은 클리어 시켜줌
@@ -241,12 +232,6 @@ class PackageListFragment : Fragment() {
             }
         })
     }
-<<<<<<< HEAD
-=======
 
-
-
-
->>>>>>> 4bbddcbdc59a20e65c399e43ebf3379bb6c2abf0
 }
 
