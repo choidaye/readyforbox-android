@@ -70,14 +70,16 @@ class DeliveryListFragment : Fragment() {
         setOnBtnClickListener()
 
 
-        //네임리스트에 카테고리 이름 넣어놓기
-//        nameList.add("생수/음료")
-//        nameList.add("세제/섬유유연제")
-//        nameList.add("욕실용품")
-//        nameList.add("휴지/물티슈")
-//        nameList.add("청소물품")
-
-
+        nameList= ArrayList()
+//        네임리스트에 카테고리 이름 넣어놓기
+        nameList.add("생수/음료").toString()
+        nameList.add("세제/섬유유연제").toString()
+        nameList.add("욕실용품").toString()
+//       name.add("휴지/물티슈").toString()
+//        name.add("청소물품").toString()
+//        name.add("디퓨저/방향제").toString()
+//
+//
 
 
 
@@ -244,8 +246,7 @@ class DeliveryListFragment : Fragment() {
             result =  productListFilter.rb_filter_product_list_new.text.toString()!!
             tv_fg_delivery_list_filter_title.text = result
 
-
-            setProductDeliveyList(nameList.toString(),1)
+            setProductDeliveyList( nameList.toString(),1)
 
             productListFilter.dismiss()
 
@@ -259,7 +260,7 @@ class DeliveryListFragment : Fragment() {
 
             result = productListFilter.rb_filter_product_list_famous.text.toString()!!
             tv_fg_delivery_list_filter_title.text = result
-            //setProductDeliveyList("category_name",2)
+          //  setProductDeliveyList(category_name.toString(),2)
             productListFilter.dismiss()
         }
 
@@ -269,7 +270,8 @@ class DeliveryListFragment : Fragment() {
 
             result = productListFilter.rb_filter_product_list_cheap.text.toString()!!
             tv_fg_delivery_list_filter_title.text = result
-            setProductDeliveyList(nameList.toString(),3)
+
+            setProductDeliveyList( nameList.toString(),3)
             productListFilter.dismiss()
         }
 
@@ -280,7 +282,9 @@ class DeliveryListFragment : Fragment() {
 
             result = productListFilter.rb_filter_product_list_expansive.text.toString()!!
             tv_fg_delivery_list_filter_title.text = result
-            setProductDeliveyList("category_name",4)
+
+         //   setProductDeliveyList(category_name.toString(),4)
+
             productListFilter.dismiss()
         }
 
