@@ -113,14 +113,34 @@
                 android:src="@drawable/dark_grey_stroke"/>
 
 
-        <TextView
-                android:id="@+id/tv_rv_ac_cart_package_num"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+        <LinearLayout
+                android:id="@+id/li_tv_ac_cart_delivery_num"
                 android:layout_centerInParent="true"
-                android:textSize="12sp"
-                android:textColor="@color/darkGrey"
-                android:text="1개" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tv_rv_ac_cart_package_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/darkGrey"
+                    android:text="1" />
+
+            <TextView
+                    android:id="@+id/tv_rv_ac_cart_package_num_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/darkGrey"
+                    android:text="개" />
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/button_arrow"/>
+        </LinearLayout>
 
     </RelativeLayout>
 

@@ -8,6 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.choidaye.readyforbox.R
+import com.choidaye.readyforbox.UI.Activity.Mypage.MyPageDeliveryManangerActivity
+import kotlinx.android.synthetic.main.fragment_my_box.*
+import org.jetbrains.anko.support.v4.startActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,6 +29,18 @@ class MyBoxFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_my_box, container, false)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+
+        btn_fg_my_box_delivery_manage.setOnClickListener {
+            startActivity<MyPageDeliveryManangerActivity>()
+        }
+
+
+
     }
 
 

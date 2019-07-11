@@ -10,16 +10,14 @@ import android.view.ViewGroup
 import com.choidaye.readyforbox.R
 import kotlinx.android.synthetic.main.fragment_delivery.*
 import kotlinx.android.synthetic.main.fragment_package.*
+import kotlinx.android.synthetic.main.fragment_package_list.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- *
- */
+
 class PackageFragment : Fragment() {
 
     override fun onCreateView(
@@ -44,20 +42,51 @@ class PackageFragment : Fragment() {
 
     //카테고리 메인 프래그먼트를 교체시켜줄겁니다
 
-    fun replaceFragment(fragment: Fragment) {
-        activity!!.supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.fl_fg_category_main, fragment, fragment.javaClass.simpleName)
-            .addToBackStack(fragment.javaClass.simpleName)
-            .commit()
+    fun replaceFragment(fragment: Fragment,name: String) {
+        val packagelistFragment =PackageListFragment()
+        val bundle = Bundle()
+
+        bundle.putString("name",name)
+        packagelistFragment.arguments = bundle
+
+        var trans = activity!!.supportFragmentManager.beginTransaction()
+        trans.replace(R.id.fl_fg_category_main,packagelistFragment)
+        trans.addToBackStack(fragment.javaClass.simpleName)
+        trans.commit()
     }
 
 
     private fun setOnBtnClickListener() {
+        btn_fg_package_area.setOnClickListener{
+            replaceFragment(PackageListFragment(),tv_fg_package_area.text.toString())
+
+        }
+        btn_fg_package_appliances.setOnClickListener {
+            replaceFragment(DeliveryListFragment(),tv_fg_package_appliances.text.toString())
+
+        }
+        btn_fg_package_manage.setOnClickListener {
+            replaceFragment(DeliveryListFragment(),tv_fg_package_manage.text.toString())
+
+        }
+        btn_fg_package_homecafe.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_package_homecafe.text.toString())
+
+        }
+        btn_fg_package_sleep.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_package_sleep.text.toString())
+
+        }
         btn_fg_package_dress.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_package_dress.text.toString())
 
-            replaceFragment(PackageListFragment())
+        }
+        btn_fg_package_animal.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_package_animal.text.toString())
 
+        }
+        btn_fg_package_special.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_package_special.text.toString())
 
         }
 

@@ -49,10 +49,10 @@ class DeliveryFragment : Fragment() {
         bundle.putString("name",name)
          deliverylistFragment.arguments = bundle
 
-        var trans = activity!!.supportFragmentManager.beginTransaction()
-        trans.replace(R.id.fl_fg_category_main,deliverylistFragment)
-       trans.addToBackStack(fragment.javaClass.simpleName)
-        trans.commit()
+        var translate = activity!!.supportFragmentManager.beginTransaction()
+        translate.replace(R.id.fl_fg_category_main,deliverylistFragment)
+       translate.addToBackStack(fragment.javaClass.simpleName)
+        translate.commit()
 
 //            .replace(R.id.fl_fg_category_main, fragment, fragment.javaClass.simpleName)
 //            .addToBackStack(fragment.javaClass.simpleName)
@@ -94,7 +94,22 @@ class DeliveryFragment : Fragment() {
             replaceFragment(DeliveryListFragment(),tv_fg_delivery_detergent.text.toString())
 
         }
+        btn_fg_delivery_clean.setOnClickListener {
+            replaceFragment(DeliveryListFragment(),tv_fg_delivery_clean.text.toString())
 
+        }
+        btn_fg_delivery_cook.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_delivery_cook.text.toString())
+
+        }
+        btn_fg_delivery_defuser.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_delivery_defuser.text.toString())
+
+        }
+        btn_fg_delivery_animal.setOnClickListener{
+            replaceFragment(DeliveryListFragment(),tv_fg_delivery_animal.text.toString())
+
+        }
 
 
     }

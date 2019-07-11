@@ -29,6 +29,7 @@ class CartDeliveryRecyclerViewAdapter(val ctx: Context, val cartdeliveryList: Ar
         holder.name.text = cartdeliveryList[position].name
         holder.price.text= cartdeliveryList[position].price.toString()
         holder.term.text = cartdeliveryList[position].term
+        holder.count.text = cartdeliveryList[position].count.toString()
 
     }
 
@@ -38,6 +39,7 @@ class CartDeliveryRecyclerViewAdapter(val ctx: Context, val cartdeliveryList: Ar
         val price: TextView = itemView.findViewById(R.id.tv_rv_ac_cart_delivery_price) as TextView
         val main_img : ImageView = itemView.findViewById(R.id.iv_item_ac_cart_delivery) as ImageView
         val term : TextView = itemView.findViewById(R.id.tv_rv_ac_cart_delivery_term) as TextView
+        val count : TextView = itemView.findViewById(R.id.tv_rv_ac_cart_package_num) as TextView
     }
 
 }

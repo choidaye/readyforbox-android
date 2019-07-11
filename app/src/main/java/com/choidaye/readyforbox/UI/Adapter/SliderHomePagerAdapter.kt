@@ -12,6 +12,7 @@ class SliderHomePagerAdapter(fm: FragmentManager?, val num_fragment: Int) : Frag
         var fragment: SliderHomeFragment = SliderHomeFragment()
         var bundle: Bundle = Bundle(1)
         when (p0) {
+            //0->bundle.putInt("idx", 0)
             0 -> bundle.putInt("background_url", R.drawable.banne_img_1)
             1 -> bundle.putInt("background_url", R.drawable.banne_img_2)
             2 -> bundle.putInt("background_url", R.drawable.banne_img_3)
