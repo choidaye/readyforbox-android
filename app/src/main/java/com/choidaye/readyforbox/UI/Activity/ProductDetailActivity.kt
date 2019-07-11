@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_product_detail.*
 import kotlinx.android.synthetic.main.product_option.*
 
 class ProductDetailActivity : AppCompatActivity() {
-
+    var isChecking: Boolean = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_detail)
@@ -25,6 +25,7 @@ class ProductDetailActivity : AppCompatActivity() {
             product_blur.visibility= View.VISIBLE
             bottomSheet.state= BottomSheetBehavior.STATE_EXPANDED
         }
+        //multi-line radio button
 
         rb_one_month.setOnCheckedChangeListener { button, isChecked ->
             if(isChecked){

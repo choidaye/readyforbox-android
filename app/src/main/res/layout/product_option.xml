@@ -81,17 +81,19 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@color/charcoalGrey"/>
-        <RadioGroup
-            android:id="@+id/rg_product_delivery"
+        <com.yuxingxin.library.MultiRadioGroup
+            android:id="@+id/multi_radio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginHorizontal="16dp"
             android:orientation="vertical">
-            <LinearLayout
+            <RadioGroup
+                android:id="@+id/rg_product_delivery"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
                 <RadioButton
                     android:id="@+id/rb_one_month"
                     android:layout_width="wrap_content"
@@ -118,10 +120,12 @@
                     android:background="@drawable/checkbox_selector"
                     android:gravity="center"
                     android:textSize="14sp"/>
-            </LinearLayout>
-            <LinearLayout
+            </RadioGroup>
+            <RadioGroup
+                android:id="@+id/rg_product_delivery2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
                 <RadioButton
                     android:id="@+id/rb_three_month"
                     android:layout_width="wrap_content"
@@ -147,8 +151,8 @@
                     android:background="@drawable/checkbox_selector"
                     android:gravity="center"
                     android:textSize="14sp"/>
-            </LinearLayout>
-        </RadioGroup>
+            </RadioGroup>
+        </com.yuxingxin.library.MultiRadioGroup>
         <Button
             android:id="@+id/btn_product_addCart"
             android:layout_width="match_parent"
