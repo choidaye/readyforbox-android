@@ -64,7 +64,7 @@
     </RelativeLayout>
     <Button
             android:id="@+id/btn_home_start"
-            android:background="@color/pumpkinOrange"
+            android:background="@drawable/orange_border_fill"
             android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

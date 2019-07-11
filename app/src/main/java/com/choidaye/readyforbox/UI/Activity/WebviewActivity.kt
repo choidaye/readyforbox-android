@@ -26,7 +26,7 @@ class WebviewActivity : AppCompatActivity() {
             intent.putExtra("buildingName","" + buildingName)
 
             Log.e("myTag", "WebviewActivity: "+ zoneCode)
-            setResult(Activity.RESULT_OK, intent);
+            setResult(Activity.RESULT_OK, intent)
             finish()
         }
         postView.setPostUrl("https://windsekirun.github.io/DaumPostCodeView/")
