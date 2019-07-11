@@ -20,6 +20,7 @@ class ForUSettingActivity : AppCompatActivity(), OnStartDragListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_for_usetting)
 
+
         var dataList: ArrayList<DragAndDrop> = ArrayList()
         var dataList2: ArrayList<DragAndDrop> =ArrayList()
 

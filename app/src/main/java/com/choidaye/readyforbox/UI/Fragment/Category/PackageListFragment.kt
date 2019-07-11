@@ -12,11 +12,8 @@ import com.choidaye.readyforbox.Data.Product
 
 import com.choidaye.readyforbox.R
 import com.choidaye.readyforbox.UI.Activity.PackageActivity
-import com.choidaye.readyforbox.UI.Adapter.PackageRecyclcerViewAdapter
 import com.choidaye.readyforbox.UI.Adapter.PackageRecyclerViewAdapter
 import kotlinx.android.synthetic.main.fragment_package_list.*
-import kotlinx.android.synthetic.main.rv_item_fg_package_list.*
-import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.support.v4.startActivity
 
 
@@ -47,7 +44,9 @@ class PackageListFragment : Fragment() {
         packageList.add(Product("삼다수","http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428","제주삼다수, 500ml,40개입",17000,10000))
 
 
-        var packageRecyclcerViewAdapter =PackageRecyclerViewAdapter(activity!!,packageList)
+        val packageRecyclcerViewAdapter =PackageRecyclerViewAdapter(activity!!,packageList){ Product ->
+            startActivity<PackageActivity>()
+        }
         rv_fg_package_list.adapter = packageRecyclcerViewAdapter
         rv_fg_package_list.layoutManager =  LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
 
@@ -58,6 +57,4 @@ class PackageListFragment : Fragment() {
 
         }
     }
-
-
 }

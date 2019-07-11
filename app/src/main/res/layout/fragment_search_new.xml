@@ -5,15 +5,24 @@
              android:layout_height="match_parent"
              android:background="@color/White"
              tools:context=".UI.Fragment.Search.SearchNewFragment">
-
-
-    <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_fg_search_list_new"
+    <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-    </android.support.v7.widget.RecyclerView>
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_fg_search_list_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+        </android.support.v7.widget.RecyclerView>
 
+        <TextView
+                android:id="@+id/fg_not_search_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최근 검색어가 없습니다"
+                android:visibility="invisible"/>
+
+    </FrameLayout>
 
 </RelativeLayout>

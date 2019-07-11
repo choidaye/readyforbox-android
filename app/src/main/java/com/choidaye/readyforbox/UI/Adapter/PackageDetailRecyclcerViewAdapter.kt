@@ -14,7 +14,7 @@ import com.choidaye.readyforbox.R
 class PackageDetailRecyclcerViewAdapter(val ctx: Context, val packageDetailList: ArrayList<PackageDetail>) : RecyclerView.Adapter<PackageDetailRecyclcerViewAdapter.Holder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_fg_package_list, parent, false)
+        val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_package_detail, parent, false)
         return Holder(view)
     }
 

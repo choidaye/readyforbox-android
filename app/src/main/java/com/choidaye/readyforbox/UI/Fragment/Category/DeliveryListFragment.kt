@@ -11,8 +11,10 @@ import android.view.ViewGroup
 import com.choidaye.readyforbox.Data.Product
 
 import com.choidaye.readyforbox.R
+import com.choidaye.readyforbox.UI.Activity.ProductDetailActivity
 import com.choidaye.readyforbox.UI.Adapter.DeliveryRecyclerViewAdapter
 import kotlinx.android.synthetic.main.fragment_delivery_list.*
+import org.jetbrains.anko.support.v4.startActivity
 
 
 class DeliveryListFragment : Fragment() {
@@ -92,7 +94,9 @@ class DeliveryListFragment : Fragment() {
         )
 
 
-        var deliveryRecyclcerViewAdapter = DeliveryRecyclerViewAdapter(activity!!, deliveryList)
+        var deliveryRecyclcerViewAdapter = DeliveryRecyclerViewAdapter(activity!!, deliveryList){ Product ->
+            startActivity<ProductDetailActivity>()
+        }
         rv_fg_delivery_list.adapter = deliveryRecyclcerViewAdapter
         rv_fg_delivery_list.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
 
