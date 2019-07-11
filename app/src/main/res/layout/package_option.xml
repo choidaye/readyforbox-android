@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginTop="11dp"
+        android:elevation="15dp"
+        android:background="@drawable/round_border"
+        app:behavior_peekHeight="160dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:orientation="vertical"
+            android:layout_gravity="end">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제품 수량"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="16dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/charcoalGrey"/>
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp">
+                <ImageView
+                        android:id="@+id/package_img_minus"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        app:srcCompat="@drawable/minus_icon" />
+                <TextView
+                        android:id="@+id/txt_package_count"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:text="1"
+                        android:textSize="16sp"
+                        android:textColor="@color/charcoalGrey"
+                        android:background="@drawable/cb_grey_button"
+                        android:layout_marginHorizontal="-1dp"
+                        android:paddingVertical="2dp"
+                        android:gravity="center"/>
+                <ImageView
+                        android:id="@+id/package_img_plus"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        app:srcCompat="@drawable/plus_icon" />
+            </LinearLayout>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10,000원"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkGrey"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"/>
+        </RelativeLayout>
+        <Button
+                android:id="@+id/btn_package_addCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="장바구니 담기"
+                android:textColor="@color/White"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="17dp"
+                android:background="@drawable/orange_border_fill"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -14,13 +14,21 @@ import com.choidaye.readyforbox.Network.ApplicationController
 import com.choidaye.readyforbox.Network.NetworkService
 
 import com.choidaye.readyforbox.R
+<<<<<<< HEAD
+import com.choidaye.readyforbox.UI.Activity.PackageActivity
+=======
+>>>>>>> 4bbddcbdc59a20e65c399e43ebf3379bb6c2abf0
 import com.choidaye.readyforbox.UI.Adapter.PackageRecyclerViewAdapter
 import kotlinx.android.synthetic.main.fragment_delivery_list.*
 import kotlinx.android.synthetic.main.fragment_package_list.*
+<<<<<<< HEAD
+import org.jetbrains.anko.support.v4.startActivity
+=======
 import org.jetbrains.anko.support.v4.toast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+>>>>>>> 4bbddcbdc59a20e65c399e43ebf3379bb6c2abf0
 
 
 class PackageListFragment : Fragment() {
@@ -75,11 +83,10 @@ class PackageListFragment : Fragment() {
 
 
 
-
-    private fun setRecyclerView() {
-
-        packageRecyclerViewAdapter = PackageRecyclerViewAdapter(activity!!, packageList)
-        rv_fg_package_list.adapter =  packageRecyclerViewAdapter
+        val packageRecyclcerViewAdapter =PackageRecyclerViewAdapter(activity!!,packageList){ Product ->
+            startActivity<PackageActivity>()
+        }
+        rv_fg_package_list.adapter = packageRecyclcerViewAdapter
         rv_fg_package_list.layoutManager =  LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
 
 
@@ -234,9 +241,12 @@ class PackageListFragment : Fragment() {
             }
         })
     }
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> 4bbddcbdc59a20e65c399e43ebf3379bb6c2abf0
 }
 
