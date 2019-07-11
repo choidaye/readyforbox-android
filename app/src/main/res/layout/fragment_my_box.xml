@@ -1,18 +1,278 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context=".UI.Fragment.MyBox.MyBoxFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-            android:id="@+id/textbtn"
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="배송정보 테스트"/>
+            android:layout_height="50dp"
+            android:background="@color/White"
+            android:minHeight="?attr/actionBarSize"
+            android:textStyle="bold"
+            android:theme="?attr/actionBarTheme">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="마이박스"
+                    android:textColor="#212529"
+                    android:textSize="17sp" />
+
+            <ImageView
+                    android:id="@+id/ic_toolbar_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/cart_icon" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/toolbar"
+            android:background="#efefef" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginVertical="47dp"
+            android:layout_marginTop="36dp"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="32dp"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/ic_human" />
+
+            <LinearLayout
+                    android:id="@+id/li_my_page_user_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/tv_mypage_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="김혜진"
+                        android:textSize="20sp" />
+
+                <TextView
+                        android:id="@+id/tv_mypage_user_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="hyejinii@naver.com" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_below="@+id/li_my_page_user_info"
+                android:background="#efefef" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="18dp"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left">
+
+                    <TextView
+                            android:id="@+id/tv_fg_my_box_myorder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="주문내역"/>
+                </LinearLayout>
+
+                <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_more" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/tv_fg_my_box_myorder"
+                android:background="#efefef" />
+
+        <LinearLayout
+                android:id="@+id/btn_fg_my_box_delivery_manage"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="18dp"
+                    android:orientation="horizontal">
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left">
+                    <TextView
+                            android:id="@+id/tv_fg_my_box_delivery_manage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="정기배송 관리" />
+                </LinearLayout>
+                <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right">
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_more" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/tv_fg_my_box_delivery_manage"
+                android:background="#efefef" />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="18dp"
+                    android:orientation="horizontal">
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left">
+                    <TextView
+                            android:id="@+id/tv_fg_my_box_delivery_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="배송안내" />
+                </LinearLayout>
+                <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_more" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/tv_fg_my_box_delivery_info"
+                android:background="#efefef" />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="vertical">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginVertical="18dp"
+                    android:orientation="horizontal">
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left">
+                    <TextView
+                            android:id="@+id/mylogout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="로그아웃" />
+                </LinearLayout>
+                <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right">
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_more" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/mylogout"
+                android:background="#efefef" />
+
+    </LinearLayout>
 
 
-
-
-</FrameLayout>
+</RelativeLayout>

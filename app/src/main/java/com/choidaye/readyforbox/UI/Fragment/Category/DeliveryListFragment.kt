@@ -30,6 +30,15 @@ class DeliveryListFragment : Fragment() {
 
     var result : String = ""
     var deliveryList = ArrayList<Product>()
+    var flag : Int = 0
+
+
+    lateinit var  nameList : ArrayList<String>
+
+
+
+
+
 
 
 
@@ -61,13 +70,26 @@ class DeliveryListFragment : Fragment() {
         setOnBtnClickListener()
 
 
+        //네임리스트에 카테고리 이름 넣어놓기
+//        nameList.add("생수/음료")
+//        nameList.add("세제/섬유유연제")
+//        nameList.add("욕실용품")
+//        nameList.add("휴지/물티슈")
+//        nameList.add("청소물품")
 
-        val extra = arguments
+
+
+
 
         //툴바 이름 바꾸기
 //        toolbar_delivery_list_title.text= extra!!.getString("name")
 
-        setProductDeliveyList(extra!!.getString("name"))
+        val extra = arguments
+        setProductDeliveyList(extra!!.getString("name"),1)
+
+
+
+
         if(extra!!.getString("name").equals("생수/음료")) tv_fg_delivery_list_water.setTextColor(resources.getColor(R.color.pumpkinOrange))
         else if(extra!!.getString("name").equals("세제/섬유유연제")) tv_fg_delivery_list_detergent.setTextColor(resources.getColor(R.color.pumpkinOrange))
         else if(extra!!.getString("name").equals("욕실용품")) tv_fg_delivery_list_bathroom.setTextColor(resources.getColor(R.color.pumpkinOrange))
@@ -122,7 +144,8 @@ class DeliveryListFragment : Fragment() {
 
         btn_fg_delivery_list_water.setOnClickListener {
 
-            setProductDeliveyList(tv_fg_delivery_list_water.text.toString())
+
+            setProductDeliveyList(tv_fg_delivery_list_water.text.toString(),1)
             clearbuttonTextColor()
             tv_fg_delivery_list_water.setTextColor(resources.getColor(R.color.pumpkinOrange))
 
@@ -132,7 +155,7 @@ class DeliveryListFragment : Fragment() {
 
         btn_fg_delivery_list_detergent.setOnClickListener {
 
-            setProductDeliveyList(tv_fg_delivery_list_detergent.text.toString())
+            setProductDeliveyList(tv_fg_delivery_list_detergent.text.toString(),1)
             clearbuttonTextColor()
             tv_fg_delivery_list_detergent.setTextColor(resources.getColor(R.color.pumpkinOrange))
 
@@ -142,7 +165,7 @@ class DeliveryListFragment : Fragment() {
 
         btn_fg_delivery_list_tissue.setOnClickListener {
 
-            setProductDeliveyList(tv_fg_delivery_list_tissue.text.toString())
+            setProductDeliveyList(tv_fg_delivery_list_tissue.text.toString(),1)
             clearbuttonTextColor()
             tv_fg_delivery_list_tissue.setTextColor(resources.getColor(R.color.pumpkinOrange))
 
@@ -153,7 +176,7 @@ class DeliveryListFragment : Fragment() {
             //툴바 이름 바꾸기
             //toolbar_delivery_list_title.text = tv_fg_delivery_lsit_clean.text
 
-            setProductDeliveyList(tv_fg_delivery_list_clean.text.toString())
+            setProductDeliveyList(tv_fg_delivery_list_clean.text.toString(),1)
             clearbuttonTextColor()
             tv_fg_delivery_list_clean.setTextColor(resources.getColor(R.color.pumpkinOrange))
         }
@@ -161,7 +184,7 @@ class DeliveryListFragment : Fragment() {
 
         btn_fg_delivery_list_animal.setOnClickListener {
 
-            setProductDeliveyList(tv_fg_delivery_list_animal.text.toString())
+            setProductDeliveyList(tv_fg_delivery_list_animal.text.toString(),1)
             clearbuttonTextColor()
             tv_fg_delivery_list_animal.setTextColor(resources.getColor(R.color.pumpkinOrange))
         }
@@ -169,7 +192,7 @@ class DeliveryListFragment : Fragment() {
 
         btn_fg_delivery_list_cook.setOnClickListener {
 
-            setProductDeliveyList(tv_fg_delivery_list_cook.text.toString())
+            setProductDeliveyList(tv_fg_delivery_list_cook.text.toString(),1)
             clearbuttonTextColor()
             tv_fg_delivery_list_cook.setTextColor(resources.getColor(R.color.pumpkinOrange))
         }
@@ -178,7 +201,8 @@ class DeliveryListFragment : Fragment() {
 
         btn_fg_delivery_list_defuser.setOnClickListener {
 
-            setProductDeliveyList(tv_fg_delivery_list_defuser.text.toString())
+
+            setProductDeliveyList(tv_fg_delivery_list_defuser.text.toString(),1)
             clearbuttonTextColor()
             tv_fg_delivery_list_defuser.setTextColor(resources.getColor(R.color.pumpkinOrange))
         }
@@ -187,7 +211,7 @@ class DeliveryListFragment : Fragment() {
 
 
 
-            setProductDeliveyList(tv_fg_delivery_list_bathroom.text.toString())
+            setProductDeliveyList(tv_fg_delivery_list_bathroom.text.toString(),1)
             clearbuttonTextColor()
             tv_fg_delivery_list_bathroom.setTextColor(resources.getColor(R.color.pumpkinOrange))
         }
@@ -220,6 +244,9 @@ class DeliveryListFragment : Fragment() {
             result =  productListFilter.rb_filter_product_list_new.text.toString()!!
             tv_fg_delivery_list_filter_title.text = result
 
+
+            setProductDeliveyList(nameList.toString(),1)
+
             productListFilter.dismiss()
 
 
@@ -232,6 +259,7 @@ class DeliveryListFragment : Fragment() {
 
             result = productListFilter.rb_filter_product_list_famous.text.toString()!!
             tv_fg_delivery_list_filter_title.text = result
+            //setProductDeliveyList("category_name",2)
             productListFilter.dismiss()
         }
 
@@ -241,6 +269,7 @@ class DeliveryListFragment : Fragment() {
 
             result = productListFilter.rb_filter_product_list_cheap.text.toString()!!
             tv_fg_delivery_list_filter_title.text = result
+            setProductDeliveyList(nameList.toString(),3)
             productListFilter.dismiss()
         }
 
@@ -251,6 +280,7 @@ class DeliveryListFragment : Fragment() {
 
             result = productListFilter.rb_filter_product_list_expansive.text.toString()!!
             tv_fg_delivery_list_filter_title.text = result
+            setProductDeliveyList("category_name",4)
             productListFilter.dismiss()
         }
 
@@ -261,11 +291,11 @@ class DeliveryListFragment : Fragment() {
 
 
 
-    fun setProductDeliveyList(category_name : String){
+    fun setProductDeliveyList(category_name : String, flag : Int){
 
 
 
-        var getProductDeliveyList: Call<GetProductDeliveyListResponse> = networkService.getProductDeliveryListResponse(category_name,1)
+        var getProductDeliveyList: Call<GetProductDeliveyListResponse> = networkService.getProductDeliveryListResponse(category_name,flag)
         getProductDeliveyList.enqueue(object : Callback<GetProductDeliveyListResponse> {
             override fun onResponse(call: Call<GetProductDeliveyListResponse>?, response: Response<GetProductDeliveyListResponse>?) {
 
