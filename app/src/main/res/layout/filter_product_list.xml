@@ -17,6 +17,7 @@
             android:layout_marginLeft="25dp">
 
         <RadioButton
+                android:fontFamily="@font/medium"
                 android:id="@+id/rb_filter_product_list_new"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -28,6 +29,7 @@
 
 
         <RadioButton
+                android:fontFamily="@font/medium"
                 android:id="@+id/rb_filter_product_list_famous"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -40,6 +42,7 @@
 
 
         <RadioButton
+                android:fontFamily="@font/medium"
                 android:id="@+id/rb_filter_product_list_cheap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -51,6 +54,7 @@
 
 
         <RadioButton
+                android:fontFamily="@font/medium"
                 android:id="@+id/rb_filter_product_list_expansive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

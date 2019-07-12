@@ -4,12 +4,23 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context=".UI.Fragment.Home.SliderHomeFragment">
-    <ImageView
-            android:id="@+id/img_fragment_slider_home"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            android:layout_marginBottom="38dp"/>
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/img_fragment_slider_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="38dp"/>
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="17dp"
+                   android:layout_marginRight="20dp"
+                   android:layout_alignParentRight="true"
+                   android:src="@drawable/cart_icon"/>
+    </RelativeLayout>
 
 </FrameLayout>

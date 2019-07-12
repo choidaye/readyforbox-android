@@ -9,8 +9,6 @@
         tools:context=".UI.Activity.Mypage.MyPageDeliveryManangerActivity">
 
 
-
-
     <android.support.v7.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -21,32 +19,30 @@
             android:id="@+id/toolbar">
 
 
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="준비해봤어"
-                android:layout_centerInParent="true"
-                android:textSize="17sp"
-                android:textColor="#212529"
-                android:id="@+id/toolbar_title"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="준비해봤어"
+                    android:layout_centerInParent="true"
+                    android:textSize="17sp"
+                    android:textColor="#212529"
+                    android:id="@+id/toolbar_title"/>
 
 
-        <ImageView
-                android:id="@+id/ic_toolbar_cart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/cart_icon"/>
-    </RelativeLayout>
+            <TextView
+                    android:id="@+id/ic_toolbar_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:text="재설정"/>
+        </RelativeLayout>
 
     </android.support.v7.widget.Toolbar>
-
 
 
     <android.support.design.widget.TabLayout
@@ -58,7 +54,6 @@
     </android.support.design.widget.TabLayout>
 
 
-
     <android.support.v4.view.ViewPager
             android:id="@+id/vp_ac_my_page_delivery_manage"
             android:layout_width="match_parent"
@@ -68,7 +63,6 @@
 
 
     </android.support.v4.view.ViewPager>
-
 
 
 </RelativeLayout>
