@@ -1,12 +1,28 @@
 package com.choidaye.readyforbox.Network
 
 import com.choidaye.readyforbox.Get.*
+import com.choidaye.readyforbox.Post.PostLoginResponse
+import com.choidaye.readyforbox.Post.PostSignupResponse
+import com.google.gson.JsonObject
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface NetworkService {
+
+    //로그인 조회
+    @POST("auth/signin")
+    fun postLoginResponse(
+        @Header("Content-Type") content_type: String,
+        @Body()body: JsonObject
+    ): Call<PostLoginResponse>
+
+    //회원가입
+    @POST("auth/signup")
+    fun postSignupResponse(
+        @Header("Content-Type") content_type: String,
+        @Body()body: JsonObject
+    ): Call<PostSignupResponse>
+
     //정기배송 리스트 조회
     @GET("product/regular")
     fun getProductDeliveryListResponse(
@@ -42,14 +58,25 @@ interface NetworkService {
 
 
     //패키지 상품 삳세페이지
-    @GET("/product/package/detail")
+    @GET("product/package/detail")
     fun getPackageInfoResponse(
         @Query("package_id") package_id : String
     ) : Call<GetPackageInfoResponse>
 
 
+
+
     //마이페이지 유저 정보
-    @POST("/mypage/user")
-    fun getUserInfoResponse()
+    @GET("mypage/user")
+    fun getUserInfoResponse(
+        @Header("token") token : String
+    ) : Call<GetUserInfoResponse>
+
+
+    //마이페이지 정기배송
+    @GET("/mypage/order")
+    fun getMypageDelivery(
+        @Header("token") token : String
+    ) : Call<GetMyboxDeliveryResponse>
 
 }

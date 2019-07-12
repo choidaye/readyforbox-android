@@ -41,15 +41,15 @@
             android:text="수량"/>
 
 
-    <TextView
-            android:id="@+id/tv_ac_my_page_delivery_check_product_num"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="11sp"
-            android:textColor="@color/blueGrey"
-            android:gravity="center_horizontal"
-            android:layout_marginLeft="3dp"
-            android:text="1"/>
+        <TextView
+                android:id="@+id/tv_ac_my_page_delivery_check_product_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="@color/blueGrey"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="3dp"
+                android:text="1"/>
 
     </LinearLayout>
 

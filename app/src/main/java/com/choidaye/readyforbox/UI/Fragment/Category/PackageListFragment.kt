@@ -1,6 +1,7 @@
 package com.choidaye.readyforbox.UI.Fragment.Category
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -31,6 +32,8 @@ class PackageListFragment : Fragment() {
     var result : String = ""
     var packageList = ArrayList<Packages>()
 
+
+    var package_id : String = ""
 
 
     val networkService: NetworkService by lazy {
@@ -77,7 +80,12 @@ class PackageListFragment : Fragment() {
     private fun setRecyclerView() {
 
         packageRecyclerViewAdapter = PackageRecyclerViewAdapter(activity!!, packageList) {Packages ->
-        startActivity<PackageActivity>()
+
+            var intent = Intent(context, PackageActivity::class.java)
+            intent.putExtra("package_id", package_id)
+
+            startActivity(intent)
+
     }
         rv_fg_package_list.adapter =  packageRecyclerViewAdapter
         rv_fg_package_list.layoutManager =  LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
@@ -114,6 +122,10 @@ class PackageListFragment : Fragment() {
             setProductPackageList(tv_fg_package_list_appliances.text.toString())
             clearbuttonTextColor()
             tv_fg_package_list_appliances.setTextColor(resources.getColor(R.color.pumpkinOrange))
+
+//            val bundle = Bundle()
+//            bundle.putString("package_id",package_id)
+//                .arguments = bundle
         }
 
 
@@ -189,6 +201,10 @@ class PackageListFragment : Fragment() {
         }
 
 
+
+
+
+
     }
 
 
@@ -213,6 +229,8 @@ class PackageListFragment : Fragment() {
 
 
                     var temp: ArrayList<Packages> = response.body()!!.data.packages
+                    package_id=temp[0].package_id
+
                     if (temp.size > 0) {
 
                         Log.v("response",response.body()!!.status.toString())

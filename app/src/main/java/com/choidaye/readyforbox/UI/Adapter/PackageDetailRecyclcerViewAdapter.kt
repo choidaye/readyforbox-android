@@ -9,10 +9,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.choidaye.readyforbox.Data.PackageDetail
+import com.choidaye.readyforbox.Data.Packages
 import com.choidaye.readyforbox.Data.Product
 import com.choidaye.readyforbox.R
 
-    class PackageDetailRecyclcerViewAdapter(val ctx: Context, val packageDetailList: ArrayList<Product>) : RecyclerView.Adapter<PackageDetailRecyclcerViewAdapter.Holder>(){
+    class PackageDetailRecyclcerViewAdapter(val ctx: Context, val packageDetailList: ArrayList<Packages>) : RecyclerView.Adapter<PackageDetailRecyclcerViewAdapter.Holder>(){
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
             val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_package_detail, parent, false)

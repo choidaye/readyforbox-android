@@ -36,6 +36,7 @@
                     android:layout_height="24dp"
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
+                    android:scaleType="fitXY"
                     android:layout_marginRight="20dp"
                     app:srcCompat="@drawable/cart_icon" />
             </RelativeLayout>
@@ -57,6 +58,7 @@
                     android:id="@+id/iv_ac_package_main"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
                     app:srcCompat="@drawable/image_btn_4" />
                 <LinearLayout
                     android:layout_width="match_parent"

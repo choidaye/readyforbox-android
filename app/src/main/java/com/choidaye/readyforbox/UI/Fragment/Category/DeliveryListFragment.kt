@@ -2,6 +2,7 @@ package com.choidaye.readyforbox.UI.Fragment.Category
 
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -17,6 +18,7 @@ import com.choidaye.readyforbox.Network.NetworkService
 import com.choidaye.readyforbox.R
 import com.choidaye.readyforbox.UI.Activity.ProductDetailActivity
 import com.choidaye.readyforbox.UI.Activity.Cart.CartActivity
+import com.choidaye.readyforbox.UI.Activity.PackageActivity
 import com.choidaye.readyforbox.UI.Adapter.DeliveryRecyclerViewAdapter
 import kotlinx.android.synthetic.main.filter_product_list.*
 import kotlinx.android.synthetic.main.fragment_category.*
@@ -43,7 +45,6 @@ class DeliveryListFragment : Fragment() {
 
 
 
-
     lateinit var deliveryRecyclcerViewAdapter: DeliveryRecyclerViewAdapter
 
 
@@ -51,6 +52,15 @@ class DeliveryListFragment : Fragment() {
     val networkService: NetworkService by lazy {
         ApplicationController.instance.networkService
     }
+
+
+
+
+
+
+
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -145,6 +155,10 @@ class DeliveryListFragment : Fragment() {
             showProductListFilter()
 
         }
+
+
+
+
 
 
         btn_fg_delivery_list_water.setOnClickListener {
