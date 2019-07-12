@@ -18,6 +18,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <TextView
+                    android:fontFamily="@font/semibold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="주문과 동시에 회원가입"
@@ -54,6 +55,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
         <TextView
+                android:fontFamily="@font/semibold"
                 android:id="@+id/txtLoginID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,6 +65,7 @@
                 android:text="아이디(이메일)"
                 android:textColor="#000000"/>
         <EditText
+                android:fontFamily="@font/light"
                 android:id="@+id/edtLoginID"
                 android:layout_marginHorizontal="16dp"
                 android:textSize="11sp"
@@ -79,6 +82,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
         <TextView
+                android:fontFamily="@font/semibold"
                 android:id="@+id/txtLoginPw"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -88,6 +92,7 @@
                 android:text="비밀번호"
                 android:textColor="#000000"/>
         <EditText
+                android:fontFamily="@font/light"
                 android:id="@+id/edtLoginPW"
                 android:layout_marginHorizontal="16dp"
                 android:textSize="11sp"
@@ -104,6 +109,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
         <TextView
+                android:fontFamily="@font/semibold"
                 android:id="@+id/txtLoginName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -113,6 +119,7 @@
                 android:text="이름"
                 android:textColor="#000000"/>
         <EditText
+                android:fontFamily="@font/light"
                 android:id="@+id/edtLoginName"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
@@ -129,6 +136,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
         <TextView
+                android:fontFamily="@font/semibold"
                 android:id="@+id/txtLoginBir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -138,6 +146,7 @@
                 android:text="생년월일"
                 android:textColor="#000000"/>
         <EditText
+                android:fontFamily="@font/light"
                 android:id="@+id/edtLoginBir"
                 android:inputType="number"
                 android:maxLength="6"
@@ -156,6 +165,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
         <TextView
+                android:fontFamily="@font/semibold"
                 android:id="@+id/txtLoginNum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -165,6 +175,7 @@
                 android:text="휴대폰 번호"
                 android:textColor="#000000"/>
         <EditText
+                android:fontFamily="@font/light"
                 android:id="@+id/edtLoginNum"
                 android:inputType="number"
                 android:maxLength="11"
@@ -181,8 +192,10 @@
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical" android:layout_alignParentStart="true" android:layout_alignParentTop="true"
+            android:layout_marginTop="1dp" android:layout_marginStart="-1dp">
         <TextView
+                android:fontFamily="@font/semibold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="501dp"
@@ -200,6 +213,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                 <RadioButton
+                        android:fontFamily="@font/medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="여성"
@@ -207,6 +221,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="10dp"/>
                 <RadioButton
+                        android:fontFamily="@font/medium"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="남성"
@@ -227,6 +242,7 @@
             android:layout_marginBottom="20dp"
             android:orientation="horizontal">
         <TextView
+                android:fontFamily="@font/medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
@@ -235,6 +251,7 @@
                 android:text="이미 가입하셨나요?"/>
 
         <TextView
+                android:fontFamily="@font/medium"
                 android:id="@+id/btn_ac_signup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -248,6 +265,7 @@
     </LinearLayout>
     //다음
     <Button
+            android:fontFamily="@font/bold"
             android:id="@+id/btn_ac_signup_next"
             android:layout_width="match_parent"
             android:layout_height="55dp"

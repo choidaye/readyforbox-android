@@ -17,6 +17,7 @@
             android:orientation="vertical"
             android:layout_gravity="end">
         <TextView
+                android:fontFamily="@font/semibold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="제품 수량"
@@ -40,6 +41,7 @@
                         android:layout_height="26dp"
                         app:srcCompat="@drawable/minus_icon" />
                 <TextView
+                        android:fontFamily="@font/medium"
                         android:id="@+id/txt_package_count"
                         android:layout_width="26dp"
                         android:layout_height="26dp"
@@ -57,6 +59,7 @@
                         app:srcCompat="@drawable/plus_icon" />
             </LinearLayout>
             <TextView
+                    android:fontFamily="@font/semibold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="10,000원"
@@ -68,6 +71,7 @@
                     android:layout_marginRight="16dp"/>
         </RelativeLayout>
         <Button
+                android:fontFamily="@font/bold"
                 android:id="@+id/btn_package_addCart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

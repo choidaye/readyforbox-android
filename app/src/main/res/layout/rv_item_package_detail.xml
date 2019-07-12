@@ -16,6 +16,7 @@
             android:src="@drawable/package_img1"
             android:layout_margin="10dp"/>
         <TextView
+                android:fontFamily="@font/medium"
             android:id="@+id/txt_item_package_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp">
             <TextView
+                    android:fontFamily="@font/semibold"
                 android:id="@+id/txt_item_package_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -36,6 +38,7 @@
                 android:textSize="17sp"
                 android:textColor="@color/darkGrey"/>
             <TextView
+                    android:fontFamily="@font/semibold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="원"

@@ -19,6 +19,7 @@
                 android:layout_marginTop="81dp"
                 android:layout_gravity="center"/>
         <TextView
+                android:fontFamily="@font/bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="21sp"
@@ -28,6 +29,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="17dp"/>
         <TextView
+                android:fontFamily="@font/medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
@@ -51,6 +53,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="22dp">
             <TextView
+                    android:fontFamily="@font/bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -62,6 +65,7 @@
                     android:layout_weight="1"
             />
             <TextView
+                    android:fontFamily="@font/bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -83,6 +87,7 @@
                 android:layout_marginRight="22dp"
                 android:layout_marginTop="16dp">
             <TextView
+                    android:fontFamily="@font/bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
@@ -94,6 +99,7 @@
                     android:layout_weight="1"
             />
             <TextView
+                    android:fontFamily="@font/light"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13sp"
@@ -115,6 +121,7 @@
                 android:layout_marginRight="22dp"
                 android:layout_marginTop="16dp">
             <TextView
+                    android:fontFamily="@font/bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
@@ -126,6 +133,7 @@
                     android:layout_weight="1"
             />
             <TextView
+                    android:fontFamily="@font/light"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13sp"
@@ -148,6 +156,7 @@
                 android:layout_marginRight="22dp"
                 android:layout_marginTop="17dp">
             <TextView
+                    android:fontFamily="@font/bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
@@ -159,6 +168,7 @@
                     android:layout_weight="1"
             />
             <TextView
+                    android:fontFamily="@font/bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
@@ -172,6 +182,7 @@
                 android:layout_marginRight="22dp"
                 android:layout_marginTop="10dp">
             <TextView
+                    android:fontFamily="@font/light"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
@@ -183,6 +194,7 @@
                     android:layout_weight="1"
             />
             <TextView
+                    android:fontFamily="@font/light"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
@@ -196,6 +208,7 @@
                 android:layout_marginRight="22dp"
                 android:layout_marginTop="7dp">
             <TextView
+                    android:fontFamily="@font/light"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13sp"
@@ -221,6 +234,7 @@
                 android:layout_marginTop="66dp"
                 android:layout_gravity="center">
             <Button
+                    android:fontFamily="@font/bold"
                     android:id="@+id/btn_order"
                     android:layout_width="159dp"
                     android:layout_height="47dp"
@@ -229,6 +243,7 @@
                     android:textColor="@color/White"
                     android:background="#2f2f2f"/>
             <Button
+                    android:fontFamily="@font/bold"
                     android:id="@+id/btn_home"
                     android:layout_width="159dp"
                     android:layout_height="47dp"

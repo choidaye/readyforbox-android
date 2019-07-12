@@ -46,6 +46,7 @@
                                 android:src="@drawable/delivery_btn_1"/>
 
                         <TextView
+                                android:fontFamily="@font/medium"
                                 android:id="@+id/tv_fg_delivery_water"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -73,6 +74,7 @@
                                 android:src="@drawable/delivery_btn_2"/>
 
                         <TextView
+                                android:fontFamily="@font/medium"
                                 android:id="@+id/tv_fg_delivery_detergent"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -100,6 +102,7 @@
                                 android:src="@drawable/delivery_btn_3"/>
 
                         <TextView
+                                android:fontFamily="@font/medium"
                                 android:id="@+id/tv_fg_delivery_bathroom"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -128,6 +131,7 @@
                                 android:src="@drawable/delivery_btn_4"/>
 
                         <TextView
+                                android:fontFamily="@font/medium"
                                 android:id="@+id/tv_fg_delivery_tissue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -165,6 +169,7 @@
                                 android:layout_marginStart="26dp"/>
 
                         <TextView
+                                android:fontFamily="@font/medium"
                                 android:id="@+id/tv_fg_delivery_clean"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -192,6 +197,7 @@
                                 android:src="@drawable/delivery_btn_6"/>
 
                         <TextView
+                                android:fontFamily="@font/medium"
                                 android:id="@+id/tv_fg_delivery_cook"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -220,6 +226,7 @@
                                 android:layout_alignParentTop="true"/>
 
                         <TextView
+                                android:fontFamily="@font/medium"
                                 android:id="@+id/tv_fg_delivery_defuser"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -247,6 +254,7 @@
                                 android:src="@drawable/delivery_btn_8"/>
 
                         <TextView
+                                android:fontFamily="@font/medium"
                                 android:id="@+id/tv_fg_delivery_animal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -281,6 +289,7 @@
 
 
                 <TextView
+                        android:fontFamily="@font/semibold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="14sp"
@@ -308,13 +317,14 @@
 
 
                         <TextView
+                                android:fontFamily="@font/medium"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="10sp"
                                 android:textColor="@color/darkGrey"
                                 android:letterSpacing="-0.02"
                                 android:layout_marginTop="6dp"
-                                android:text="제품명제품명제품명제품"/>
+                                android:text="네이비 면수건 6개입"/>
 
 
                     </LinearLayout>
@@ -333,12 +343,13 @@
 
 
                         <TextView
+                                android:fontFamily="@font/medium"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="10sp"
                                 android:textColor="@color/darkGrey"
                                 android:layout_marginTop="6dp"
-                                android:text="제품명제품명제품명제품"/>
+                                android:text="이노카 식기건조대 2단"/>
 
 
                     </LinearLayout>
@@ -357,12 +368,13 @@
 
 
                         <TextView
+                                android:fontFamily="@font/medium"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="10sp"
                                 android:textColor="@color/darkGrey"
                                 android:layout_marginTop="6dp"
-                                android:text="제품명제품명제품명제품"/>
+                                android:text="클래식 원목 3단 협탁"/>
 
 
                     </LinearLayout>
@@ -391,6 +403,7 @@
 
 
                 <TextView
+                        android:fontFamily="@font/semibold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="14sp"
@@ -425,6 +438,7 @@
 
 
                             <TextView
+                                    android:fontFamily="@font/semibold"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="10sp"
@@ -434,12 +448,13 @@
 
 
                             <TextView
+                                    android:fontFamily="@font/medium"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="10sp"
                                     android:layout_marginLeft="4dp"
                                     android:textColor="@color/darkGrey"
-                                    android:text="제품명제품"/>
+                                    android:text="아이홈 다용도 접이.."/>
 
                         </LinearLayout>
 
@@ -465,8 +480,8 @@
                                 android:layout_marginTop="6dp"
                                 android:orientation="horizontal">
 
-
                             <TextView
+                                    android:fontFamily="@font/semibold"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="10sp"
@@ -476,12 +491,13 @@
 
 
                             <TextView
+                                    android:fontFamily="@font/medium"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="10sp"
                                     android:layout_marginLeft="4dp"
                                     android:textColor="@color/darkGrey"
-                                    android:text="제품명제"/>
+                                    android:text="원터치 특대형 모기.."/>
 
                         </LinearLayout>
 
@@ -508,21 +524,23 @@
 
 
                             <TextView
+                                    android:fontFamily="@font/semibold"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="10sp"
                                     android:textColor="@color/pumpkinOrange"
                                     android:lineSpacingExtra="4sp"
-                                    android:text="20%"/>
+                                    android:text="10%"/>
 
 
                             <TextView
+                                    android:fontFamily="@font/medium"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="10sp"
                                     android:layout_marginLeft="4dp"
                                     android:textColor="@color/darkGrey"
-                                    android:text="제품명제품"/>
+                                    android:text="3단 원목 수납장"/>
 
                         </LinearLayout>
 

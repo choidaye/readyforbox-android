@@ -24,6 +24,7 @@
                 android:src="@drawable/ic_cart"/>
 
         <TextView
+                android:fontFamily="@font/semibold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
@@ -36,6 +37,7 @@
 
 
         <Button
+                android:fontFamily="@font/bold"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:text="쇼핑하러가기"

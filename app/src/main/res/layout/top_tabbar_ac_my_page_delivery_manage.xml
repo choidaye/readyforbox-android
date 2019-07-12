@@ -11,6 +11,7 @@
             android:layout_weight="1"
             android:gravity="center">
         <TextView
+                android:fontFamily="@font/semibold"
                 android:text="상품확인"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -25,6 +26,7 @@
             android:layout_weight="1"
             android:gravity="center">
         <TextView
+                android:fontFamily="@font/semibold"
                 android:text="결제정보 변경"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

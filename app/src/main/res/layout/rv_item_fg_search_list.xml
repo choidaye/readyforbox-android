@@ -9,6 +9,7 @@
 
 
     <TextView
+            android:fontFamily="@font/medium"
             android:id="@+id/tv_fg_search_keyword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

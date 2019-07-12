@@ -24,6 +24,7 @@
                 android:layout_height="wrap_content">
 
             <TextView
+                    android:fontFamily="@font/semibold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="장바구니"
@@ -66,6 +67,7 @@
 
 
         <CheckBox
+                android:fontFamily="@font/semibold"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:text="전체 선택"
@@ -79,6 +81,7 @@
                 android:background="@color/verylightPink">
 
             <TextView
+                    android:fontFamily="@font/bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -104,6 +107,7 @@
                 android:background="@color/verylightPink">
 
             <TextView
+                    android:fontFamily="@font/bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -139,6 +143,7 @@
             android:background="@color/pumpkinOrange">
 
         <TextView
+                android:fontFamily="@font/semibold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
@@ -150,6 +155,7 @@
 
 
         <Button
+                android:fontFamily="@font/bold"
                 android:id="@+id/btn_ac_cart_order"
                 android:layout_width="wrap_content"
                 android:layout_height="44dp"

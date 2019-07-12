@@ -95,7 +95,7 @@ class SignupCartActivity : AppCompatActivity() {
             else if (address_detail == "") edtAddressdetail.requestFocus()
             else postSignupResponse(cart_name, cart_num1, cart_num2, cart_num3, address_num, address, address_detail)
         }
-        btnLogindelivery.setOnClickListener{
+        img_popup.setOnClickListener {
             val intent: Intent = Intent(this, PopupDeliveryActivity::class.java)
             startActivityForResult(intent, 1000)
         }
@@ -136,10 +136,27 @@ class SignupCartActivity : AppCompatActivity() {
 
             }
         }
-        if(requestCode==1000){
-            if(resultCode==Activity.RESULT_OK) {
-                val door: String = data!!.getStringExtra("door")
-                btnLogindelivery.setText(door)
+        if (requestCode == 1000) {
+            if (resultCode == Activity.RESULT_OK) {
+                val values: String? = data!!.getStringExtra("values")
+                val door: String? = intent.getStringExtra("door")
+                Log.e("myTag", "" + door)
+                val securityoffice: String? = intent.getStringExtra("security")
+                Log.e("myTag", "" + securityoffice)
+                val courier: String? = data!!.getStringExtra("courier")
+                Log.e("myTag", "" + courier)
+                val self: String? = data!!.getStringExtra("self")
+                Log.e("myTag", "" + self)
+                val other: String? = data!!.getStringExtra("other")
+                Log.e("myTag", "" + other)
+
+
+                edtLogindelivery.setText(values)
+                edtLogindelivery.setText(door)
+                edtLogindelivery.setText(securityoffice)
+                edtLogindelivery.setText(courier)
+                edtLogindelivery.setText(self)
+                edtLogindelivery.setText(other)
             }
         }
     }
