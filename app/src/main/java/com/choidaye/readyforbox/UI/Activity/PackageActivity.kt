@@ -1,5 +1,7 @@
 package com.choidaye.readyforbox.UI.Activity
 
+import android.app.Activity
+import android.content.Intent
 import android.graphics.Paint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +13,7 @@ import android.view.View
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.choidaye.readyforbox.Data.PackageDetail
+import com.choidaye.readyforbox.Data.Packages
 import com.choidaye.readyforbox.Data.Product
 import com.choidaye.readyforbox.Get.GetPackageInfoResponse
 import com.choidaye.readyforbox.Network.ApplicationController
@@ -35,7 +38,7 @@ class PackageActivity : AppCompatActivity(){
     var package_id : Int = 0
     var main_img : String = ""
     var price : Int = 0
-    var saled_price  : Int = -1
+    var saled_price  : Int = 0
 
     var ratio : Int = 0
 
@@ -43,7 +46,7 @@ class PackageActivity : AppCompatActivity(){
         ApplicationController.instance.networkService
     }
 
-    var packageDetailList = ArrayList<Product>()
+    var packageDetailList = ArrayList<Packages>()
 
     lateinit var packageDetailRecyclcerViewAdapter :PackageDetailRecyclcerViewAdapter
 
@@ -62,11 +65,16 @@ class PackageActivity : AppCompatActivity(){
 
 
 
-
+        val intent: Intent = intent
+        val value=intent.getStringExtra("package_id")
+        Log.e("value",value)
+        setResult(Activity.RESULT_OK,intent)
 
 
         setRecyclerView()
-        getPackageInfoResponse(package_id.toString())
+
+
+        getPackageInfoResponse(value)
 
         txt_package_detail_realPrice.paintFlags=txt_package_detail_realPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
 
@@ -127,7 +135,9 @@ class PackageActivity : AppCompatActivity(){
     private fun getPackageInfoResponse(package_id : String) {
 
 
+        setResult(Activity.RESULT_OK,intent)
         Log.e("response", "리스폰스 들어옴")
+
         var getPackageInfoResponse = networkService.getPackageInfoResponse(package_id)
         getPackageInfoResponse.enqueue(object : Callback<GetPackageInfoResponse> {
 
@@ -139,11 +149,27 @@ class PackageActivity : AppCompatActivity(){
                 if (response.isSuccessful){
 
 
+                    Log.v("response body", response.body().toString())
+
+                    Log.v("successful", "통신성공")
+
+
+
                         name = response.body()!!.data.name
                         ratio = response.body()!!.data.sale_ratio
                         price = response.body()!!.data.price
+                        saled_price = response.body()!!.data.saled_price
+                        main_img = response.body()!!.data.main_img
 
                         setDetailedPackage(name,ratio,main_img,saled_price,price)
+
+
+
+
+
+
+
+
 
                 }else{
                     Log.v("response data", "서버 값 전달 오류")
@@ -162,6 +188,7 @@ class PackageActivity : AppCompatActivity(){
 
 
     private fun setDetailedPackage(name: String, sale_ratio: Int, image: String,saled_price : Int, price : Int) {
+
 
         name?.let {
             tv_ac_package_name.text = name
@@ -182,6 +209,8 @@ class PackageActivity : AppCompatActivity(){
         price?.let {
             txt_package_detail_realPrice.text = price.toString()
         }
+
+
 
     }
 

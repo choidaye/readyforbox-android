@@ -1,6 +1,7 @@
 package com.choidaye.readyforbox.Get
 
-import com.choidaye.readyforbox.Data.Product
+
+import com.choidaye.readyforbox.Data.ProductData
 
 data class GetProductDeliveyListResponse(
     val status : Int,
@@ -9,7 +10,3 @@ data class GetProductDeliveyListResponse(
     val data : ProductData
 )
 
-data class ProductData(
-    val product_count : Int,
-    val product : ArrayList<Product>
-)

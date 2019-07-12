@@ -21,15 +21,13 @@ class SearchRecyclerViewAdapter(val ctx: Context, val searchList: ArrayList<Sear
 
 
     override fun onBindViewHolder(holer: SearchRecyclerViewAdapter.Holder, position: Int) {
-        holer.keyword.text = searchList[position].keyword
-
 
 
     }
 
 
     inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val keyword : TextView =  itemView.findViewById(R.id.tv_fg_search_keyword) as TextView
+
 
     }
 

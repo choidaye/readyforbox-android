@@ -28,5 +28,17 @@ class SearchResultFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_search_result, container, false)
     }
 
+    override  fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        setRecyclerView()
+
+
+    }
+
+    private fun setRecyclerView() {
+
+    }
+
 
 }
