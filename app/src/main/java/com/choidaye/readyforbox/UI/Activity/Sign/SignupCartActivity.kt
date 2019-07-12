@@ -35,6 +35,7 @@ class SignupCartActivity : AppCompatActivity() {
         edtCartNum2.setText(num2)
         edtCartNum3.setText(num3)
 
+
 //        val login_u_id = edtLoginID.text.toString()
 //        Log.e("myTag", "CartInformation_name:" + login_u_id)
 

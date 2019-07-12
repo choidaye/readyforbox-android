@@ -15,8 +15,10 @@ class CartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cart)
 
-
         setReclerView()
+//        btn_ac_cart_order.setOnClickListener {
+//            startActivity<PopupCartActivity>()
+//        }
     }
 
     private fun setReclerView() {
