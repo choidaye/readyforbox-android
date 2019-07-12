@@ -1,6 +1,12 @@
 package com.choidaye.readyforbox.Network
 
+<<<<<<< HEAD
 import com.choidaye.readyforbox.Get.*
+=======
+import com.choidaye.readyforbox.Get.GetForUResultResponse
+import com.choidaye.readyforbox.Get.GetProductDeliveyListResponse
+import com.choidaye.readyforbox.Get.GetProductPackageListResponse
+>>>>>>> forYou
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -22,13 +28,18 @@ interface NetworkService {
         @Query("flag") flag : Int
     ): Call<GetProductPackageListResponse>
 
+<<<<<<< HEAD
 
     //forU 결과값
+=======
+    //준비해봤어 결과
+>>>>>>> forYou
     @GET("product/custom")
     fun getForUResultResponse(
         @Query("first") first: String,
         @Query("second") second : String,
         @Query("fifth") fifth : String,
+<<<<<<< HEAD
         @Query("minprice") minprice : Int
 
     ) : Call<GetForUResultResponse>
@@ -52,4 +63,9 @@ interface NetworkService {
     @POST("/mypage/user")
     fun getUserInfoResponse()
 
+=======
+        @Query("minprice") minprice : Int,
+        @Query("maxprice") maxprice : Int
+    ): Call<GetForUResultResponse>
+>>>>>>> forYou
 }

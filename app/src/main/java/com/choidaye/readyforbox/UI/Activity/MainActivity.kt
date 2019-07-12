@@ -1,15 +1,18 @@
 package com.choidaye.readyforbox.UI.Activity
 
+import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.View
+import android.webkit.JavascriptInterface
 import android.widget.RelativeLayout
 import com.choidaye.readyforbox.R
 import com.choidaye.readyforbox.UI.Adapter.MainFragmentStatePagerAdapter
 import com.choidaye.readyforbox.UI.Fragment.Category.DeliveryListFragment
+import com.choidaye.readyforbox.UI.Fragment.ForU.ForUResultFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         configureBottomNavigation()
+
 
 
 
@@ -45,18 +49,29 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-//    public  fun replaceFragment(fragment: Fragment) {
-//        supportFragmentManager
-//            .beginTransaction()
-//            .replace(R.id.vp_ac_main_frag_pager, fragment, fragment.javaClass.simpleName)
-//            .addToBackStack(fragment.javaClass.simpleName)
-//            .commit()
-//    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
 
+        val forUResultFragment=ForUResultFragment()
+        val args=Bundle()
+        var type: String=data!!.getStringExtra("name")
+        args.putString("type",type)
+        forUResultFragment.arguments=args
+        var translate = supportFragmentManager.beginTransaction()
+        translate.replace(R.id.main_layout,forUResultFragment)
+        translate.addToBackStack(forUResultFragment.javaClass.simpleName)
+        translate.commit()
 
+//        replaceFragment(ForUResultFragment())
+    }
 
-
-
-
-
+    /*
+    fun replaceFragment(Fragment:Fragment){
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.vp_ac_main_frag_pager,Fragment, Fragment.javaClass.simpleName)
+            .addToBackStack(Fragment.javaClass.simpleName)
+            .commit()
+    }
+    */
 }
