@@ -8,10 +8,20 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.widget.RadioGroup
+import com.choidaye.readyforbox.Network.ApplicationController
+import com.choidaye.readyforbox.Network.NetworkService
 import com.choidaye.readyforbox.R
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_signup.*
+import kotlinx.android.synthetic.main.activity_signup.edtLoginID
+import kotlinx.android.synthetic.main.activity_signup.edtLoginPW
+import kotlinx.android.synthetic.main.activity_signup.view.*
 
 class SignupActivity : AppCompatActivity() {
+
+    val networkService: NetworkService by lazy {
+        ApplicationController.instance.networkService
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,18 +29,18 @@ class SignupActivity : AppCompatActivity() {
         setContentView(R.layout.activity_signup)
         //configureNext()
         //setOnClickListener()
-        val textChangeListener: TextWatcher = object: TextWatcher {
+        val textChangeListener: TextWatcher = object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                if(edtLoginNum.text.toString() == "" ||
+                if (edtLoginNum.text.toString() == "" ||
                     edtLoginBir.text.toString() == "" ||
                     edtLoginName.text.toString() == "" ||
                     edtLoginPW.text.toString() == "" ||
                     edtLoginID.text.toString() == "" ||
-                    rg_check.checkedRadioButtonId == -1){
+                    rg_check.checkedRadioButtonId == -1
+                ) {
                     btn_ac_signup_next.setBackgroundColor(resources.getColor(R.color.blueGrey))
                     btn_ac_signup_next.isClickable = false
-                }
-                else{
+                } else {
                     btn_ac_signup_next.setBackgroundColor(resources.getColor(R.color.pumpkinOrange))
                     btn_ac_signup_next.isClickable = true
                 }
@@ -43,18 +53,18 @@ class SignupActivity : AppCompatActivity() {
             }
         }
 
-        rg_check.setOnCheckedChangeListener(object: RadioGroup.OnCheckedChangeListener{
+        rg_check.setOnCheckedChangeListener(object : RadioGroup.OnCheckedChangeListener {
             override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
-                if(edtLoginNum.text.toString() == "" ||
+                if (edtLoginNum.text.toString() == "" ||
                     edtLoginBir.text.toString() == "" ||
                     edtLoginName.text.toString() == "" ||
                     edtLoginPW.text.toString() == "" ||
                     edtLoginID.text.toString() == "" ||
-                    rg_check.checkedRadioButtonId == -1){
+                    rg_check.checkedRadioButtonId == -1
+                ) {
                     btn_ac_signup_next.setBackgroundColor(resources.getColor(R.color.blueGrey))
                     btn_ac_signup_next.isClickable = false
-                }
-                else{
+                } else {
                     btn_ac_signup_next.setBackgroundColor(resources.getColor(R.color.pumpkinOrange))
                     btn_ac_signup_next.isClickable = true
                 }
@@ -69,31 +79,31 @@ class SignupActivity : AppCompatActivity() {
         }
 
 
-        edtLoginID.setOnFocusChangeListener (object: View.OnFocusChangeListener{
+        edtLoginID.setOnFocusChangeListener(object : View.OnFocusChangeListener {
             override fun onFocusChange(v: View?, hasFocus: Boolean) {
                 clearFieldNameColor()
                 txtLoginID.setTextColor(resources.getColor(R.color.pumpkinOrange))
             }
         })
-        edtLoginPW.setOnFocusChangeListener (object: View.OnFocusChangeListener{
+        edtLoginPW.setOnFocusChangeListener(object : View.OnFocusChangeListener {
             override fun onFocusChange(v: View?, hasFocus: Boolean) {
                 clearFieldNameColor()
                 txtLoginPw.setTextColor(resources.getColor(R.color.pumpkinOrange))
             }
         })
-        edtLoginName.setOnFocusChangeListener (object: View.OnFocusChangeListener{
+        edtLoginName.setOnFocusChangeListener(object : View.OnFocusChangeListener {
             override fun onFocusChange(v: View?, hasFocus: Boolean) {
                 clearFieldNameColor()
                 txtLoginName.setTextColor(resources.getColor(R.color.pumpkinOrange))
             }
         })
-        edtLoginBir.setOnFocusChangeListener (object: View.OnFocusChangeListener{
+        edtLoginBir.setOnFocusChangeListener(object : View.OnFocusChangeListener {
             override fun onFocusChange(v: View?, hasFocus: Boolean) {
                 clearFieldNameColor()
                 txtLoginBir.setTextColor(resources.getColor(R.color.pumpkinOrange))
             }
         })
-        edtLoginNum.setOnFocusChangeListener (object: View.OnFocusChangeListener{
+        edtLoginNum.setOnFocusChangeListener(object : View.OnFocusChangeListener {
             override fun onFocusChange(v: View?, hasFocus: Boolean) {
                 clearFieldNameColor()
                 txtLoginNum.setTextColor(resources.getColor(R.color.pumpkinOrange))
@@ -120,6 +130,14 @@ class SignupActivity : AppCompatActivity() {
             val login_u_name: String = edtLoginName.text.toString()
             val login_u_bir: String = edtLoginBir.text.toString()
             val login_u_num: String = edtLoginNum.text.toString()
+//            //val login_u_gender :Boolean = rg_check.
+//
+//            var gendercheck: Int = 0
+//            if (rg_check.check1.isChecked() == true) {
+//                gendercheck=0
+//            } else{
+//                gendercheck=1
+//            }
 
             //비어있으면 계속 요청하는 코드
             if (login_u_id == "") edtLoginID.requestFocus()
@@ -127,12 +145,13 @@ class SignupActivity : AppCompatActivity() {
             else if (login_u_name == "") edtLoginName.requestFocus()
             else if (login_u_bir == "") edtLoginBir.requestFocus()
             else if (login_u_num == "") edtLoginNum.requestFocus()
+            //값을 하나 더 넘겨주어야함(gendercheck)
             else postLoginResponse(login_u_id, login_u_pw, login_u_name, login_u_bir, login_u_num)
         }
 
     }
 
-    fun clearFieldNameColor(){
+    fun clearFieldNameColor() {
         txtLoginID.setTextColor(resources.getColor(R.color.black))
         txtLoginPw.setTextColor(resources.getColor(R.color.black))
         txtLoginName.setTextColor(resources.getColor(R.color.black))
@@ -155,16 +174,21 @@ class SignupActivity : AppCompatActivity() {
 //    }
 
     fun postLoginResponse(
-        login_u_id: String,
-        login_u_pw: String,
-        login_u_name: String,
-        login_u_bir: String,
-        logi_u_num: String
+        email: String,
+        password: String,
+        name: String,
+        birth: String,
+        phone: String
+        //gender: Int
     ) {
         val intent: Intent = Intent(this, SignupCartActivity::class.java)
-        intent.putExtra("loginName",edtLoginID.text.toString())
+        intent.putExtra("loginName", edtLoginName.text.toString())
         intent.putExtra("loginNum", edtLoginNum.text.toString())
-        Log.e("myTag", "SignupActivity:" + edtLoginID.text.toString())
-        startActivity(intent)
+        intent.putExtra("email", edtLoginID.text.toString())
+        intent.putExtra("password", edtLoginPW.text.toString())
+        intent.putExtra("birth", edtLoginBir.text.toString())
+        //intent.putExtra("gender", gender)
+            Log.e("myTag", "SignupActivity:" + edtLoginID.text.toString())
+                    startActivity (intent)
     }
 }
