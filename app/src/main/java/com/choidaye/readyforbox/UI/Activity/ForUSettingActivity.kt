@@ -1,5 +1,7 @@
 package com.choidaye.readyforbox.UI.Activity
 
+import android.app.Activity
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -8,13 +10,23 @@ import android.util.Log
 import android.widget.LinearLayout
 import com.choidaye.readyforbox.Data.DragAndDrop
 import com.choidaye.readyforbox.DragListener.*
+import com.choidaye.readyforbox.Get.GetForUResultResponse
+import com.choidaye.readyforbox.Network.ApplicationController
+import com.choidaye.readyforbox.Network.NetworkService
 import com.choidaye.readyforbox.R
 import com.choidaye.readyforbox.UI.Adapter.DragListRecyclcerViewAdapter
 import kotlinx.android.synthetic.main.activity_for_usetting.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ForUSettingActivity : AppCompatActivity(), OnStartDragListener {
     lateinit var dragListRecyclcerViewAdapter: DragListRecyclcerViewAdapter
     lateinit var touchHelper: ItemTouchHelper
+
+    val networkService: NetworkService by lazy {
+        ApplicationController.instance.networkService
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -130,13 +142,45 @@ class ForUSettingActivity : AppCompatActivity(), OnStartDragListener {
             dragListRecyclcerViewAdapter.notifyDataSetChanged()
         }
         btn_for_u_setting_finish.setOnClickListener {
-            finish()
+            val min: String=txt_setting_priceMin.text.toString()
+            val max: String=txt_setting_priceMax.text.toString()
+
+            setForUResult(dataList[0].name,dataList[1].name,dataList[4].name,min.toInt(),max.toInt())
         }
 
     }
 
     override fun onStartDrag(holder: DragListRecyclcerViewAdapter.Holder) {
         touchHelper.startDrag(holder)
+    }
+    fun setForUResult(first: String, second: String, fifth: String, minprice: Int, maxprice:Int){
+        val getForUResult: Call<GetForUResultResponse> = networkService.getForUResultResponse(first,second,fifth,minprice,maxprice)
+        getForUResult.enqueue(object: Callback<GetForUResultResponse>{
+            override fun onResponse(call: Call<GetForUResultResponse>?, response: Response<GetForUResultResponse>?) {
+                if(response!!.isSuccessful){
+                    val intent: Intent = intent
+                    if(rb_ready.isChecked){
+                        intent.putExtra("name","예비 자취생 타입")
+                    }else if(rb_12.isChecked){
+                        intent.putExtra("name","자취 새내기 타입")
+                    }else if(rb_24.isChecked){
+                        intent.putExtra("name","프로 자취생 타입")
+                    }else if(rb_36.isChecked){
+                        intent.putExtra("name","자취만렙 타입")
+                    }
+
+                    setResult(Activity.RESULT_OK,intent)
+                    finish()
+                }
+                else{
+                    Log.e("TAG","전달 실패")
+                }
+            }
+
+            override fun onFailure(call: Call<GetForUResultResponse>, t: Throwable) {
+                Log.e("TAG","통신 실패")
+            }
+        })
     }
 
 }

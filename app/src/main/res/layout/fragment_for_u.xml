@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/White"
-    tools:context=".UI.Fragment.ForU.ForUFragment">
+    tools:context=".UI.Fragment.ForU.ForUFragment"
+    android:id="@+id/fg_for_u_layout">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

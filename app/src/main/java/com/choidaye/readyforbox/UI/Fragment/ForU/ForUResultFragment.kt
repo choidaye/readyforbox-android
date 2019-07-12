@@ -62,7 +62,7 @@ class ForUResultFragment : Fragment() {
 
         setRecyclerView()
 
-
+        //setForUResultList()
 
         forUresultpackageList.add(ForUResultPackage("삼다수","http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428",17000))
         forUresultpackageList.add(ForUResultPackage("삼다수","http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428",17000))
