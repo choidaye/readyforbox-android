@@ -32,7 +32,6 @@ class DeliveryListFragment : Fragment() {
 
     var result : String = ""
     var deliveryList = ArrayList<Product>()
-    var flag : Int = 0
 
 
     lateinit var  nameList : ArrayList<String>
@@ -229,7 +228,7 @@ class DeliveryListFragment : Fragment() {
 
     private fun showProductListFilter() {
 
-        Log.v("asdf","다예맵")
+        Log.v("filter","최신순 인기순 등 필터")
         var productListFilter = Dialog(activity!!)
         productListFilter.setCancelable(true)
 
@@ -251,6 +250,9 @@ class DeliveryListFragment : Fragment() {
             tv_fg_delivery_list_filter_title.text = result
 
             setProductDeliveyList( nameList.toString(),1)
+            Log.v("namelist",nameList.toString())
+
+
 
             productListFilter.dismiss()
 
@@ -309,6 +311,7 @@ class DeliveryListFragment : Fragment() {
 
                 if (response!!.isSuccessful) {
                     deliveryList.clear()
+
 
                     var temp: ArrayList<Product> = response.body()!!.data.product
                     if (temp.size > 0) {

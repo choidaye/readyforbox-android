@@ -56,5 +56,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     //daum api webview lib
     implementation 'com.github.WindSekirun:DaumPostCodeView:1.0.0'
+    //radio btn
+    implementation 'com.yuxingxin.multiradiogroup:library:1.0.0'
 
 }

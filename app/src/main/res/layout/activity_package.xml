@@ -54,6 +54,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
                 <ImageView
+                    android:id="@+id/iv_ac_package_main"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/image_btn_4" />
@@ -63,6 +64,7 @@
                     android:orientation="vertical"
                     android:background="@color/White">
                     <TextView
+                        android:id="@+id/tv_ac_package_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="플레이팅 완벽하게 끝내기"
@@ -78,14 +80,21 @@
                         android:layout_marginTop="20dp"
                         android:layout_marginLeft="16dp">
                         <TextView
+                            android:id="@+id/tv_ac_package_ratio"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="10%"
+                            android:text="10"
                             android:textSize="12sp"
-                            android:textColor="@color/darkGrey"
-                            android:layout_marginRight="5dp"/>
+                            android:textColor="@color/darkGrey"/>
                         <TextView
-                                android:id="@+id/txt_package_detail_realPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:textSize="12sp"
+                                android:textColor="@color/darkGrey"
+                                android:layout_marginRight="5dp"/>
+                        <TextView
+                            android:id="@+id/txt_package_detail_realPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="11,700"
@@ -105,6 +114,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginBottom="20dp">
                         <TextView
+                            android:id="@+id/tv_ac_package_saled_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="48,900"

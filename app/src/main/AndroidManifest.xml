@@ -24,9 +24,6 @@
         <activity android:name=".UI.Activity.Cart.CartActivity">
         </activity>
         <activity android:name=".UI.Activity.Sign.SignupActivity">
-
-
-
         </activity>
         <activity android:name=".UI.Activity.Order.OrdercompletedActivity">
         </activity>
@@ -38,6 +35,12 @@
         </activity>
         <activity android:name=".UI.Activity.ForUSettingActivity">
         </activity>
+
+        <activity android:name=".UI.Activity.PackageActivity">
+        </activity>
+        <activity android:name=".UI.Activity.ProductDetailActivity">
+        </activity>
+
         <activity
                 android:name=".UI.Activity.SplashActivity"
                 android:screenOrientation="portrait"
@@ -49,6 +52,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+
+
+
 
 
 

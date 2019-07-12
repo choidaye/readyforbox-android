@@ -31,11 +31,13 @@ class PackageRecyclerViewAdapter(val ctx: Context, val packageList: ArrayList<Pa
         holer.price.text=packageList[position].price.toString()
         holer.saled_price.text = packageList[position].saled_price.toString()
         holer.name.text = packageList[position].name
+
     }
 
 
     inner class Holder(itemView: View,itemClick: (Packages) -> Unit) : RecyclerView.ViewHolder(itemView){
         val price: TextView = itemView.findViewById(R.id.tv_fg_package_list_original_cost) as TextView
+
         val main_img : ImageView = itemView.findViewById(R.id.iv_item_fg_package_list) as ImageView
         val saled_price : TextView = itemView.findViewById(R.id.tv_fg_package_list_saled_price)as TextView
         val name : TextView = itemView.findViewById(R.id.tv_fg_package_list_name)as TextView

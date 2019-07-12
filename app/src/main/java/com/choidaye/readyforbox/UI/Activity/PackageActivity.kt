@@ -5,10 +5,16 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.BottomSheetBehavior
 import android.support.v7.widget.GridLayoutManager
+import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.choidaye.readyforbox.Data.PackageDetail
+import com.choidaye.readyforbox.Data.Product
+import com.choidaye.readyforbox.Get.GetPackageInfoResponse
+import com.choidaye.readyforbox.Network.ApplicationController
+import com.choidaye.readyforbox.Network.NetworkService
 import com.choidaye.readyforbox.R
 import com.choidaye.readyforbox.UI.Adapter.PackageDetailRecyclcerViewAdapter
 import kotlinx.android.synthetic.main.activity_package.*
@@ -16,13 +22,51 @@ import kotlinx.android.synthetic.main.activity_product_detail.*
 import kotlinx.android.synthetic.main.package_option.*
 import kotlinx.android.synthetic.main.product_option.*
 import kotlinx.android.synthetic.main.rv_item_fg_package_list.*
+import org.jetbrains.anko.image
 import org.jetbrains.anko.startActivity
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class PackageActivity : AppCompatActivity(){
+
+    var name: String = ""
+    var content : String = ""
+    var package_id : Int = 0
+    var main_img : String = ""
+    var price : Int = 0
+    var saled_price  : Int = -1
+
+    var ratio : Int = 0
+
+    val networkService: NetworkService by lazy {
+        ApplicationController.instance.networkService
+    }
+
+    var packageDetailList = ArrayList<Product>()
+
     lateinit var packageDetailRecyclcerViewAdapter :PackageDetailRecyclcerViewAdapter
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_package)
+
+
+
+        tv_ac_package_ratio.text = ratio.toString()
+        tv_ac_package_name.text = name
+        txt_package_detail_realPrice.text = price.toString()
+
+        //package_id = intent.getIntExtra("package_id",-1)
+
+
+
+
+
+
+        setRecyclerView()
+        getPackageInfoResponse(package_id.toString())
 
         txt_package_detail_realPrice.paintFlags=txt_package_detail_realPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
 
@@ -33,15 +77,8 @@ class PackageActivity : AppCompatActivity(){
             bottomSheet.state= BottomSheetBehavior.STATE_EXPANDED
         }
 
-        var packageDetailList : ArrayList<PackageDetail> = ArrayList()
-        packageDetailList.add(PackageDetail("http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428","제품명", 3000))
-        packageDetailList.add(PackageDetail("http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428","제품명", 3000))
-        packageDetailList.add(PackageDetail("http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428","제품명", 3000))
-        packageDetailList.add(PackageDetail("http://img.danawa.com/prod_img/500000/155/117/img/1117155_1.jpg?shrink=500:500&_v=20180523104428","제품명", 3000))
 
-        packageDetailRecyclcerViewAdapter= PackageDetailRecyclcerViewAdapter(applicationContext!!,packageDetailList)
-        rv_item_package_detail_all.adapter=packageDetailRecyclcerViewAdapter
-        rv_item_package_detail_all.layoutManager=GridLayoutManager(applicationContext!!,2)
+
 
 
         package_img_minus.setOnClickListener {
@@ -74,6 +111,80 @@ class PackageActivity : AppCompatActivity(){
             bottomSheet.state= BottomSheetBehavior.STATE_COLLAPSED
         }
     }
+
+
+
+    private fun setRecyclerView() {
+
+        packageDetailRecyclcerViewAdapter= PackageDetailRecyclcerViewAdapter(applicationContext!!,packageDetailList)
+        rv_item_package_detail_all.adapter=packageDetailRecyclcerViewAdapter
+        rv_item_package_detail_all.layoutManager=GridLayoutManager(applicationContext!!,2)
+
+
+    }
+
+
+    private fun getPackageInfoResponse(package_id : String) {
+
+
+        Log.e("response", "리스폰스 들어옴")
+        var getPackageInfoResponse = networkService.getPackageInfoResponse(package_id)
+        getPackageInfoResponse.enqueue(object : Callback<GetPackageInfoResponse> {
+
+            override fun onResponse(call: Call<GetPackageInfoResponse>?, response: Response<GetPackageInfoResponse>) {
+
+                Log.e("response","리스폰스 확인")
+
+
+                if (response.isSuccessful){
+
+
+                        name = response.body()!!.data.name
+                        ratio = response.body()!!.data.sale_ratio
+                        price = response.body()!!.data.price
+
+                        setDetailedPackage(name,ratio,main_img,saled_price,price)
+
+                }else{
+                    Log.v("response data", "서버 값 전달 오류")
+
+                }
+
+
+            }
+
+            override fun onFailure(call: Call<GetPackageInfoResponse>, t: Throwable) {
+
+            }
+        })
+
+    }
+
+
+    private fun setDetailedPackage(name: String, sale_ratio: Int, image: String,saled_price : Int, price : Int) {
+
+        name?.let {
+            tv_ac_package_name.text = name
+        }
+        sale_ratio?.let {
+            tv_ac_package_ratio.text = sale_ratio.toString()
+        }
+
+        image?.let {
+            Glide.with(this).load(image).into(iv_ac_package_main)
+        }
+
+        saled_price?.let{
+            tv_ac_package_saled_price.text = saled_price.toString()
+
+        }
+
+        price?.let {
+            txt_package_detail_realPrice.text = price.toString()
+        }
+
+    }
+
 
 
 }
