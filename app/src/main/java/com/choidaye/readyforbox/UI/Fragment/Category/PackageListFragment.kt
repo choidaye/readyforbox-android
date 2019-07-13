@@ -67,6 +67,7 @@ class PackageListFragment : Fragment() {
 //        toolbar_delivery_list_title.text= extra!!.getString("name")
 
         setProductPackageList(extra!!.getString("name"))
+
         if(extra!!.getString("name").equals("공간확보의 달인")) tv_fg_package_list_area.setTextColor(resources.getColor(R.color.pumpkinOrange))
         else if(extra!!.getString("name").equals("가전제품")) tv_fg_package_list_appliances.setTextColor(resources.getColor(R.color.pumpkinOrange))
         else if(extra!!.getString("name").equals("우리 집 관리")) tv_fg_package_list_manage.setTextColor(resources.getColor(R.color.pumpkinOrange))

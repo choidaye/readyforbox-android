@@ -1,6 +1,7 @@
 package com.choidaye.readyforbox.UI.Fragment.Category
 
 
+import android.app.Activity
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
@@ -34,6 +35,8 @@ class DeliveryListFragment : Fragment() {
 
     var result : String = ""
     var deliveryList = ArrayList<Product>()
+
+    var product_id : String = ""
 
 
     lateinit var  nameList : ArrayList<String>
@@ -122,6 +125,10 @@ class DeliveryListFragment : Fragment() {
     private fun setRecyclerView() {
         deliveryRecyclcerViewAdapter = DeliveryRecyclerViewAdapter(activity!!, deliveryList){ Product ->
             startActivity<ProductDetailActivity>()
+            var intent = Intent(context, ProductDetailActivity::class.java)
+            intent.putExtra("product_id", product_id)
+
+            startActivity(intent)
         }
         rv_fg_delivery_list.adapter = deliveryRecyclcerViewAdapter
         rv_fg_delivery_list.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
@@ -242,6 +249,7 @@ class DeliveryListFragment : Fragment() {
 
     private fun showProductListFilter() {
 
+
         Log.v("filter","최신순 인기순 등 필터")
         var productListFilter = Dialog(activity!!)
         productListFilter.setCancelable(true)
@@ -318,7 +326,6 @@ class DeliveryListFragment : Fragment() {
     fun setProductDeliveyList(category_name : String, flag : Int){
 
 
-
         var getProductDeliveyList: Call<GetProductDeliveyListResponse> = networkService.getProductDeliveryListResponse(category_name,flag)
         getProductDeliveyList.enqueue(object : Callback<GetProductDeliveyListResponse> {
             override fun onResponse(call: Call<GetProductDeliveyListResponse>?, response: Response<GetProductDeliveyListResponse>?) {
@@ -328,7 +335,14 @@ class DeliveryListFragment : Fragment() {
 
 
                     var temp: ArrayList<Product> = response.body()!!.data.product
+
+
+                   product_id=temp[0].product_id
+
                     if (temp.size > 0) {
+
+                         Log.v("response",response.body()!!.status.toString())
+
                         val position = deliveryRecyclcerViewAdapter.itemCount
                         deliveryRecyclcerViewAdapter.deliveryList.addAll(temp)
                         deliveryRecyclcerViewAdapter.notifyDataSetChanged()

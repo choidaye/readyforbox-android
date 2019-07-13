@@ -11,6 +11,7 @@ import com.choidaye.readyforbox.R
 
 class SearchRecyclerViewAdapter(val ctx: Context, val searchList: ArrayList<SearchData>) : RecyclerView.Adapter<SearchRecyclerViewAdapter.Holder>(){
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchRecyclerViewAdapter.Holder {
         val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_fg_search_list, parent, false)
         return Holder(view)
@@ -21,13 +22,15 @@ class SearchRecyclerViewAdapter(val ctx: Context, val searchList: ArrayList<Sear
 
 
     override fun onBindViewHolder(holer: SearchRecyclerViewAdapter.Holder, position: Int) {
+        holer.keyword.text = searchList[position].keyword
+
 
 
     }
 
 
     inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+        val keyword : TextView =  itemView.findViewById(R.id.tv_fg_search_keyword) as TextView
 
     }
 

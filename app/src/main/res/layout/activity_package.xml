@@ -122,7 +122,7 @@
                         android:layout_marginLeft="16dp"
                         android:layout_marginBottom="20dp">
                         <TextView
-                                android:fontFamily="@font/bold"
+                           android:fontFamily="@font/bold"
                             android:id="@+id/tv_ac_package_saled_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

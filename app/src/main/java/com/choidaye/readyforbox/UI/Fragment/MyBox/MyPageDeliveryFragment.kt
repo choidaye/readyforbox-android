@@ -37,7 +37,7 @@ private const val ARG_PARAM2 = "param2"
 class MyPageDeliveryFragment : Fragment() {
 
 
-    var token : String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo5LCJuYW1lIjoi67CV7J6s7ISxIiwiZW1haWwiOiJxd2VyIiwiaWF0IjoxNTYyODM1ODkx"
+    var token : String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo5LCJuYW1lIjoiPz8_IiwiZW1haWwiOiJkYXllQG5hdmVyLmNvbSIsImlhdCI6MTU2Mjk4ODMxNCwiZXhwIjoxNTY0MTk3OTE0LCJpc3MiOiJqYWVzZW9uZyJ9.YgcyZXP4ukZOmqPZu6Ybiy4-u64EhpgY5Bzu7Kv9Jn8"
 
     val networkService: NetworkService by lazy {
         ApplicationController.instance.networkService
@@ -47,6 +47,14 @@ class MyPageDeliveryFragment : Fragment() {
     lateinit var myPageDeliveryManangerRecyclerViewAdapter: MyPageDeliveryManangerRecyclerViewAdapter
 
     var mypageDeliverylist = ArrayList<Regular>()
+
+    var name : String = ""
+    var content : String = ""
+    var count : Int = 0
+    var saled_price : Int = 0
+    var is_subscribed : Int = 0
+    var delivery_day : Int = 0
+
 
 
 
@@ -64,7 +72,7 @@ class MyPageDeliveryFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         setRecyclerView()
-        getMyPagedeliveryResponse(token)
+       getMyPagedeliveryResponse(token)
 
     }
 
@@ -81,10 +89,24 @@ class MyPageDeliveryFragment : Fragment() {
 
                 if (response.isSuccessful){
 
+                    Log.v("response", response.message())
+                    Log.v("status", response.body().toString())
+
+                    val position = ArrayList<Regular>().size
+                    var regulardata = response.body()!!.data.regular
 
 
 
+                    var temp: ArrayList<Regular> = response.body()!!.data.regular
 
+
+                    mypageDeliverylist.clear()
+                    myPageDeliveryManangerRecyclerViewAdapter.mypageDeliveryList.addAll(temp)
+                    myPageDeliveryManangerRecyclerViewAdapter.notifyDataSetChanged()
+
+
+
+                   // setMyDeliveryView(delivery_day,delivery_day,name,count)
 
 
 
@@ -118,38 +140,38 @@ class MyPageDeliveryFragment : Fragment() {
 
     }
 
-
-    private fun setMyDeliveryView(delivery_cycle : Int, delivery_day : Int, name :String, num : String ){
-
-            delivery_cycle?.let{
-
-                tv_ac_my_page_delivery_check_product_term.text  = delivery_cycle.toString()
-
-            }
-
-            delivery_day?.let{
-
-                tv_ac_my_page_delivery_check_product_date.text = delivery_day.toString()
-
-
-            }
-
-            name?.let{
-
-                tv_ac_my_page_delivery_check_product_name.text = name
-
-
-            }
-
-            num?.let{
-                tv_ac_my_page_delivery_check_product_num.text = num
-            }
-
-
-
+//
+//    private fun setMyDeliveryView(delivery_cycle : Int, delivery_day : Int, name :String, count : Int ){
+//
+//            delivery_cycle?.let{
+//
+//                tv_ac_my_page_delivery_check_product_term.text  = delivery_cycle.toString()
+//
+//            }
+//
+//            delivery_day?.let{
+//
+//                tv_ac_my_page_delivery_check_product_date.text = delivery_day.toString()
+//
+//
+//            }
+//
+//            name?.let{
+//
+//                tv_ac_my_page_delivery_check_product_name.text = name
+//
+//
+//            }
+//
+//            count?.let{
+//                tv_ac_my_page_delivery_check_product_num.text = count.toString()
+//            }
+//
 
 
-    }
+
+
+   // }
 
 
 

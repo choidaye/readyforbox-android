@@ -64,13 +64,18 @@ interface NetworkService {
     ) : Call<GetDeliveryDetailResponse>
 
 
-    //패키지 상품 삳세페이지
+    //패키지 상품 상세페이지
     @GET("product/package/detail")
     fun getPackageInfoResponse(
         @Query("package_id") package_id : String
     ) : Call<GetPackageInfoResponse>
 
 
+    //정기배송 상품 상세 페이지
+    @GET("product/regular/detail")
+    fun getProductinfoResponse(
+        @Query("product_id") product_id: String
+    ) : Call<GetProductInfoResponse>
 
 
     //마이페이지 유저 정보
@@ -81,10 +86,17 @@ interface NetworkService {
 
 
     //마이페이지 정기배송
-    @GET("/mypage/order")
+    @GET("mypage/order")
     fun getMypageDelivery(
         @Header("token") token : String
     ) : Call<GetMyboxDeliveryResponse>
+
+
+    //검색결과
+    @GET("product/regular")
+    fun getSearchResult(
+        @Query("search") search : String
+    ) : Call<GetSearchResultResponse>
 
 
 

@@ -32,10 +32,7 @@ private const val ARG_PARAM2 = "param2"
 class MyBoxFragment : Fragment() {
 
 
-    var token : String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo5LCJuYW1lIjoi67CV7J6s7ISxIiwiZW1haWwiOiJxd2VyIiwiaWF0IjoxNTYyODM1ODkxLCJleHAiOjE1NjQwNDU0OTEsImlzcyI6ImphZXNlb25nIn0.laWOX4xDlKBR2i-5zWIixK1i--07Oft9B2V31bB6EhI"
-
-
-
+    var token : String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo5LCJuYW1lIjoi7LWc64uk7JiIIiwiZW1haWwiOiJkYXllQG5hdmVyLmNvbSIsImlhdCI6MTU2Mjk4ODYwNiwiZXhwIjoxNTY0MTk4MjA2LCJpc3MiOiJqYWVzZW9uZyJ9.6hdRcGFEqFCxDNJNZbHMOQiu7ExKKi6fFpL39Ji1Y_o"
     val networkService: NetworkService by lazy {
         ApplicationController.instance.networkService
     }
@@ -54,7 +51,7 @@ class MyBoxFragment : Fragment() {
 
 
 
-        //getUserInfoResponse(token)
+        getUserInfoResponse(token)
         btn_fg_my_box_delivery_manage.setOnClickListener {
             startActivity<MyPageDeliveryManangerActivity>()
         }
@@ -63,36 +60,43 @@ class MyBoxFragment : Fragment() {
 
     }
 
-//    private fun getUserInfoResponse(token: String) {
-//
-//        Log.e("response","리스폰스 들어옴")
-//
-//
-//
-//        val getUserInfoResponse : Call<GetUserInfoResponse> =
-//        networkService.getUserInfoResponse(token)
-//        getUserInfoResponse.enqueue(object : Callback<GetUserInfoResponse>{
-//            override fun onResponse(call: Call<GetUserInfoResponse>, response: Response<GetUserInfoResponse>) {
-//                    if (response.isSuccessful){
-//                        val name : String = response.body()!!.data.name
-//                        val email :String = response.body()!!.data.email
-//
-//                        Log.v("server","서버 값 잘 받음")
-//                        setMyPageView(name,email)
-//
-//
-//                    }else{
-//                        Log.v("TAG", "서버 값 전달 실패")
-//                    }
-//            }
-//
-//            override fun onFailure(call: Call<GetUserInfoResponse>, t: Throwable) {
-//
-//                Log.e("My page fail",t.toString())
-//            }
-//
-//        })
-//    }
+    private fun getUserInfoResponse(token: String) {
+
+        Log.e("response","리스폰스 들어옴")
+
+
+
+        val getUserInfoResponse : Call<GetUserInfoResponse> =
+        networkService.getUserInfoResponse(token)
+        getUserInfoResponse.enqueue(object : Callback<GetUserInfoResponse>{
+            override fun onResponse(call: Call<GetUserInfoResponse>, response: Response<GetUserInfoResponse>) {
+
+
+                    if (response.isSuccessful){
+
+                        Log.v("response", response.message())
+                        Log.v("status", response.body().toString())
+
+
+                        val name : String = response.body()!!.data.name
+                        val email : String = response.body()!!.data.email
+
+                        Log.v("server","서버 값 잘 받음")
+                        setMyPageView(name,email)
+
+
+                    }else{
+                        Log.v("TAG", "서버 값 전달 실패")
+                    }
+            }
+
+            override fun onFailure(call: Call<GetUserInfoResponse>, t: Throwable) {
+
+                Log.e("My page fail",t.toString())
+            }
+
+        })
+    }
 
 
 

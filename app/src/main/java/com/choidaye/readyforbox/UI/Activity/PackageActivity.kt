@@ -46,7 +46,7 @@ class PackageActivity : AppCompatActivity(){
         ApplicationController.instance.networkService
     }
 
-    var packageDetailList = ArrayList<Packages>()
+    var packageDetailList = ArrayList<Product>()
 
     lateinit var packageDetailRecyclcerViewAdapter :PackageDetailRecyclcerViewAdapter
 
@@ -162,6 +162,13 @@ class PackageActivity : AppCompatActivity(){
                         main_img = response.body()!!.data.main_img
 
                         setDetailedPackage(name,ratio,main_img,saled_price,price)
+
+
+                    var temp : ArrayList<Product> = response.body()!!.data.product
+                   packageDetailRecyclcerViewAdapter.packageDetailList.addAll(temp)
+                   packageDetailRecyclcerViewAdapter.notifyDataSetChanged()
+
+
 
 
 

@@ -13,7 +13,7 @@ import com.choidaye.readyforbox.Data.Packages
 import com.choidaye.readyforbox.Data.Product
 import com.choidaye.readyforbox.R
 
-    class PackageDetailRecyclcerViewAdapter(val ctx: Context, val packageDetailList: ArrayList<Packages>) : RecyclerView.Adapter<PackageDetailRecyclcerViewAdapter.Holder>(){
+    class PackageDetailRecyclcerViewAdapter(val ctx: Context, val packageDetailList: ArrayList<Product>) : RecyclerView.Adapter<PackageDetailRecyclcerViewAdapter.Holder>(){
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
             val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_package_detail, parent, false)
@@ -28,7 +28,7 @@ import com.choidaye.readyforbox.R
             Glide.with(ctx)
                 .load(packageDetailList[position].main_img)
                 .into(holer.main_img)
-            holer.name.text=packageDetailList[position].name.toString()
+            holer.name.text=packageDetailList[position].name
             holer.price.text=packageDetailList[position].price.toString()
         }
 
