@@ -136,7 +136,7 @@
                     android:orientation="vertical"
                     android:background="@color/White"
                     android:padding="5dp"
-                    android:id="@+id/order_person_view_before_click">
+                    android:id="@+id/order_person_view_before_click" android:layout_alignParentBottom="true">
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -300,6 +300,544 @@
                 </LinearLayout>
 
             </LinearLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/White"
+                    android:padding="5dp"
+                    android:id="@+id/order_view_shipping_before_click">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="배송지 정보"
+                        android:textSize="20dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tv_order_view_shpping"
+                        android:text="주소주소주소..."
+                        android:layout_margin="10dp"
+                        android:layout_toLeftOf="@+id/btn_shpping_item_view_down"
+                        android:layout_centerVertical="true"/>
+
+                <ImageButton android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_alignParentRight="true"
+                             android:layout_centerVertical="true"
+                             android:padding="5dp"
+                             android:background="@drawable/arrow"
+                             android:id="@+id/btn_shpping_item_view_down"
+                />
+
+            </RelativeLayout>
+            <LinearLayout  android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:background="#ffffff"
+                           android:id="@+id/order_shipping_view_after_click"
+                           android:visibility="invisible">
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/White"
+                        android:padding="5dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="배송지 정보"
+                            android:textSize="20dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+
+                    />
+
+                    <ImageButton android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_alignParentRight="true"
+                                 android:layout_centerVertical="true"
+                                 android:padding="5dp"
+                                 android:background="@drawable/up_arrow"
+                                 android:id="@+id/btn_shpping_item_view_up"
+                    />
+
+                </RelativeLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="#ffffff"
+                        android:weightSum="10"
+                >
+                    <TextView android:layout_width="0dp"
+                              android:layout_weight="2"
+                              android:layout_height="wrap_content"
+                              android:text="수령자"
+                              android:textSize="17dp"
+                              android:id="@+id/tv_order_view_shpping_person_name"
+                              android:textColor="#000000"
+                              android:layout_gravity="center"
+                              android:gravity="center"/>
+                    <EditText android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="8"
+                              android:layout_margin="5dp"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="#ffffff"
+                        android:weightSum="10">
+                    <TextView android:layout_width="0dp"
+                              android:layout_weight="2"
+                              android:layout_height="wrap_content"
+                              android:text="연락처"
+                              android:textSize="17dp"
+                              android:textColor="#000000"
+                              android:layout_gravity="center"
+                              android:gravity="center"/>
+                    <EditText android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="2"
+                              android:layout_margin="5dp"
+                              android:id="@+id/tv_order_view_shpping_phone_first"/>
+                    <TextView android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:layout_height="wrap_content"
+                              android:text=" - "
+                              android:textSize="17dp"
+                              android:textColor="#000000"
+                              android:layout_gravity="center"
+                              android:gravity="center"/>
+                    <EditText android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="2"
+                              android:layout_margin="5dp"
+                              android:id="@+id/tv_order_view_shpping_phone_second"/>
+                    <TextView android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:layout_height="wrap_content"
+                              android:text=" - "
+                              android:textSize="17dp"
+                              android:textColor="#000000"
+                              android:layout_gravity="center"
+                              android:gravity="center"/>
+                    <EditText android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="2"
+                              android:layout_margin="5dp"
+                              android:id="@+id/tv_order_view_shpping_phone_third"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="#ffffff"
+                        android:weightSum="10"
+                >
+                    <TextView android:layout_width="0dp"
+                              android:layout_weight="2"
+                              android:layout_height="wrap_content"
+                              android:text="배송지"
+                              android:textSize="17dp"
+                              android:textColor="#000000"
+                              android:layout_gravity="center"
+                              android:gravity="center"/>
+                    <EditText android:layout_width="0dp"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="5"
+                              android:layout_margin="5dp"
+                              android:id="@+id/tv_order_view_shpping_address"/>
+                    <Button
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:text="우편번호 검색"
+                    android:textColor="#ff7400"
+                    android:background="@drawable/white_oragne_button"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" 
+                              android:layout_height="wrap_content"
+                                android:weightSum="10"
+                              android:gravity="right"
+                    android:orientation="horizontal">
+                    <EditText android:layout_width="0dp"
+                              android:layout_weight="8"
+                              android:layout_height="wrap_content"
+                              android:id="@+id/etv_order_view_shpping_address1"
+                    android:textSize="17dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:weightSum="10"
+                              android:gravity="right"
+                              android:orientation="horizontal">
+                    <EditText android:layout_width="0dp"
+                              android:layout_weight="8"
+                              android:layout_height="wrap_content"
+                              android:id="@+id/etv_order_view_shpping_address2"
+                              android:textSize="17dp"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                </LinearLayout>
+            </LinearLayout>
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/White"
+                        android:padding="5dp"
+                        android:id="@+id/order_address_view_before_click">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="정기배송 정보"
+                            android:textSize="20dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/tv_order_view_address_day"
+                            android:text="매달 13일"
+                            android:layout_margin="10dp"
+                            android:layout_toLeftOf="@+id/btn_regular_item_view_down"
+                            android:layout_centerVertical="true"/>
+
+                    <ImageButton android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_alignParentRight="true"
+                                 android:layout_centerVertical="true"
+                                 android:padding="5dp"
+                                 android:background="@drawable/arrow"
+                                 android:id="@+id/btn_regular_item_view_down"
+                    />
+
+                </RelativeLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                        android:visibility="invisible"
+                    android:id="@+id/order_address_view_after_click">
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/White"
+                            android:padding="5dp">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="정기배송 정보"
+                                android:textSize="20dp"
+                                android:padding="5dp"
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+
+                        />
+
+
+                        <ImageButton android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:layout_alignParentRight="true"
+                                     android:layout_centerVertical="true"
+                                     android:padding="5dp"
+                                     android:background="@drawable/up_arrow"
+                                     android:id="@+id/btn_regular_item_view_up"
+                        />
+
+                    </RelativeLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                            android:background="#ffffff">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="정기 배송은 마이페이지에서 언제든지 바꿀 수 있어요."
+                        android:layout_marginLeft="15dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:weightSum="10"
+                                    android:background="@color/White">
+                        <Button android:layout_width="0dp"
+                                android:layout_weight="3"
+                                android:layout_height="wrap_content"
+                                android:text="매달 13일 >"
+                                android:textColor="#ff7400"
+                                android:layout_margin="15dp"
+                                android:background="@drawable/white_oragne_button"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/White"
+                    android:padding="5dp"
+                    android:id="@+id/order_pay_view_before_click">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="결제 수단"
+                        android:textSize="20dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tv_order_view_pay"
+                        android:text="매달 13일"
+                        android:layout_margin="10dp"
+                        android:layout_toLeftOf="@+id/btn_pay_item_view_down"
+                        android:layout_centerVertical="true"/>
+
+                <ImageButton android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_alignParentRight="true"
+                             android:layout_centerVertical="true"
+                             android:padding="5dp"
+                             android:background="@drawable/arrow"
+                             android:id="@+id/btn_pay_item_view_down"
+                />
+
+            </RelativeLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:background="@color/White"
+                          android:visibility="invisible"
+                          android:id="@+id/order_pay_view_after_click">
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/White"
+                        android:padding="5dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="결제 수단"
+                            android:textSize="20dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+
+                    />
+
+
+                    <ImageButton android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_alignParentRight="true"
+                                 android:layout_centerVertical="true"
+                                 android:padding="5dp"
+                                 android:background="@drawable/arrow"
+                                 android:id="@+id/btn_pay_item_view_up"
+                    />
+
+                </RelativeLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                        android:background="@color/White"
+                        android:orientation="vertical">
+                    <RadioButton android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text ="신용/체크카드"
+                                 android:textStyle="bold"
+                                 android:layout_marginLeft="15dp"
+                                 android:id="@+id/radio_order_pay"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:weightSum="10">
+                    <Button android:layout_width="0dp"
+                            android:layout_weight="5"
+                            android:layout_height="wrap_content"
+                            android:text="결제 카드 등록하기 >"
+                            android:textColor="#ff7400"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/white_oragne_button"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/White"
+                    android:padding="5dp"
+                    android:id="@+id/order_last_view_before_click">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="최종 결제금액"
+                        android:textSize="20dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tv_order_view_last"
+                        android:text="30,500원"
+                        android:layout_margin="10dp"
+                        android:layout_toLeftOf="@+id/btn_last_item_view_down"
+                        android:layout_centerVertical="true"/>
+
+                <ImageButton android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_alignParentRight="true"
+                             android:layout_centerVertical="true"
+                             android:padding="5dp"
+                             android:background="@drawable/arrow"
+                             android:id="@+id/btn_last_item_view_down"
+                />
+            </RelativeLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/White"
+                    android:id="@+id/order_last_view_after_click"
+                    android:visibility="invisible">
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/White"
+                        android:padding="5dp"
+                        >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="최종 결제금액"
+                        android:textSize="20dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+
+                />
+
+
+                <ImageButton android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_alignParentRight="true"
+                             android:layout_centerVertical="true"
+                             android:padding="5dp"
+                             android:background="@drawable/up_arrow"
+                             android:id="@+id/btn_last_item_view_up"
+                />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="17dp"
+                              android:textStyle="bold"
+                              android:textColor="#000000"
+                              android:layout_margin="15dp"
+                                android:text="총 주문 금액"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="17dp"
+                              android:textStyle="bold"
+                              android:textColor="#000000"
+                              android:layout_margin="15dp"
+                              android:layout_alignParentRight="true"
+                              android:text="30,500원"/>
+
+
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="17dp"
+                              android:textStyle="bold"
+                              android:textColor="#000000"
+                              android:layout_margin="15dp"
+                              android:text="배송비"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:textSize="17dp"
+                              android:textStyle="bold"
+                              android:textColor="#000000"
+                              android:layout_margin="15dp"
+                              android:layout_alignParentRight="true"
+                              android:text="무료"/>
+
+                </RelativeLayout>
+                <LinearLayout android:layout_width="match_parent"
+                              android:weightSum="10"
+                              android:gravity="center"
+                              android:layout_height="wrap_content">
+                    <View android:layout_width="0dp"
+                          android:layout_height="1dp"
+                         android:layout_weight="9"
+                          android:background="#000000"/>
+                </LinearLayout>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30,500원"
+                        android:textSize="20dp"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_gravity="right"
+                />
+            </LinearLayout>
+
+
 
 
         </LinearLayout>
@@ -341,6 +879,7 @@
                 android:background="@drawable/round_white_fill"/>
 
     </LinearLayout>
+
 
 
 
