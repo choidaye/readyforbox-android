@@ -130,14 +130,12 @@ class SignupActivity : AppCompatActivity() {
             val login_u_name: String = edtLoginName.text.toString()
             val login_u_bir: String = edtLoginBir.text.toString()
             val login_u_num: String = edtLoginNum.text.toString()
-//            //val login_u_gender :Boolean = rg_check.
-//
-//            var gendercheck: Int = 0
-//            if (rg_check.check1.isChecked() == true) {
-//                gendercheck=0
-//            } else{
-//                gendercheck=1
-//            }
+            var gendercheck: String = "0"
+            if (rg_check.check1.isChecked() == true) {
+                gendercheck= "0"
+            } else{
+                gendercheck= "1"
+            }
 
             //비어있으면 계속 요청하는 코드
             if (login_u_id == "") edtLoginID.requestFocus()
@@ -146,7 +144,7 @@ class SignupActivity : AppCompatActivity() {
             else if (login_u_bir == "") edtLoginBir.requestFocus()
             else if (login_u_num == "") edtLoginNum.requestFocus()
             //값을 하나 더 넘겨주어야함(gendercheck)
-            else postLoginResponse(login_u_id, login_u_pw, login_u_name, login_u_bir, login_u_num)
+            else postLoginResponse(login_u_id, login_u_pw, login_u_name, login_u_bir, login_u_num, gendercheck)
         }
 
     }
@@ -178,15 +176,17 @@ class SignupActivity : AppCompatActivity() {
         password: String,
         name: String,
         birth: String,
-        phone: String
-        //gender: Int
+        phone: String,
+        gender: String
     ) {
         val intent: Intent = Intent(this, SignupCartActivity::class.java)
         intent.putExtra("loginName", edtLoginName.text.toString())
         intent.putExtra("loginNum", edtLoginNum.text.toString())
         intent.putExtra("email", edtLoginID.text.toString())
+        intent.putExtra("phone", edtLoginNum.text.toString())
         intent.putExtra("password", edtLoginPW.text.toString())
         intent.putExtra("birth", edtLoginBir.text.toString())
+        intent.putExtra("gender", gender)
         //intent.putExtra("gender", gender)
             Log.e("myTag", "SignupActivity:" + edtLoginID.text.toString())
                     startActivity (intent)
