@@ -26,24 +26,28 @@ class PopupDeliveryActivity : AppCompatActivity() {
             val intent: Intent = Intent(this, SignupCartActivity::class.java)
             intent.putExtra("securityoffice", "" + tv_security.text.toString())
             setResult(Activity.RESULT_OK, intent)
+            Log.e("myTag", ""+ tv_security.text.toString())
             finish()
         }
         rl_courier.setOnClickListener{
             val intent: Intent = Intent(this, SignupCartActivity::class.java)
             intent.putExtra("courier", "" + tv_courier.text.toString())
             setResult(Activity.RESULT_OK, intent)
+            Log.e("myTag", ""+ tv_courier.text.toString())
             finish()
         }
         rl_self.setOnClickListener{
             val intent: Intent = Intent(this, SignupCartActivity::class.java)
             intent.putExtra("self", "" + tv_self.text.toString())
             setResult(Activity.RESULT_OK, intent)
+            Log.e("myTag", ""+ tv_self.text.toString())
             finish()
         }
         rl_other.setOnClickListener{
             val intent: Intent = Intent(this, SignupCartActivity::class.java)
             intent.putExtra("other", "" + tv_other.text.toString())
             setResult(Activity.RESULT_OK, intent)
+            Log.e("myTag", ""+ tv_other.text.toString())
             finish()
         }
     }
