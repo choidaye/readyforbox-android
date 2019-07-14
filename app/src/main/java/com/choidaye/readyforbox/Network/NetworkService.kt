@@ -86,6 +86,11 @@ interface NetworkService {
         @Header("token") token : String
     ) : Call<GetMyboxDeliveryResponse>
 
+    //정기배송 상품 상세 페이지
+    @GET("product/regular/detail")
+    fun getProductinfoResponse(
+        @Query("product_id") product_id: String
+    ) : Call<GetProductInfoResponse>
 
 
 

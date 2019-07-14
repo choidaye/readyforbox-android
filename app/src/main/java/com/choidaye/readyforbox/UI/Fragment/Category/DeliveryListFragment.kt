@@ -31,8 +31,8 @@ import retrofit2.Response
 
 
 class DeliveryListFragment : Fragment() {
-
     var result : String = ""
+    var product_id : String = ""
     var deliveryList = ArrayList<Product>()
 
 
@@ -121,7 +121,10 @@ class DeliveryListFragment : Fragment() {
 
     private fun setRecyclerView() {
         deliveryRecyclcerViewAdapter = DeliveryRecyclerViewAdapter(activity!!, deliveryList){ Product ->
-            startActivity<ProductDetailActivity>()
+            var intent = Intent(context, ProductDetailActivity::class.java)
+            intent.putExtra("product_id", product_id)
+
+            startActivity(intent)
         }
         rv_fg_delivery_list.adapter = deliveryRecyclcerViewAdapter
         rv_fg_delivery_list.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
@@ -328,6 +331,7 @@ class DeliveryListFragment : Fragment() {
 
 
                     var temp: ArrayList<Product> = response.body()!!.data.product
+                    product_id=temp[0].product_id
                     if (temp.size > 0) {
                         val position = deliveryRecyclcerViewAdapter.itemCount
                         deliveryRecyclcerViewAdapter.deliveryList.addAll(temp)

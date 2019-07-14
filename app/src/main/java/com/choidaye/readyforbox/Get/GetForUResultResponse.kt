@@ -1,8 +1,8 @@
 package com.choidaye.readyforbox.Get
 
 import com.choidaye.readyforbox.Data.Packages
-import com.choidaye.readyforbox.Data.Regular
-import com.choidaye.readyforbox.Data.Regular_not_important
+import com.choidaye.readyforbox.Data.Regular_not_Important
+import com.choidaye.readyforbox.Data.Regularity
 
 data class GetForUResultResponse (
     var status : Int,
@@ -13,6 +13,6 @@ data class GetForUResultResponse (
 
 data class ForURestulData(
     var pacakges : ArrayList<Packages>,
-    var regular: ArrayList<Regular>,
-    var regular_not_important : ArrayList<Regular_not_important>
+    var regularity: ArrayList<Regularity>,
+    var regular_not_Important : ArrayList<Regular_not_Important>
 )

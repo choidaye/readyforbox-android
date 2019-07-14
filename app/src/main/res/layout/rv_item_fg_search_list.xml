@@ -6,8 +6,6 @@
         android:background="@color/White">
 
 
-
-<<<<<<< HEAD
     <RelativeLayout
             android:id="@+id/rl_fg_category_delivery_img"
             android:layout_width="92dp"
