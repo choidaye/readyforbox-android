@@ -9,9 +9,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.choidaye.readyforbox.Data.ForUResultDelivery
+import com.choidaye.readyforbox.Data.Regularity
 import com.choidaye.readyforbox.R
 
-class ForUResultDeliveryRecyclerViewAdapter(val ctx: Context, val forUresultDeliveryList: ArrayList<ForUResultDelivery>) : RecyclerView.Adapter<ForUResultDeliveryRecyclerViewAdapter.Holder>(){
+class ForUResultDeliveryRecyclerViewAdapter(val ctx: Context, val forUresultDeliveryList: ArrayList<Regularity>) : RecyclerView.Adapter<ForUResultDeliveryRecyclerViewAdapter.Holder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_fg_for_u_result_delivery, parent, false)
@@ -27,7 +28,7 @@ class ForUResultDeliveryRecyclerViewAdapter(val ctx: Context, val forUresultDeli
             .load(forUresultDeliveryList[position].main_img)
             .into(holer.main_img)
         holer.name.text = forUresultDeliveryList[position].name
-        holer.price.text=forUresultDeliveryList[position].price.toString()
+        holer.price.text=forUresultDeliveryList[position].aled_price.toString()
 
 
 

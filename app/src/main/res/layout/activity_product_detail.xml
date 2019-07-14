@@ -66,7 +66,7 @@
                                 android:layout_height="365dp"
                                 app:srcCompat="@drawable/img"/>
                         <TextView
-                                android:id="@+id/tV_ac_product_detail_name"
+                                android:id="@+id/tv_ac_product_detail_name"
                                 android:fontFamily="@font/light"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"

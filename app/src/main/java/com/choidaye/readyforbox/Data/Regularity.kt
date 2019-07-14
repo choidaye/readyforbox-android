@@ -1,6 +1,6 @@
 package com.choidaye.readyforbox.Data
 
-data class Regular(
+data class Regularity(
     var created_at : String,
     var order_id : String,
     var delivery_cycle : Int,

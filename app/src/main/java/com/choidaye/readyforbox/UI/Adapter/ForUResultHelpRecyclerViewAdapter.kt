@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
-import com.choidaye.readyforbox.Data.ForUResultHelp
+import com.choidaye.readyforbox.Data.Regular_not_Important
 import com.choidaye.readyforbox.R
 
-class ForUResultHelpRecyclerViewAdapter(val ctx: Context, val forUresultHelpList: ArrayList<ForUResultHelp>) : RecyclerView.Adapter<ForUResultHelpRecyclerViewAdapter.Holder>(){
+class ForUResultHelpRecyclerViewAdapter(val ctx: Context, val forUresultHelpList: ArrayList<Regular_not_Important>) : RecyclerView.Adapter<ForUResultHelpRecyclerViewAdapter.Holder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_fg_for_u_result_help, parent, false)
@@ -27,7 +27,7 @@ class ForUResultHelpRecyclerViewAdapter(val ctx: Context, val forUresultHelpList
             .load(forUresultHelpList[position].main_img)
             .into(holer.main_img)
         holer.name.text = forUresultHelpList[position].name
-        holer.price.text=forUresultHelpList[position].price.toString()
+        holer.price.text=forUresultHelpList[position].saled_price.toString()
 
 
 

@@ -32,11 +32,9 @@ import retrofit2.Response
 
 
 class DeliveryListFragment : Fragment() {
-
     var result : String = ""
-    var deliveryList = ArrayList<Product>()
-
     var product_id : String = ""
+    var deliveryList = ArrayList<Product>()
 
 
     lateinit var  nameList : ArrayList<String>
@@ -124,7 +122,7 @@ class DeliveryListFragment : Fragment() {
 
     private fun setRecyclerView() {
         deliveryRecyclcerViewAdapter = DeliveryRecyclerViewAdapter(activity!!, deliveryList){ Product ->
-            startActivity<ProductDetailActivity>()
+
             var intent = Intent(context, ProductDetailActivity::class.java)
             intent.putExtra("product_id", product_id)
 
@@ -335,10 +333,7 @@ class DeliveryListFragment : Fragment() {
 
 
                     var temp: ArrayList<Product> = response.body()!!.data.product
-
-
                    product_id=temp[0].product_id
-
                     if (temp.size > 0) {
 
                          Log.v("response",response.body()!!.status.toString())

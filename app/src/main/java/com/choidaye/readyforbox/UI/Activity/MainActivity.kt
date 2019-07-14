@@ -54,8 +54,24 @@ class MainActivity : AppCompatActivity() {
 
         val forUResultFragment=ForUResultFragment()
         val args=Bundle()
-        var type: String=data!!.getStringExtra("name")
+
+        val type: String=data!!.getStringExtra("name")
+        val first: String=data!!.getStringExtra("first")
+        val second: String=data!!.getStringExtra("second")
+        val fifth: String=data!!.getStringExtra("fifth")
+        val minprice: Int =data!!.getIntExtra("minprice",0)
+        val maxprice: Int =data!!.getIntExtra("maxprice",300000)
+
+
         args.putString("type",type)
+        args.putString("first",first)
+        args.putString("second",second)
+        args.putString("fifth",fifth)
+        args.putInt("minprice",minprice)
+        args.putInt("maxprice",maxprice)
+        Log.e("first_value",first)
+
+
         forUResultFragment.arguments=args
         var translate = supportFragmentManager.beginTransaction()
         translate.replace(R.id.main_layout,forUResultFragment)

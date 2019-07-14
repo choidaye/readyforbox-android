@@ -24,8 +24,6 @@ import retrofit2.Response
 
 class ProductDetailActivity : AppCompatActivity() {
     var isChecking: Boolean = true
-
-
     var name : String = ""
     var content : String= ""
     var main_img : String = ""
@@ -38,13 +36,9 @@ class ProductDetailActivity : AppCompatActivity() {
 
 
 
-
-
-
     val networkService: NetworkService by lazy {
         ApplicationController.instance.networkService
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,14 +48,9 @@ class ProductDetailActivity : AppCompatActivity() {
 
 
 
-        tV_ac_product_detail_name.text = name
+        tv_ac_product_detail_name.text = name
         tv_ac_product_detail_saled_price.text = saled_price.toString()
         txt_product_realPrice.paintFlags=txt_product_realPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
-
-
-
-
-
 
         val intent: Intent = intent
         val value=intent.getStringExtra("product_id")
@@ -69,10 +58,6 @@ class ProductDetailActivity : AppCompatActivity() {
         Log.e("value",value)
 
         setResult(Activity.RESULT_OK,intent)
-
-
-
-
 
         var bottomSheet= BottomSheetBehavior.from(product_option)
         btn_product_buy.setOnClickListener {
@@ -89,7 +74,8 @@ class ProductDetailActivity : AppCompatActivity() {
                 rb_one_month.setTextColor(applicationContext.resources.getColor(R.color.darkGrey))
             }
         }
-        rb_two_month.setOnCheckedChangeListener { button, isChecked ->
+        rb_two_month.setOnCheckedChangeListener { button, isChecked
+            ->
             if(isChecked){
                 rb_two_month.setTextColor(applicationContext.resources.getColor(R.color.pumpkinOrange))
             }else{
@@ -140,12 +126,9 @@ class ProductDetailActivity : AppCompatActivity() {
             bottomSheet.state= BottomSheetBehavior.STATE_COLLAPSED
         }
 
-
-
         getProductinfoResponse(value)
 
     }
-
     private fun getProductinfoResponse(product_id:String) {
 
         setResult(Activity.RESULT_OK,intent)
@@ -199,41 +182,36 @@ class ProductDetailActivity : AppCompatActivity() {
 
     }
 
-
-    private fun setProductView(name: String, sale_ratio: Int, main_img: String,saled_price : Int, price : Int, content : String){
+    private fun setProductView(name: String, sale_ratio: Int, main_img: String,saled_price : Int, price : Int, content : String) {
 
         name?.let {
-            tV_ac_product_detail_name.text = name
+            tv_ac_product_detail_name.text = name
         }
 
-        content?.let{
+        content?.let {
             tv_ac_product_detail_content.text = content
         }
 
-        main_img?.let{
+        main_img?.let {
             Glide.with(this).load(main_img).into(iv_ac_product_detail)
         }
 
-        sale_ratio?.let{
+        sale_ratio?.let {
             tv_ac_product_detail_ratio.text = sale_ratio.toString()
         }
 
-        saled_price?.let{
+        saled_price?.let {
             tv_ac_product_detail_saled_price.text = saled_price.toString()
         }
 
-        price?.let{
+        price?.let {
             txt_product_realPrice.text = price.toString()
         }
 
-        content_img?.let{
+        content_img?.let {
             Glide.with(this).load(main_img).into(iv_ac_product_detail_content_img)
         }
-
-
-
-
-
-
     }
+
+
 }

@@ -1,6 +1,5 @@
 package com.choidaye.readyforbox.Get
 
-
 data class GetProductInfoResponse (
     var status : Int,
     var success : Boolean,

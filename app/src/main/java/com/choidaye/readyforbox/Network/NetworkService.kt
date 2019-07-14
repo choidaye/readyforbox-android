@@ -91,7 +91,6 @@ interface NetworkService {
         @Header("token") token : String
     ) : Call<GetMyboxDeliveryResponse>
 
-
     //검색결과
     @GET("product/regular")
     fun getSearchResult(
