@@ -145,19 +145,21 @@ class ForUResultFragment : Fragment() {
         getForUResultResponse.enqueue(object: Callback<GetForUResultResponse>{
             override fun onResponse(call: Call<GetForUResultResponse>, response: Response<GetForUResultResponse>) {
                 if(response!!.isSuccessful){
-                    Log.e("package",first)
-                    val tmp:ArrayList<Packages> = response.body()!!.data.pacakges
+
+                    forUresultpackageList.clear()
+                    forUresultdeliveryList.clear()
+                    forUresulthelpList.clear()
+
+
+                    val tmp:ArrayList<Packages> = response.body()!!.data.packages
                     val tmp2:ArrayList<Regularity> = response.body()!!.data.regularity
                     val tmp3:ArrayList<Regular_not_Important> = response.body()!!.data.regular_not_Important
 
 
-
-                    //if(tmp.size>0) {
-                    //  val position1 = forUResultPackageRecyclerViewAdapter.itemCount
+                    if(tmp.size>0) {
                         forUResultPackageRecyclerViewAdapter.forUresultpackageList.addAll(tmp)
                         forUResultPackageRecyclerViewAdapter.notifyDataSetChanged()
-                    //}
-
+                    }
                     //if(tmp2.size>0){
                     //    val position2 = forUResultDeliveryRecyclerViewAdapter.itemCount
                         forUResultDeliveryRecyclerViewAdapter.forUresultDeliveryList.addAll(tmp2)

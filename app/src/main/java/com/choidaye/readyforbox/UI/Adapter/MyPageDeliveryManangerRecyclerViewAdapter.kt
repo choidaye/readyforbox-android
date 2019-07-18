@@ -9,11 +9,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.choidaye.readyforbox.Data.PackageDetail
-import com.choidaye.readyforbox.Data.Regularity
+import com.choidaye.readyforbox.Data.Regular
 import com.choidaye.readyforbox.R
 
 
-class MyPageDeliveryManangerRecyclerViewAdapter(val ctx: Context, val mypageDeliveryList: ArrayList<Regularity>) : RecyclerView.Adapter<MyPageDeliveryManangerRecyclerViewAdapter.Holder>(){
+class MyPageDeliveryManangerRecyclerViewAdapter(val ctx: Context, val mypageDeliveryList: ArrayList<Regular>) : RecyclerView.Adapter<MyPageDeliveryManangerRecyclerViewAdapter.Holder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view : View = LayoutInflater.from(parent.context).inflate(R.layout.rv_item_ac_my_page_delivery_check_product, parent, false)

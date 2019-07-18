@@ -28,7 +28,7 @@ class ForUResultDeliveryRecyclerViewAdapter(val ctx: Context, val forUresultDeli
             .load(forUresultDeliveryList[position].main_img)
             .into(holer.main_img)
         holer.name.text = forUresultDeliveryList[position].name
-        holer.price.text=forUresultDeliveryList[position].aled_price.toString()
+        holer.saled_price.text=forUresultDeliveryList[position].saled_price.toString()
 
 
 
@@ -37,7 +37,7 @@ class ForUResultDeliveryRecyclerViewAdapter(val ctx: Context, val forUresultDeli
 
     inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val name : TextView =  itemView.findViewById(R.id.tv_fg_for_u_result_name) as TextView
-        val price: TextView = itemView.findViewById(R.id.tv_fg_for_u_result_price) as TextView
+        val saled_price: TextView = itemView.findViewById(R.id.tv_fg_for_u_result_price) as TextView
         val main_img : ImageView = itemView.findViewById(R.id.img_fg_for_u_result_thumbnail) as ImageView
 
 
