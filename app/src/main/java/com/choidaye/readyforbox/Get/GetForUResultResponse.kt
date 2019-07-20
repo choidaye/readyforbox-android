@@ -8,11 +8,11 @@ data class GetForUResultResponse (
     var status : Int,
     var success : Boolean,
     var message : String,
-    var data : ForURestulData
+    var data : ForUResultData
 )
 
-data class ForURestulData(
-    var pacakges : ArrayList<Packages>,
+data class ForUResultData(
+    var packages : ArrayList<Packages>,
     var regularity: ArrayList<Regularity>,
     var regular_not_Important : ArrayList<Regular_not_Important>
 )

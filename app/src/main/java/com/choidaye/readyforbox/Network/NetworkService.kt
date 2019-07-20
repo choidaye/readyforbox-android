@@ -54,7 +54,7 @@ interface NetworkService {
         @Query("minprice") minprice : Int,
         @Query("maxprice") maxprice : Int
 
-    ) : Call<GetForUResultResponse>
+    ): Call<GetForUResultResponse>
 
 
     //딜리버리 상품 상세페이지

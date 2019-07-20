@@ -1,7 +1,7 @@
 package com.choidaye.readyforbox.Get
 
 import com.choidaye.readyforbox.Data.Packages
-import com.choidaye.readyforbox.Data.Regularity
+import com.choidaye.readyforbox.Data.Regular
 
 data class GetMyboxDeliveryResponse (
     var status : Int,
@@ -14,6 +14,6 @@ data class GetMyboxDeliveryResponse (
 
 data class MypageDelivery(
 
-    var regularity : ArrayList<Regularity>,
+    var regular : ArrayList<Regular>,
     var packages : ArrayList<Packages>
 )

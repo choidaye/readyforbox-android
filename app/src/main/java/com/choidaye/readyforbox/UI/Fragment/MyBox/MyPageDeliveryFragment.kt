@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.choidaye.readyforbox.Data.Packages
+import com.choidaye.readyforbox.Data.Regular
 import com.choidaye.readyforbox.Data.Regularity
 import com.choidaye.readyforbox.Get.GetMyboxDeliveryResponse
 import com.choidaye.readyforbox.Get.MypageDelivery
@@ -46,7 +47,7 @@ class MyPageDeliveryFragment : Fragment() {
 
     lateinit var myPageDeliveryManangerRecyclerViewAdapter: MyPageDeliveryManangerRecyclerViewAdapter
 
-    var mypageDeliverylist = ArrayList<Regularity>()
+    var mypageDeliverylist = ArrayList<Regular>()
 
     var name : String = ""
     var content : String = ""
